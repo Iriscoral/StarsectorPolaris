@@ -1,0 +1,26 @@
+{
+	"defaultChannels":[
+		"plsp_public",
+	],
+	
+	"plsp_public":{
+		"name":"北极星简报",
+		"logo":"graphics/icons/intel/comms.png",
+		"icon":"graphics/icons/intel/comms.png",
+		"image":"graphics/factions/plsp.png",
+		"sound":"ui_channel_news",
+		"faction":"plsp",
+		"type":"新闻报告",
+		"shortType":"新闻",
+	},
+	"plsp_internal":{
+		"name":"北极星之首-通讯",
+		"logo":"graphics/icons/intel/secure_comms.png",
+		"icon":"graphics/icons/intel/secure_comms.png",
+		"image":"graphics/factions/plsp.png",
+		"sound":"ui_channel_comm_secure",
+		"faction":"plsp",
+		"type":"情报报告",
+		"shortType":"情报",
+	},
+}

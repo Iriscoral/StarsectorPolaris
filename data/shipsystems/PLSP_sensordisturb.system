@@ -1,0 +1,22 @@
+{
+	"id":"PLSP_sensordisturb",
+	"type":"STAT_MOD",
+	"aiType":"CUSTOM",
+	"aiScript":"data.shipsystems.scripts.ai.PLSP_SensorDisturbAI",
+	"statsScript":"data.shipsystems.scripts.PLSP_SensorDisturbStats",
+	
+	"jitterUnderColor":[225,127,39,55],
+	"jitterUnderCopies":25,
+	"jitterUnderMinRange":0,
+	"jitterUnderRange":8,
+	"jitterUnderRangeRadiusFraction":0,
+	
+	"engineGlowGlowMult":2,
+	"runScriptWhilePaused":true, # only for the player's ship
+	
+	"useSound":"PLSP_sensordisturb_active",
+	"loopSound":"PLSP_sensordisturb_loop",
+	"deactivateSound":"PLSP_sensordisturb_deactive",
+	
+	"outOfUsesSound":"gun_out_of_ammo",
+}

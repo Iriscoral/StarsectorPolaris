@@ -1,0 +1,26 @@
+{
+    "displayName": "Defensive",
+    "fluxCapacitors": 6,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "PLSP_blazar",
+    "hullMods": [
+        "PLSP_clustermodulator",
+        "heavyarmor"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_blazar_defensive",
+    "weaponGroups": [{
+        "autofire": true,
+        "mode": "LINKED",
+        "weapons": {
+            "WS0002": "PLSP_guidingpds",
+            "WS0003": "PLSP_guidingpds",
+            "WS0004": "PLSP_guidingpds",
+            "WS0005": "PLSP_guidingpds",
+            "WS0006": "PLSP_guidingpds",
+            "WS0007": "PLSP_guidingpds"
+        }
+    }]
+}

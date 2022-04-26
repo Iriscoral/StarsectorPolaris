@@ -1,0 +1,17 @@
+{
+	"id":"PLSP_reservedrone",
+	"type":"STAT_MOD",
+	"aiType":"RESERVE_DEPLOYMENT",
+	
+	"statsScript":"data.shipsystems.scripts.PLSP_ReserveDroneStats",
+	
+	"useSound":"system_reserve_wing",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+	}
+}
+
+
+
+

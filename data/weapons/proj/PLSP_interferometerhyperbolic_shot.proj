@@ -1,0 +1,17 @@
+{
+	"id":"PLSP_interferometerhyperbolic_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	"onHitEffect":"data.scripts.weapons.PLSP_InterferometerHyperbolicOnHitEffect",
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	"passThroughMissiles":true,
+	"length":12.0,
+	"width":16.0,
+	"fadeTime":0.15,
+	"fringeColor":[145,225,125,255],
+	"coreColor":[170,235,80,200],
+	"textureType":"ROUGH",  # only needed for BEAM spawnType
+	"textureScrollSpeed":-256.0,
+	"pixelsPerTexel":1.0
+}

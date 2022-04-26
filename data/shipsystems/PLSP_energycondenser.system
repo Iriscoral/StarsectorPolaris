@@ -1,0 +1,20 @@
+{
+	"id":"PLSP_energycondenser",
+	"type":"STAT_MOD",
+	"aiType":"CUSTOM",
+	"aiScript":"data.shipsystems.scripts.ai.PLSP_EnergyCondenserAI",
+	"statsScript":"data.shipsystems.scripts.PLSP_EnergyCondenserStats",
+	
+	"weaponGlowColor":[65,110,200,155],
+	"weaponTypes":[ENERGY],
+	
+	"jitterColor":[85,120,240,40],
+	"jitterCopies":5,
+	"jitterRange":10,
+	"jitterRangeRadiusFraction":0.1,
+	
+	"useSound":"PLSP_energycondenser_active",
+	"loopSound":"PLSP_energycondenser_loop",
+	"deactivateSound":"PLSP_energycondenser_deactive",
+	"outOfUsesSound":"gun_out_of_ammo",
+}

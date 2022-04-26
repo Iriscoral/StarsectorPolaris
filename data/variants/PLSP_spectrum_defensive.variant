@@ -1,0 +1,47 @@
+{
+    "displayName": "Defensive",
+    "fluxCapacitors": 24,
+    "fluxVents": 25,
+    "goalVariant": true,
+    "hullId": "PLSP_spectrum",
+    "hullMods": [
+        "targetingunit",
+        "PLSP_clustermodulator"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_spectrum_defensive",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "PLSP_interferometerdegeneracy"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0005": "PLSP_impulsem"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0008": "PLSP_streammicrowave",
+                "WS0009": "PLSP_streammicrowave"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0006": "PLSP_streammicrowave",
+                "WS0007": "PLSP_streammicrowave"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0002": "PLSP_guidingpdl"}
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "displayName": "Assault",
+    "fluxCapacitors": 4,
+    "fluxVents": 8,
+    "goalVariant": true,
+    "hullId": "PLSP_evolution",
+    "hullMods": [
+        "PLSP_clustermodulator",
+        "heavyarmor"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_evolution_assault",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0004": "railgun",
+                "WS0005": "railgun"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0002": "PLSP_magnetics",
+                "WS0003": "PLSP_magnetics"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "PLSP_streampolarization"}
+        }
+    ]
+}

@@ -1,0 +1,49 @@
+{
+    "displayName": "Assault",
+    "fluxCapacitors": 10,
+    "fluxVents": 13,
+    "goalVariant": true,
+    "hullId": "PLSP_quasar",
+    "hullMods": [
+        "PLSP_clustermodulator",
+        "targetingunit"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_quasar_assault",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "PLSP_electprojecter"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0004": "PLSP_impulsem",
+                "WS0005": "PLSP_impulsem"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0002": "PLSP_electemitter",
+                "WS0003": "PLSP_electemitter",
+                "WS0012": "PLSP_electemitter",
+                "WS0013": "PLSP_electemitter"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0006": "PLSP_guidingpds",
+                "WS0007": "PLSP_guidingpds",
+                "WS0008": "PLSP_guidingpds",
+                "WS0009": "PLSP_guidingpds"
+            }
+        }
+    ]
+}

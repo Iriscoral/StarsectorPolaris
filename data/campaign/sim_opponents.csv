@@ -1,0 +1,13 @@
+variant id
+
+#战列舰
+PLSP_meridian_combat
+#巡洋舰
+PLSP_quasar_combat
+PLSP_spectrum_mix
+#驱逐舰
+PLSP_magnitude_defensive
+PLSP_pemumbra_assault
+#护卫舰
+PLSP_evolution_combat
+PLSP_meteoroid_assault

@@ -1,0 +1,17 @@
+{
+	"id":"PLSP_guidingpdl_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC",
+	"collisionClass":"PROJECTILE_FIGHTER",
+	"collisionClassByFighter":"PROJECTILE_FIGHTER",	
+	"length":16.0,
+	"width":16,
+	"fadeTime":0.2,
+	"fringeColor":[255,155,255,0],
+	"coreColor":[255,255,255,255],
+	"glowColor":[245,165,230,75],
+	"hitGlowRadius":40,
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"bulletSprite":"graphics/missiles/PLSP_pd.png"	
+}

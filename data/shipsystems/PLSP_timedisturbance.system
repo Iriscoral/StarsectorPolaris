@@ -1,0 +1,15 @@
+{
+	"id":"PLSP_timedisturbance",
+	"type":"STAT_MOD",
+	"aiType":"CUSTOM",
+	"aiScript":"data.shipsystems.scripts.ai.PLSP_TimeDisturbanceAI",
+	"statsScript":"data.shipsystems.scripts.PLSP_TimeDisturbanceStats",
+	
+	"engineGlowGlowMult":2,
+	
+	"useSound":"PLSP_timedisturbance_active",
+	"loopSound":"system_high_energy_focus_loop",
+	"deactivateSound":"PLSP_timedisturbance_deactive",
+	
+	"outOfUsesSound":"gun_out_of_ammo",
+}

@@ -1,0 +1,54 @@
+{
+    "displayName": "Assault",
+    "fluxCapacitors": 17,
+    "fluxVents": 32,
+    "goalVariant": true,
+    "hullId": "PLSP_meridian",
+    "hullMods": [
+        "targetingunit",
+        "PLSP_clustermodulator",
+        "advancedshieldemitter",
+        "magazines"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_meridian_assault",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0009": "autopulse",
+                "WS0010": "autopulse"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "heavyneedler",
+                "WS0002": "heavyneedler"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "PLSP_guidingpds",
+                "WS0004": "PLSP_guidingpds"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0011": "heavyblaster",
+                "WS0012": "heavyblaster"
+            }
+        }
+    ],
+    "wings": [
+        "PLSP_comettail_wing",
+        "PLSP_comettail_wing"
+    ]
+}

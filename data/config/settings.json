@@ -1,0 +1,52 @@
+{
+	"plugins":{
+		"PLSP_WeaponPlugin":"data.scripts.plugin.PLSP_WeaponPlugin",
+		"PLSP_SystemPlugin":"data.scripts.plugin.PLSP_SystemPlugin",
+		"PLSP_GuidingProjPlugin":"data.scripts.plugin.PLSP_GuidingProjPlugin",
+		"PLSP_LockerPlugin":"data.scripts.plugin.PLSP_LockerPlugin",
+	},
+	"designTypeColors":{
+		"Polaris":[73,214,230,255],
+		"北极星":[73,214,230,255],
+	},
+	"graphics":{
+		"misc":{
+			"PLSP_null":"graphics/null.png",
+			"PLSP_emptySkill":"graphics/icons/skills/PLSP_empty_skill.png",
+
+			"PLSP_polarizationMask":"graphics/missiles/PLSP_polarization_mask.png",
+			"PLSP_chaosVortex":"graphics/fx/PLSP_chaosVortex.png",
+			"PLSP_disturb":"graphics/fx/PLSP_disturb.png",
+			"PLSP_eventLine":"graphics/fx/PLSP_eventLine.png",
+			"PLSP_whiteRing":"graphics/fx/PLSP_whiteRing.png",
+			"PLSP_denseFog":"graphics/fx/PLSP_denseFog.png",
+			
+			"PLSP_stream_visual":"graphics/fx/PLSP_stream_visual.png",
+			"PLSP_linkBand":"graphics/fx/PLSP_linkBand.png",
+			"PLSP_clusterAdditionBand":"graphics/fx/PLSP_clusterAdditionBand.png",
+			
+			"PLSP_clusterBand":"graphics/fx/PLSP_clusterBand.png",
+			"PLSP_clusterCore":"graphics/fx/PLSP_clusterCore.png",
+			"PLSP_clusterMistI":"graphics/fx/PLSP_clusterMistI.png",
+			"PLSP_clusterMistM":"graphics/fx/PLSP_clusterMistM.png",
+			"PLSP_clusterMistO":"graphics/fx/PLSP_clusterMistO.png",
+			"PLSP_clusterRing":"graphics/fx/PLSP_clusterRing.png",
+			
+			"PLSP_commissionRing":"graphics/fx/PLSP_commissionRing.png",
+		},
+		"fx":{
+			"PLSP_trails_clean":"graphics/fx/PLSP_trails_clean.png",
+			"PLSP_trails_fuzzy":"graphics/fx/PLSP_trails_fuzzy.png",
+			"PLSP_trails_smooth":"graphics/fx/PLSP_trails_smooth.png",
+			"PLSP_trails_zappy":"graphics/fx/PLSP_trails_zappy.png",
+			"PLSP_trails_contrail":"graphics/fx/PLSP_trails_contrail.png",
+		},
+		"intel": {
+			"PLSP_MA":"graphics/icons/intel/PLSP_MA.png",
+		},
+		"blueprint_packages":{
+			"PLSP_package_bp":"graphics/icons/cargo/PLSP_package_bp.png",
+			"PLSP_package_rp":"graphics/icons/cargo/PLSP_package_rp.png",
+		},
+	},
+}

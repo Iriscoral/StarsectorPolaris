@@ -1,0 +1,2 @@
+id,name,order,tier,description,author,combat officer,admiral,admin,tags,icon,
+PLSP_spot_resilience,Spot Resilience,10500,0,"Advanced General Studies and Battlefield Miscellany enable officers to not only respond rationally to the ever-changing and complex battlefield environment, but also to make more forward-thinking decisions based on it.","Art of Cold Space, Ep.1",TRUE,,,"npc_only, player_only",graphics/icons/skills/PLSP_spot_resilience.png,

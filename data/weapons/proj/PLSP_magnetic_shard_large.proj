@@ -1,0 +1,19 @@
+{
+	"id":"PLSP_magnetic_shard_large",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC",
+	"collisionClass":"PROJECTILE_FF",
+	"collisionClassByFighter":"PROJECTILE_FIGHTER",
+	"onHitEffect":"com.fs.starfarer.api.impl.combat.IonCannonOnHitEffect",
+	"length":48.0,
+	"glowRadius":0,
+	"hitGlowRadius":60,
+	"width":16,
+	"fadeTime":0.2,
+	"fringeColor":[10,175,215,255],
+	"coreColor":[210,250,255,155],	
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"bulletSprite":"graphics/missiles/PLSP_flare.png"
+					
+}

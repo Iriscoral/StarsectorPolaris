@@ -1,0 +1,38 @@
+{
+    "displayName": "Strike",
+    "fluxCapacitors": 16,
+    "fluxVents": 14,
+    "goalVariant": true,
+    "hullId": "PLSP_aberration",
+    "hullMods": [
+        "PLSP_clustermodulator",
+        "PLSP_magnetdamper",
+        "fluxbreakers"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_aberration_strike",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0002": "PLSP_streampolarization",
+                "WS0003": "PLSP_streampolarization"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "PLSP_magneticm"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0004": "lightneedler",
+                "WS0005": "lightneedler"
+            }
+        }
+    ]
+}

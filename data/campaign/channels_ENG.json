@@ -1,0 +1,26 @@
+{
+	"defaultChannels":[
+		"plsp_public",
+	],
+	
+	"plsp_public":{
+		"name":"Polaris Message",
+		"logo":"graphics/icons/intel/comms.png",
+		"icon":"graphics/icons/intel/comms.png",
+		"image":"graphics/factions/plsp.png",
+		"sound":"ui_channel_news",
+		"faction":"plsp",
+		"type":"News Report",
+		"shortType":"News",
+	},
+	"plsp_internal":{
+		"name":"Polaris Intelligence",
+		"logo":"graphics/icons/intel/secure_comms.png",
+		"icon":"graphics/icons/intel/secure_comms.png",
+		"image":"graphics/factions/plsp.png",
+		"sound":"ui_channel_comm_secure",
+		"faction":"plsp",
+		"type":"Intelligence Report",
+		"shortType":"Intel",
+	},
+}

@@ -1,0 +1,59 @@
+{
+    "displayName": "Defensive",
+    "fluxCapacitors": 28,
+    "fluxVents": 29,
+    "goalVariant": true,
+    "hullId": "PLSP_flocculus",
+    "hullMods": [
+        "PLSP_clustermodulator",
+        "targetingunit",
+        "PLSP_magnetdamper",
+        "advancedshieldemitter"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_flocculus_defensive",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "PLSP_pulsesc"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0004": "PLSP_impulsem",
+                "WS0005": "PLSP_impulsem",
+                "WS0010": "PLSP_impulsem",
+                "WS0011": "PLSP_impulsem"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0006": "PLSP_electemitter",
+                "WS0007": "PLSP_electemitter"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0002": "PLSP_guidingpdl",
+                "WS0003": "PLSP_guidingpdl"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0016": "PLSP_iccannon",
+                "WS0017": "PLSP_iccannon",
+                "WS0018": "PLSP_iccannon",
+                "WS0019": "PLSP_iccannon"
+            }
+        }
+    ]
+}

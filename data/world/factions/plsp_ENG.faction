@@ -1,0 +1,293 @@
+{
+	id:"plsp",
+	"color":[65,230,243,255],
+	"baseUIColor":[98,154,210,200],
+	"darkUIColor":[73,214,230,175],
+	"gridUIColor":[51,247,222,75],
+	"displayName":"Polaris",
+	"displayNameWithArticle":"the Polaris",
+	"displayNameLong":"Polaris Prime",
+	"displayNameLongWithArticle":"the Polaris Prime",
+	"personNamePrefixAOrAn":"a",
+	"displayNameIsOrAre":"is",
+	"logo":"graphics/factions/plsp.png",
+	"crest":"graphics/factions/crest_plsp.png",
+	"shipNamePrefix":"PLSP",
+	"shipNameSources":{
+		"SPACE":150,
+		"BRITISH_NAVY":300,
+		"NORSE":150,
+		"CELTIC":100,
+		"ABRAHAMIC":150,
+	},
+	"names":{
+		"myth":1,
+		"modern":4,
+		"world":4,
+		"future":2,
+	},
+	# variantOverrides restricts hulls to listed variants and adjusts their probability
+	"variantOverrides":{
+	},
+	# multiplier for how often hulls show up in the faction's fleets
+	"hullFrequency":{
+		"tags":{
+			"PLSP_bp":1,
+			"PLSP_rp":0.5,
+			"PLSP_fp":10,
+		},
+		"hulls":{
+		},
+	},
+	# ships the faction gets access to when importing S&W out-of-faction
+	"shipsWhenImporting":{
+		"tags":[],
+		"hulls":[
+			"dram",
+			"mudskipper",
+			"valkyrie",
+			"starliner"
+		],
+	},
+	"knownShips":{
+		"tags":["PLSP_bp", "PLSP_rp"],
+		"hulls":[
+			"ox",
+			"crig"
+		],
+	},
+	# listing ships here will make the faction mostly use them even if other hulls become available
+	"priorityShips":{
+		"tags":[],
+		"hulls":[
+		],
+	},
+	"knownFighters":{
+		"tags":["PLSP_bp", "PLSP_rp"],
+		"fighters":[
+			"xyphos_wing",
+			"thunder_wing",
+			"claw_wing",
+			"hoplon_wing",
+			"trident_wing",
+			"longbow_wing",
+			"dagger_wing",
+			"broadsword_wing",
+		],
+	},
+	"priorityFighters":{
+		"tags":[],
+		"fighters":[
+		],
+	},
+	"knownWeapons":{
+		"tags":["midline_bp", "missile_bp", "hightech_bp", "PLSP_bp", "PLSP_rp"],
+		"weapons":[
+			"devastator",
+			"hellbore",
+			"heavyac",
+			"heavymortar",
+			
+			"railgun",
+			"dualflak",
+			"heavymauler",
+			"hveldriver",
+			#"gauss",
+			"mjolnir",
+			"sabotpod",
+			"phasecl",
+			"cyclone",
+			"hurricane",
+			"squall",
+			"locust",
+			"pdburst",
+			"amblaster",
+			"phasebeam",
+			"heavyblaster",
+			#"heavyburst",
+			"ionpulser",
+			"ionbeam",
+			"plasma",
+			"guardian",
+			"lightneedler",
+			"heavyneedler",
+			#"multineedler",
+			"tachyonlance",
+			"breach",
+			"breachpod",
+		],
+	},
+	"priorityWeapons":{
+		"tags":["PLSP_bp"],
+		"weapons":[
+		],
+	},
+	"knownHullMods":{
+		"tags":["PLSP_bp"],
+		"hullMods":[
+			"advancedshieldemitter",
+			"advancedoptics",
+			"turretgyros",
+			"augmentedengines",
+			#"dedicated_targeting_core",
+			"eccm",
+			"missleracks",
+			"extendedshieldemitter",
+			#"fluxcoil",
+			#"fluxdistributor",
+			"hardenedshieldemitter",
+			"hardened_subsystems",
+			"insulatedengine",
+			"pointdefenseai",
+			"targetingunit",
+			"adaptiveshields",
+			#"recovery_shuttles",
+			"operations_center",
+			"nav_relay",
+			"ecm",
+			"autorepair",
+			"blast_doors",
+			"magazines",
+
+			#"ballistic_rangefinder",
+			"hiressensors",
+			"efficiency_overhaul",
+			#"adaptive_coils",
+			#"phase_anchor",
+			
+			"PLSP_flashbooster",
+			"PLSP_solarscope",
+			"PLSP_fluxlink",
+			"PLSP_hardenedsafety",
+			"PLSP_clustermodulator",
+			"PLSP_magnetdamper",
+		],
+	},
+	"factionDoctrine":{
+		"warships":4,
+		"carriers":2,
+		"phaseShips":1,
+		
+		"officerQuality":5,
+		"shipQuality":4,
+		"numShips":1,
+		
+		"shipSize":3,
+		
+		"aggression":3,
+		
+		"combatFreighterProbability":0,     				# instead of some portion of the freighters in a fleet
+		"combatFreighterCombatUseFraction":0,  				# as part of the normal combat lineup
+		"combatFreighterCombatUseFractionWhenPriority":0.33,# as part of normal combat lineup, when marked as priority ship
+		"autofitRandomizeProbability":0.1,
+
+		"commanderSkillsShuffleProbability":1,
+		"commanderSkills":[
+			"crew_training",
+			"officer_training",
+			"coordinated_maneuvers",
+			"electronic_warfare",
+			"fighter_uplink",
+			"carrier_group",
+			"flux_regulation",
+		],
+	},
+	"fleetTypeNames":{
+		#"trade":"",
+    	#"tradeLiner":"",
+    	#"tradeSmuggler":"",
+    	#"smallTrader":"",
+		"patrolSmall":"Eternal Night",
+		"patrolMedium":"Eternal Day",
+		"patrolLarge":"Dawn Line",
+		"inspectionFleet":"Curtain",
+		"taskForce":"Regression Line",
+		#"mercScout":"",
+		#"mercBountyHunter":"",
+	},
+	"illegalCommodities":[
+		"drugs",
+		"organs",
+	],
+	"music":{
+		"theme":"PLSP_market_interaction_neutral",
+		"market_neutral":"PLSP_market_interaction_neutral",
+		"market_hostile":"PLSP_market_interaction_hostile",
+		"market_friendly":"PLSP_market_interaction_friendly",
+		"encounter_neutral":"PLSP_encounter_interaction_neutral",
+		"encounter_hostile":"PLSP_encounter_interaction_hostile",
+		"encounter_friendly":"PLSP_encounter_interaction_friendly",
+	},
+	"internalComms":"plsp_internal",
+	"portraits":{
+		"standard_male":[
+			"graphics/portraits/PLSP_m_1.png",
+			"graphics/portraits/PLSP_u_1.png",
+			"graphics/portraits/PLSP_u_2.png",
+		],
+		"standard_female":[
+			"graphics/portraits/PLSP_f_1.png",
+			"graphics/portraits/PLSP_f_2.png",
+			"graphics/portraits/PLSP_f_3.png",
+		],
+	},
+	"ranks":{
+		"ranks":{
+			"spaceSailor":{"name":"Nebula-Class Enlistee"},
+			"spaceChief":{"name":"Brown Dwarf-Class Enlistee"},
+			"spaceEnsign":{"name":"Main Sequence-Class Enlistee"},
+			"spaceLieutenant":{"name":"Nova-Class Officer"},
+			"spaceCommander":{"name":"White Dwarf-Class Officer"},
+			"spaceCaptain":{"name":"Neutron-Class Officer"},
+			"spaceAdmiral":{"name":"Black Hole-Class Commander"},
+			"spaceMarshal":{"name":"Galaxy-Class Commander"},
+			"groundPrivate":{"name":"Brown Dwarf-Class Pilot"},
+			"groundSergeant":{"name":"Main Sequence-Class Pilot"},
+			"groundLieutenant":{"name":"Nova-Class Commander"},
+			"groundCaptain":{"name":"White Dwarf-Class Commander"},
+			"groundMajor":{"name":"Neutron-Class Commander"},
+			"groundColonel":{"name":"Black Hole-Class Chief"},
+			"groundGeneral":{"name":"Galaxy-Class Chief"},
+			"factionLeader":{"name":"Moderati"},
+		},
+		"posts":{
+			"PLSP_MA_Port":{"name":"Foreign Affairs Officer, North Celestial Akademia"},
+			"factionLeader":{"name":"Moderati"},
+
+		},
+	},
+	"voices":{
+		"LOW":{
+			"soldier":10,
+			"spacer":10,
+			"faithful":5,
+		},
+		"MEDIUM":{
+			"soldier":10,
+			"business":5,
+			"official":10,
+		},
+		"HIGH":{
+			"business":5,
+			"official":10,
+			"soldier":5,
+		},
+	},
+	"custom":{
+		"postsNoBounties":true,
+		"offersCommissions":true,
+		"engagesInHostilities":true,
+		"buysAICores":true,
+		"AICoreValueMult":1.5,
+		"AICoreRepMult":0.5,
+		"buysSurveyData":true,
+		"hostilityImpactOnGrowth":true,
+		"caresAboutAtrocities":false,
+		"punitiveExpeditionData":{
+			"vsCompetitors":false,
+			"vsFreePort":false,
+			"canBombard":true,
+			"territorial":false,
+		},
+	},
+},

@@ -1,0 +1,29 @@
+{
+    "displayName": "Support",
+    "fluxCapacitors": 6,
+    "fluxVents": 6,
+    "goalVariant": true,
+    "hullId": "PLSP_celestialobjectscholar",
+    "hullMods": ["expanded_deck_crew"],
+    "permaMods": [],
+    "variantId": "PLSP_celestialobjectscholar_support",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0002": "PLSP_guidingpdm"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "PLSP_impulsel"}
+        }
+    ],
+    "wings": [
+        "PLSP_perturbation_wing",
+        "PLSP_perturbation_wing",
+        "PLSP_perturbation_wing"
+    ]
+}

@@ -1,0 +1,9 @@
+id,variant,tags,tier,rarity,fleet pts,op cost,formation,range,attackRunRange,attackPositionOffset,num,role,role desc,refit,base value,,,,,,,,,,,,,number
+PLSP_perturbation_wing,PLSP_perturbation_variant,"bomber4, bomber, high, merc, PLSP_p, PLSP_bp, PLSP_fp",2,,7,17,V,4000,2000,,2,BOMBER,轰炸机,20,8000,,,,,,,,,,,,,1.28
+PLSP_redshift_wing,PLSP_redshift_variant,"fighter9, fighter, high, merc, PLSP_p, PLSP_bp, PLSP_fp",3,,8,21,CLAW,4000,500,-400,2,FIGHTER,Heavy 战斗机,16,18000,,,,,,,,,,,,,4.1
+PLSP_blueshift_wing,PLSP_blueshift_variant,"fighter5, fighter, high, merc, PLSP_p, PLSP_rp, PLSP_fp",2,,6,13,V,6000,500,900,1,FIGHTER,战斗机,12,10000,,,,,,,,,,,,,5.5
+PLSP_comettail_wing,PLSP_comettail_variant,"interceptor, high, interceptor3, merc, PLSP_p, PLSP_bp, PLSP_fp",1,,5,8,BOX,4000,500,400,2,INTERCEPTOR,拦截机,10,6000,,,,,,,,,,,,,23.1
+PLSP_moonphase_wing,PLSP_moonphase_variant,"support2, high, fighter, merc, PLSP_p, PLSP_bp, PLSP_fp",2,,6,10,BOX,4000,500,,1,SUPPORT,支援机,12,6000,,,,,,,,,,,,,24.1
+PLSP_occultation_wing,PLSP_occultation_variant,"fighter4, high, fighter, merc, PLSP_p, PLSP_rp, PLSP_fp",2,,6,14,CLAW,4000,500,-400,1,FIGHTER,战斗机,14,6000,,,,,,,,,,,,,24.2
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PLSP_subobject_wing,PLSP_subobject_variant,"no_drop, no_sell, high",3,,6,0,V,0,200,,1,BOMBER,轰炸机,20,6000,,,,,,,,,,,,,19

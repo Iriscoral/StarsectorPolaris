@@ -1,0 +1,82 @@
+{
+	"playableFaction":true,
+	"corvusCompatible":true,
+
+	"baseFleetCostMultiplier":1,
+	"marketSpawnWeight":0.5,
+	"colonyExpeditionChance":0.5, # less interest
+	"colonyTargetValuator":"exerelin.campaign.colony.IndustrialColonyTargetValuator",
+
+	"customRebelFaction":"",
+	"customRebelFleetId":"",
+	"rebelFleetSuffix":"Fallen Object",
+
+	"directoryUseShortName":true,
+	
+	"startRelationships":{
+		"hegemony": -0.4,
+		"sindrian_diktat": -0.6,
+		"pirates": -0.8,
+		"luddic_path": -0.8,
+	},
+	"maxRelationships":{
+		"hegemony": 0,
+		"sindrian_diktat":-0.4,
+		"pirates": -0.6,
+		"luddic_path": -0.6,
+		"cabal": -0.6,
+	},
+	"minRelationships":{
+
+	},
+    "diplomacyPositiveChance":{
+        "hegemony":0.8,
+        "sindrian_diktat":0.4
+    },
+    "diplomacyNegativeChance":{
+        "hegemony":1.2,
+        "sindrian_diktat":2.0
+    },
+	"diplomacyTraits": ["stalwart", "submissive", "irredentist"],
+	"alignments":{
+		"technocratic":0.5,
+		"militarist":0.5,
+		"ideological":-0.5,
+	},
+	
+	"freeMarket":false,
+	"allowPrisonerActions":false,
+	
+	"startShipsSolo":[["PLSP_evolution_combat"]],
+	"startShipsCombatSmall":[["PLSP_aberration_combat", "PLSP_blazar_mix", "PLSP_crescent_assault"]],
+	#"startShipsTradeSmall":[["K_lagoon_run", "K_shaft_mining", "K_fdust_combat"]],
+	"startShipsCombatLarge":[["PLSP_collapse_assault", "PLSP_pemumbra_assault", "PLSP_facula_defensive"]],
+	"startShipsTradeLarge":[["PLSP_zodiac_run", "PLSP_blazar_mix", "PLSP_meteoroid_assault"]],
+	"startShipsCarrierSmall":[["PLSP_magnitude_support", "PLSP_crescent_assault", "PLSP_meteoroid_assault"]],
+	"startShipsCarrierLarge":[["PLSP_horizon_support", "PLSP_aberration_combat", "PLSP_evolution_combat"]],
+	"startShipsSuper":[["PLSP_axis_combat"]],
+	
+	"invasionStrengthBonusAttack":0.2,
+	"invasionStrengthBonusDefend":0.2,
+	
+	"startSpecialItems":[
+		[["PLSP_package_bp", ""]],
+	],
+	
+	"defenceStations":[
+		{"ids":["orbitalstation_high", "battlestation_high", "starfortress_high"]},
+	],
+	
+	"industrySeeds":[
+		{"id":"orbitalworks", "mult":0.1},
+		{"id":"lightindustry", "mult":0.1},
+	],
+	
+	"bonusSeeds":[
+		{"id":"nanoforge_pristine", "count":1},
+		{"id":"aiCore_station", "count":2, "mult":0.2},
+		{"id":"aiCore_military", "mult":0.5},
+		{"id":"aiCore_heavyindustry", "count":1},
+		{"id":"aiCore_any", "mult":2},
+	],
+}

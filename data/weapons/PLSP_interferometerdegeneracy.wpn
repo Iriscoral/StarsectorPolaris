@@ -1,0 +1,28 @@
+{
+	"id":"PLSP_interferometerdegeneracy",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"ENERGY",
+	"size":"LARGE",
+	"turretSprite":"graphics/weapons/PLSP_interferometerdegeneracy_turret_base.png",
+	"turretGlowSprite":"graphics/weapons/PLSP_interferometerdegeneracy_turret_glow.png",
+	"hardpointSprite":"graphics/weapons/PLSP_interferometerdegeneracy_hardpoint_base.png",
+	"hardpointGlowSprite":"graphics/weapons/PLSP_interferometerdegeneracy_hardpoint_glow.png",
+	"glowColor":[50,200,255,255],
+	"turretOffsets":[7, 15, 7, -15, 8, 13, 8, -13, 9, 12, 9, -12],
+	"turretAngleOffsets":[15, -15, 30, -30, 45, -45],
+	"hardpointOffsets":[12, 14, 12, -14, 13, 12, 13, -12, 14, 11, 14, -11],
+	"hardpointAngleOffsets":[15, -15, 30, -30, 45, -45],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	#"animationType":"GLOW",
+	"animationType":"GLOW_AND_FLASH",
+	"muzzleFlashSpec":{"length":30.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":5.0,
+					   "particleSizeMin":15.0,
+					   "particleSizeRange":20.0,
+					   "particleDuration":0.12,
+					   "particleCount":10,
+					   "particleColor":[150,55,180,255]},
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"projectileSpecId":"PLSP_interferometerdegeneracy_shot",  # projectile that will be fired
+	"fireSoundTwo":"PLSP_interferometerdegeneracy_fire",
+}

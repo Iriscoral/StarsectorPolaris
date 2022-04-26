@@ -1,0 +1,36 @@
+{
+    "displayName": "Mix",
+    "fluxCapacitors": 7,
+    "fluxVents": 11,
+    "goalVariant": true,
+    "hullId": "PLSP_blazar",
+    "hullMods": [
+        "PLSP_flashbooster",
+        "PLSP_clustermodulator",
+        "PLSP_solarscope",
+        "heavyarmor"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_blazar_mix",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0002": "PLSP_interferometerhyperbolic",
+                "WS0003": "PLSP_interferometerhyperbolic",
+                "WS0004": "PLSP_interferometerhyperbolic",
+                "WS0005": "PLSP_interferometerhyperbolic"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0006": "PLSP_impulses",
+                "WS0007": "PLSP_impulses"
+            }
+        }
+    ]
+}

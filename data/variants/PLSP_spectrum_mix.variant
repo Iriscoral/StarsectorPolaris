@@ -1,0 +1,45 @@
+{
+    "displayName": "Combat",
+    "fluxCapacitors": 17,
+    "fluxVents": 22,
+    "goalVariant": true,
+    "hullId": "PLSP_spectrum",
+    "hullMods": [
+        "targetingunit",
+        "fluxbreakers"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_spectrum_mix",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0001": "PLSP_streaminvert",
+                "WS0002": "PLSP_streaminvert"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0005": "PLSP_magneticm"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0006": "PLSP_electgenerator",
+                "WS0007": "PLSP_electgenerator"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "PLSP_guidingpdm",
+                "WS0004": "PLSP_guidingpdm"
+            }
+        }
+    ]
+}

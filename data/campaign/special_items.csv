@@ -1,0 +1,5 @@
+name,id,tags,tech/manufacturer,rarity,base price,stack size,cargo space,baseRaidDanger,icon,sound id,sound id drop,plugin,plugin params,desc,order
+北极星基础蓝图包,PLSP_package_bp,package_bp,北极星,0.6,25000,1000,1,,graphics/icons/cargo/blueprint_plsp_bp.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,PLSP_bp,"允许重型工业设施建造 一部分常见的北极星舰船、武器和战机LPC",200.12
+北极星进阶蓝图包,PLSP_package_rp,package_bp,北极星,0.2,35000,1000,1,,graphics/icons/cargo/blueprint_plsp_rp.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,PLSP_rp,"允许重型工业设施建造 少部分更为进阶的北极星舰船、武器和战机LPC",200.22
+
+Skill Picker,PLSP_skillpicker,,,,0,1,1,,graphics/icons/cargo/PLSP_skillpicker.png,combat1,ui_char_decrease_skill,data.scripts.campaign.items.PLSP_SkillPicker,,,0

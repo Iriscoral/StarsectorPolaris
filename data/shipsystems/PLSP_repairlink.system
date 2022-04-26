@@ -1,0 +1,19 @@
+{
+	"id":"PLSP_repairlink",
+	"type":"STAT_MOD",
+	"aiType":"TARGETING_FEED",
+	
+	"statsScript":"data.shipsystems.scripts.PLSP_RepairLinkStats",
+	
+	"useSound":"system_targeting_feed",
+	"loopSound":"PLSP_repairlink_loop",
+	"deactivateSound":"PLSP_repairlink_deactive",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+	}
+}
+
+
+
+

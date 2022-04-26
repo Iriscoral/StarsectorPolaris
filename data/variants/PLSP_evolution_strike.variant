@@ -1,0 +1,37 @@
+{
+    "displayName": "Strike",
+    "fluxCapacitors": 6,
+    "fluxVents": 5,
+    "goalVariant": true,
+    "hullId": "PLSP_evolution",
+    "hullMods": [
+        "PLSP_flashbooster",
+        "PLSP_clustermodulator"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_evolution_strike",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "heavyblaster"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0002": "PLSP_impulses",
+                "WS0003": "PLSP_impulses"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0004": "lightdualmg",
+                "WS0005": "lightdualmg"
+            }
+        }
+    ]
+}

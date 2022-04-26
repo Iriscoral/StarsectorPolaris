@@ -1,0 +1,27 @@
+{
+    "displayName": "Support",
+    "fluxCapacitors": 4,
+    "fluxVents": 8,
+    "goalVariant": true,
+    "hullId": "PLSP_magnitude",
+    "hullMods": ["PLSP_fluxlink"],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_magnitude_support",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0002": "PLSP_guidingpds"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "PLSP_impulsem"}
+        }
+    ],
+    "wings": [
+        "PLSP_blueshift_wing",
+        "PLSP_blueshift_wing"
+    ]
+}

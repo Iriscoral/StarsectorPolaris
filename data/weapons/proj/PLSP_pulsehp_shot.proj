@@ -1,0 +1,18 @@
+{
+	"id":"PLSP_pulsehp_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC",
+	"collisionClass":"PROJECTILE_FF",
+	"collisionClassByFighter":"PROJECTILE_FIGHTER",
+	"length":120.0,
+	"width":8,
+	"hitGlowRadius":25,
+	"fadeTime":0.15,
+	#"fringeColor":[255,155,125,255],
+	#"coreColor":[255,255,200,150],
+	"fringeColor":[40,50,225,255],
+	"coreColor":[255,255,255,155],	
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"bulletSprite":"graphics/missiles/PLSP_pulse.png"
+}

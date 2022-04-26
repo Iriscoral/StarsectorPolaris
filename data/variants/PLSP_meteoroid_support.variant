@@ -1,0 +1,25 @@
+{
+    "displayName": "Support",
+    "fluxCapacitors": 3,
+    "fluxVents": 5,
+    "goalVariant": true,
+    "hullId": "PLSP_meteoroid",
+    "hullMods": [],
+    "permaMods": [],
+    "variantId": "PLSP_meteoroid_support",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "ionbeam"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0002": "heatseeker",
+                "WS0003": "heatseeker"
+            }
+        }
+    ]
+}

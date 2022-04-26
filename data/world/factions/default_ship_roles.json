@@ -1,0 +1,168 @@
+{
+	# should be a copy of "combatSmall", minus variants that are annoying to fight in low numbers
+	# for example, no Hyperions or fast beam-based kiting loadouts, or ships with damper field
+	"combatSmallForSmallFleet":{
+			"PLSP_crescent_assault":3,
+			"PLSP_crescent_combat":1,
+			"PLSP_crescent_strike":5,
+			"PLSP_evolution_assault":3,
+			"PLSP_evolution_combat":1,
+			"PLSP_evolution_strike":5,
+	},
+	"combatSmall":{
+			"PLSP_crescent_assault":7,
+			"PLSP_crescent_combat":5,
+			"PLSP_crescent_strike":3,
+
+			"PLSP_meteoroid_assault":5,
+			"PLSP_meteoroid_mix":3,
+			"PLSP_meteoroid_support":2,
+
+			"PLSP_facula_defensive":7,
+			"PLSP_facula_strike":5,
+			"PLSP_facula_support":3,
+
+			"PLSP_quadrant_mix":5,
+			"PLSP_quadrant_support":3,
+			"PLSP_quadrant_defensive":2,
+
+			"PLSP_evolution_assault":7,
+			"PLSP_evolution_combat":5,
+			"PLSP_evolution_strike":3,
+	},
+	"combatMedium":{
+			"PLSP_aberration_assault":7,
+			"PLSP_aberration_combat":5,
+			"PLSP_aberration_strike":3,
+
+			"PLSP_pemumbra_assault":5,
+			"PLSP_pemumbra_combat":3,
+			"PLSP_pemumbra_mix":2,
+
+			"PLSP_corona_combat":7,
+			"PLSP_corona_defensive":5,
+			"PLSP_corona_assault":3,
+
+			"PLSP_blazar_defensive":5,
+			"PLSP_blazar_mix":3,
+			"PLSP_blazar_assault":2,
+
+			"PLSP_lightcone_combat":5,
+			"PLSP_lightcone_support":3,
+			"PLSP_lightcone_mix":2,
+	},
+	"combatLarge":{
+			"PLSP_heliumflash_assault":7,
+			"PLSP_heliumflash_defensive":5,
+			"PLSP_heliumflash_support":3,
+
+			"PLSP_quasar_assault":5,
+			"PLSP_quasar_combat":3,
+			"PLSP_quasar_strike":2,
+
+			"PLSP_spectrum_defensive":5,
+			"PLSP_spectrum_mix":3,
+			"PLSP_spectrum_assault":2,
+
+			"PLSP_collapse_assault":7,
+			"PLSP_collapse_defensive":5,
+			"PLSP_collapse_support":3,
+	},
+	"combatCapital":{
+			"PLSP_meridian_combat":5,
+			"PLSP_meridian_defensive":3,
+			"PLSP_meridian_assault":2,
+
+			"PLSP_transit_combat":5,
+			"PLSP_transit_mix":3,
+			"PLSP_transit_assault":2,
+
+			"PLSP_flocculus_assault":7,
+			"PLSP_flocculus_defensive":5,
+			"PLSP_flocculus_support":3,
+
+			"PLSP_axis_combat":5,
+			"PLSP_axis_mix":3,
+			"PLSP_axis_assault":2,
+	},
+	
+	# hybrid ships with good combat and cargo capacity
+	"combatFreighterSmall":{
+	},
+	"combatFreighterMedium":{
+	},
+	"combatFreighterLarge":{
+	},
+	
+	"civilianRandom":{
+	},
+
+	# carriers
+	"carrierSmall":{
+			"PLSP_magnitude_mix":3,
+			"PLSP_magnitude_support":1,
+			"PLSP_magnitude_defensive":1,
+	},
+	"carrierMedium":{
+			"PLSP_celestialobjectscholar_mix":3,
+			"PLSP_celestialobjectscholar_support":1,
+			"PLSP_celestialobjectscholar_defensive":1,
+	},
+	"carrierLarge":{
+			"PLSP_horizon_mix":3,
+			"PLSP_horizon_support":1,
+			"PLSP_horizon_defensive":1,
+	},
+
+	# phase ships
+	"phaseSmall":{
+	},
+	"phaseMedium":{
+	},
+	"phaseLarge":{
+	},
+	"phaseCapital":{
+	},
+
+	# freighters and such
+	"freighterSmall":{
+	},
+	"freighterMedium":{
+			"PLSP_zodiac_run":3,
+	},
+	"freighterLarge":{
+	},
+	
+	"tankerSmall":{
+	},
+	"tankerMedium":{
+			"PLSP_zodiac_run":3,
+	},
+	"tankerLarge":{
+	},
+	
+	"personnelSmall":{
+	},
+	"personnelMedium":{
+			"PLSP_zodiac_run":3,
+	},
+	"personnelLarge":{
+	},
+	
+	"linerSmall":{
+	},
+	"linerMedium":{
+	},
+	"linerLarge":{
+	},
+	
+	# utility ships
+	"tug":{
+	},
+	"crig":{
+	},
+
+	# Seems like we can still hind some rare hull here :)
+	"utility":{
+	}
+}

@@ -1,0 +1,2 @@
+id,name,order,tier,description,author,combat officer,admiral,admin,tags,icon,
+PLSP_spot_resilience,临场应变,10500,0,"进阶通识和战场杂学，使军官不仅能理性地应对瞬息万变的复杂战场环境，还能够在此之上做出更具前瞻性的决断。","深空艺术, Ep.1",TRUE,,,"npc_only, player_only",graphics/icons/skills/PLSP_spot_resilience.png,

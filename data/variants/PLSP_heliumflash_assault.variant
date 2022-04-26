@@ -1,0 +1,42 @@
+{
+    "displayName": "Assault",
+    "fluxCapacitors": 9,
+    "fluxVents": 21,
+    "goalVariant": true,
+    "hullId": "PLSP_heliumflash",
+    "hullMods": [
+        "targetingunit",
+        "heavyarmor"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_heliumflash_assault",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0002": "PLSP_electemitter",
+                "WS0003": "PLSP_electemitter",
+                "WS0004": "PLSP_electemitter",
+                "WS0005": "PLSP_electemitter"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0006": "PLSP_magneticm",
+                "WS0007": "PLSP_magneticm"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0010": "PLSP_guidingpds",
+                "WS0011": "PLSP_guidingpds"
+            }
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "displayName": "Combat",
+    "fluxCapacitors": 5,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "PLSP_crescent",
+    "hullMods": [
+        "PLSP_clustermodulator",
+        "heavyarmor"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_crescent_combat",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "PLSP_electemitter"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0002": "PLSP_impulses",
+                "WS0003": "PLSP_impulses"
+            }
+        }
+    ]
+}

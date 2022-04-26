@@ -1,0 +1,5 @@
+{
+    "plsp":{
+		"modifiedVentingAI" : true, # Advanced(maybe) Polaris ship AI check for venting
+    },
+}

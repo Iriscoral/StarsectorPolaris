@@ -1,0 +1,57 @@
+{
+  "hullName": "PLSP_redshift",
+  "hullId": "PLSP_redshift",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighter/PLSP_redshift.png",
+  "style": "PLSP_TECH",
+  "height": 46,
+  "width": 50,
+  "center": [25, 23],
+  "collisionRadius": 31,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 28.5,
+  "viewOffset": 0,
+  "builtInMods": [
+
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 60,
+      "angle": 0,
+      "locations": [-4.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-13, 17],
+      "length": 31.5,
+      "width": 5,
+      "angle": -180,
+      "contrailSize": 5,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-13, -17],
+      "length": 31.5,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 5,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -1.5, -7.5,
+    20, -6,
+    -6, -21,
+    -16, -5,
+    -16, 5,
+    -6, 21,
+    20, 6,
+    -1.5, 7.5,
+    5, 0
+  ]
+}

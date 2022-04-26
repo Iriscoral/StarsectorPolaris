@@ -1,0 +1,209 @@
+{
+  "hullName": "PLSP_collapse",
+  "hullId": "PLSP_collapse",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/PLSP_collapse.png",
+  "style": "PLSP_TECH",
+  "height": 166,
+  "width": 248,
+  "center": [124, 72],
+  "collisionRadius": 164.5,
+  "shieldCenter": [-15.5, -0],
+  "shieldRadius": 141.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "PLSP_starlightadapter"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 0,
+      "locations": [-8, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 60,
+      "locations": [-11, 67]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -60,
+      "locations": [-11, -67]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 0,
+      "locations": [28, 45]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -0,
+      "locations": [28, -45]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 150,
+      "locations": [-19, 29.5]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": -150,
+      "locations": [-19, -29.5]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 180,
+      "locations": [-35.5, -0]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 30,
+      "locations": [52.5, 54.5]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -30,
+      "locations": [52.5, -54.5]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 90,
+      "locations": [-14, 102]
+    },
+    {
+      "id": "WS0012",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": -90,
+      "locations": [-14, -102]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-43, -0],
+      "length": 74,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-33, 36.5],
+      "length": 34.5,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 16,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-33, -36.5],
+      "length": 34.5,
+      "width": 16,
+      "angle": -180,
+      "contrailSize": 16,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-28, 74],
+      "length": 72.874886,
+      "width": 22.405477,
+      "angle": 166,
+      "contrailSize": 22.405477,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-28, -74],
+      "length": 72.874886,
+      "width": 22.405477,
+      "angle": -166,
+      "contrailSize": 22.405477,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    41.5, -1.5,
+    53, -6,
+    18.5, -21,
+    50.5, -25.5,
+    47, -36,
+    92, -22.5,
+    71.5, -53.5,
+    -15.5, -125,
+    -13.5, -112.5,
+    -42, -126,
+    -33, -109,
+    -70.5, -93,
+    -36, -83,
+    -28.5, -68.5,
+    -61, -72,
+    -41.5, -45,
+    -27, -36.5,
+    -59.5, -5,
+    -44.5, -3.5,
+    -44.5, 3.5,
+    -59.5, 5,
+    -27, 36.5,
+    -41.5, 45,
+    -61, 72,
+    -28.5, 68.5,
+    -36, 83,
+    -70.5, 93,
+    -33, 109,
+    -42, 126,
+    -13.5, 112.5,
+    -15.5, 125,
+    71.5, 53.5,
+    92, 22.5,
+    47, 36,
+    50.5, 25.5,
+    18.5, 21,
+    53, 6,
+    41.5, 1.5
+  ]
+}

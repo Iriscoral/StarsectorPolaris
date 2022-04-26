@@ -1,0 +1,31 @@
+{
+    "displayName": "Assault",
+    "fluxCapacitors": 17,
+    "fluxVents": 12,
+    "goalVariant": true,
+    "hullId": "PLSP_spectrum",
+    "hullMods": [
+        "targetingunit",
+        "PLSP_hardenedsafety"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_spectrum_assault",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "tachyonlance"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0005": "PLSP_impulsem"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0002": "PLSP_guidingpdl"}
+        }
+    ]
+}

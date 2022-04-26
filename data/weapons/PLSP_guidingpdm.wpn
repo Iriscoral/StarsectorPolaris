@@ -1,0 +1,28 @@
+{
+	"id":"PLSP_guidingpdm",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"ENERGY",
+	"size":"MEDIUM",
+	"turretSprite":"graphics/weapons/PLSP_guidingpdm_turret_base.png",
+	"turretGlowSprite":"graphics/weapons/PLSP_guidingpdm_turret_glow.png",
+	"hardpointSprite":"graphics/weapons/PLSP_guidingpdm_hardpoint_base.png",
+	"hardpointGlowSprite":"graphics/weapons/PLSP_guidingpdm_hardpoint_glow.png",
+	"glowColor":[150,255,240,255],
+	"turretOffsets":[10, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[12, 0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	#"animationType":"GLOW",
+	"animationType":"GLOW_AND_FLASH",
+	"muzzleFlashSpec":{"length":12.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":5.0,
+					   "particleSizeMin":15.0,
+					   "particleSizeRange":20.0,
+					   "particleDuration":0.12,
+					   "particleCount":10,
+					   "particleColor":[150,255,220,255]},
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"projectileSpecId":"PLSP_guidingpdm_shot",  # projectile that will be fired
+	"fireSoundTwo":"PLSP_guidingpdm_fire",
+}

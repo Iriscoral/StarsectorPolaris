@@ -1,0 +1,17 @@
+{
+	"displayName": "Fighter",
+	"fluxCapacitors": 0,
+	"fluxVents": 0,
+	"hullId": "PLSP_comettail",
+	"hullMods": [],
+	"variantId": "PLSP_comettail_variant",
+	"weaponGroups": [
+	{
+		"autofire": true,
+		"mode": "LINKED",
+		"weapons": {
+		"WS0001": "PLSP_icflak"
+		}
+	}
+	]
+}

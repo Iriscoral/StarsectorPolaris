@@ -1,0 +1,28 @@
+{
+	"id":"PLSP_perturbationw",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"MISSILE",
+	"size":"SMALL",
+	"turretSprite":"graphics/missiles/PLSP_flare.png",
+	"turretGlowSprite":"graphics/weapons/PLSP_perturbation_glow.png",
+	"hardpointSprite":"",
+	"hardpointGlowSprite":"graphics/weapons/PLSP_perturbation_glow.png",
+	"glowColor":[35,240,255,255],
+	"turretOffsets":[5, 0, 3, -4, 3, 4],
+	"turretAngleOffsets":[0, 45, -45],
+	"hardpointOffsets":[5, 0, 3, -4, 3, 4],
+	"hardpointAngleOffsets":[0, 45, -45],
+	"barrelMode":"LINKED", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"GLOW_AND_FLASH",
+	"muzzleFlashSpec":{"length":30.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":15.0,
+					   "particleSizeMin":10.0,
+					   "particleSizeRange":12.0,
+					   "particleDuration":0.12,
+					   "particleCount":17,
+					   "particleColor":[100,200,255,255]},	
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"requiresFullCharge":false,  # for pulse weapons - whether the weapon will fire at a lower strength partial charge
+	"projectileSpecId":"PLSP_perturbationw_shot",  # projectile that will be fired
+	"fireSoundTwo":"PLSP_perturbationw_fire",
+}

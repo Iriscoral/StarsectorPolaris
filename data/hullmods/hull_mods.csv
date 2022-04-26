@@ -1,0 +1,19 @@
+name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hiddenEverywhere,cost_frigate,cost_dest,cost_cruiser,cost_capital,script,desc,short,sprite
+
+星辉稳定器,PLSP_starlightadapter,,,北极星,,,,,TRUE,,0,0,0,0,data.hullmods.PLSP_StarlightAdapter,适配至龙骨与延伸结构的庞大稳定装置，以机动性为代价，这种安全栓在确保舰船稳定飞行的同时提供灵活的增益效果。,北极星基础战斗模块,graphics/hullmods/PLSP_starlightadapter.png
+高能集成,PLSP_hei,,,北极星,,,,,TRUE,,0,0,0,0,data.hullmods.PLSP_HEI,内嵌至核心区专于适配大体积能量武器的套件，精心设计的布线方案能显著减少对应武器必要链接设备所占用的空间。,降低装配消耗,graphics/hullmods/PLSP_hei.png
+节点闭锁,PLSP_nodelock,,,北极星,,,,,TRUE,,0,0,0,0,data.hullmods.PLSP_NodeLock,专用于抢夺战场点位控制权的电子战设备，能闭锁一切在影响范围内的链路通讯。,占领点位,graphics/hullmods/PLSP_nodelock.png
+
+
+星烁增压器,PLSP_flashbooster,1,,北极星,"offensive, merc",武器,8000,,,,4,8,15,25,data.hullmods.PLSP_FlashBooster,这套增压装置完美兼容固有定位系统的接口，相较于再次提升射程，压倒性火力与渐入佳境的输出模式才是它的亮眼之处。,提高持续输出能力,graphics/hullmods/PLSP_flashbooster.png
+星耀聚焦器,PLSP_solarscope,3,,北极星,"offensive, defensive, merc",特殊,10000,,,,4,8,12,20,data.hullmods.PLSP_SolarScope,非传统聚焦设备允许舰载系统在战备状态下，经由一套通量共享设计与其他战舰互联，从而加速初始化进度和数据校准。,减少战术系统冷却,graphics/hullmods/PLSP_solarscope.png
+星芒链接器,PLSP_fluxlink,2,,北极星,"special, non_phase, merc",战机,8000,,,,5,10,15,30,data.hullmods.PLSP_FluxLink,特化调频阵列能和与之链接的轻量幅能核心建立传输联系，比如战机的小型幅能调控中枢和相应子核心。,提高战机作战能力,graphics/hullmods/PLSP_fluxlink.png
+安全协议固化,PLSP_hardenedsafety,2,,北极星,"defensive, engines, special, merc, no_build_in","特殊, 防御",15000,,,,15,30,45,70,data.hullmods.PLSP_HardenedSafety,强调稳健的运作模式，北极星舰船适配一种独有的硬件管理方案，以再度精化舰船的安全保障机制和相关协议。,提高稳定程度,graphics/hullmods/PLSP_hardenedsafety.png
+星团调频器,PLSP_clustermodulator,1,,北极星,"offensive, special, merc",特殊,4000,,,,3,6,9,15,data.hullmods.PLSP_ClusterModulator,将一套紧凑的幅能网络调频器安装在北极星幅能核心专有接口上，以承受空间膜扰动的代价，在各个端点间传输幅能。,集群分担幅能,graphics/hullmods/PLSP_clustermodulator.png
+星团分流器,PLSP_clusteraddition,2,,北极星,"special, merc",特殊,6000,,,,2,4,5,10,data.hullmods.PLSP_ClusterAddition,调频设备固件的流量限制，使其难以应对最高强度传输需求。不过附加分流组件和额外外置接口，可以显著缓解这个问题。,提高分担幅能效果,graphics/hullmods/PLSP_clusteraddition.png
+星磁阻尼器,PLSP_magnetdamper,1,,北极星,"defensive, merc",防御,7000,,,,8,15,20,40,data.hullmods.PLSP_MagnetDamper,被安置在装甲与结构间隙的分布式磁性阻尼设备，能够有效地缓解微小冲击对于整体结构的影响，并阻止大面积解体。,提升装甲防御,graphics/hullmods/PLSP_magnetdamper.png
+
+
+低熵域信道,PLSP_commission,,,,,,,,TRUE,,0,0,0,0,data.hullmods.PLSP_Commission,"北极星深解通讯调频的艺术，只要按照指导方针对主控台进行一定修改，任何舰船都能为战场通讯高效化出一份力，并与其他端点传输海量火控校准数据。
+
+""拓展配信模块已上线，已选用-天极之壁-协议。""",提升射程,graphics/hullmods/PLSP_commission.png

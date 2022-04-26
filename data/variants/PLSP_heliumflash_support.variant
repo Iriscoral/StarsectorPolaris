@@ -1,0 +1,40 @@
+{
+    "displayName": "Support",
+    "fluxCapacitors": 20,
+    "fluxVents": 21,
+    "goalVariant": true,
+    "hullId": "PLSP_heliumflash",
+    "hullMods": ["targetingunit"],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_heliumflash_support",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "PLSP_interferometerresonant",
+                "WS0002": "PLSP_interferometerresonant",
+                "WS0003": "PLSP_interferometerresonant",
+                "WS0004": "PLSP_interferometerresonant",
+                "WS0005": "PLSP_interferometerresonant"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0006": "PLSP_impulsem",
+                "WS0007": "PLSP_impulsem"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0010": "PLSP_guidingpds",
+                "WS0011": "PLSP_guidingpds"
+            }
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "displayName": "Support",
+    "fluxCapacitors": 16,
+    "fluxVents": 16,
+    "goalVariant": true,
+    "hullId": "PLSP_lightcone",
+    "hullMods": [
+        "turretgyros",
+        "PLSP_clustermodulator",
+        "PLSP_magnetdamper",
+        "heavyarmor"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_lightcone_support",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "PLSP_icculverin"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0005": "PLSP_magnetics",
+                "WS0006": "PLSP_magnetics"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "PLSP_streammicrowave",
+                "WS0004": "PLSP_streammicrowave"
+            }
+        }
+    ]
+}

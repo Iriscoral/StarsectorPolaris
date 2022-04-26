@@ -1,0 +1,38 @@
+{
+    "displayName": "Mix",
+    "fluxCapacitors": 14,
+    "fluxVents": 20,
+    "goalVariant": true,
+    "hullId": "PLSP_pemumbra",
+    "hullMods": [
+        "PLSP_flashbooster",
+        "missleracks"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_pemumbra_mix",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "PLSP_interferometerresonant",
+                "WS0002": "PLSP_interferometerresonant"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0004": "PLSP_impulses",
+                "WS0005": "PLSP_impulses",
+                "WS0006": "PLSP_impulses"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0003": "PLSP_electemitter"}
+        }
+    ]
+}

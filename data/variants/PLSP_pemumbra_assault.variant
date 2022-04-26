@@ -1,0 +1,38 @@
+{
+    "displayName": "Assault",
+    "fluxCapacitors": 10,
+    "fluxVents": 17,
+    "goalVariant": true,
+    "hullId": "PLSP_pemumbra",
+    "hullMods": [
+        "missleracks",
+        "heavyarmor"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_pemumbra_assault",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "PLSP_electemitter",
+                "WS0002": "PLSP_electemitter"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0004": "PLSP_impulses",
+                "WS0005": "PLSP_impulses",
+                "WS0006": "PLSP_impulses"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0007": "PLSP_guidingpds"}
+        }
+    ]
+}

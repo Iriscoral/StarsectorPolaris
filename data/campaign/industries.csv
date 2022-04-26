@@ -1,0 +1,2 @@
+id,name,cost mult,build time,income,upkeep,downgrade,upgrade,tags,data,image,plugin,desc,order
+PLSP_militaryacademy,北天极学院,100,180,,10,,,"military, unraidable, grounddefenses",,graphics/icons/industry/PLSP_militaryacademy.png,data.scripts.campaign.PLSP_MilitaryAcademy,规模庞大的军官教育设施，能让大量新晋学员凭借着可能是全英仙座最好的教育资源，成长为富有理论知识和大量拟真战斗经验的合格军官。而除此之外，这里也受限地允许希望进修的外籍指挥官在这里接受再教育，获取短期高质量教育条件。,2700.12

@@ -1,0 +1,21 @@
+{
+    "displayName": "Cruise",
+    "fluxCapacitors": 0,
+    "fluxVents": 6,
+    "goalVariant": true,
+    "hullId": "PLSP_zodiac",
+    "hullMods": [
+        "augmentedengines",
+        "autorepair"
+    ],
+    "permaMods": [],
+    "variantId": "PLSP_zodiac_run",
+    "weaponGroups": [{
+        "autofire": true,
+        "mode": "LINKED",
+        "weapons": {
+            "WS0001": "PLSP_guidingpds",
+            "WS0002": "PLSP_guidingpds"
+        }
+    }]
+}

@@ -1,0 +1,36 @@
+{
+    "displayName": "Combat",
+    "fluxCapacitors": 16,
+    "fluxVents": 16,
+    "goalVariant": true,
+    "hullId": "PLSP_lightcone",
+    "hullMods": [
+        "PLSP_clustermodulator",
+        "PLSP_flashbooster"
+    ],
+    "permaMods": [],
+    "variantId": "PLSP_lightcone_combat",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "PLSP_pulsesc"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0005": "PLSP_impulses",
+                "WS0006": "PLSP_impulses"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "PLSP_guidingpds",
+                "WS0004": "PLSP_guidingpds"
+            }
+        }
+    ]
+}

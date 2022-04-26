@@ -1,0 +1,30 @@
+{
+    "displayName": "Support",
+    "fluxCapacitors": 10,
+    "fluxVents": 6,
+    "goalVariant": true,
+    "hullId": "PLSP_quadrant",
+    "hullMods": [
+        "PLSP_clustermodulator",
+        "advancedoptics",
+        "heavyarmor"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_quadrant_support",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "ionbeam"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0002": "PLSP_iccannon",
+                "WS0003": "PLSP_iccannon"
+            }
+        }
+    ]
+}

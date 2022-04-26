@@ -1,0 +1,51 @@
+{
+    "displayName": "Assault",
+    "fluxCapacitors": 50,
+    "fluxVents": 48,
+    "goalVariant": true,
+    "hullId": "PLSP_transit",
+    "hullMods": [
+        "targetingunit",
+        "PLSP_clustermodulator",
+        "advancedshieldemitter",
+        "fluxbreakers"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_transit_assault",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "plasma"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0002": "typhoon",
+                "WS0003": "typhoon",
+                "WS0004": "typhoon",
+                "WS0005": "typhoon"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0006": "heavyneedler",
+                "WS0007": "heavyneedler"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0008": "PLSP_guidingpds",
+                "WS0009": "PLSP_guidingpds",
+                "WS0010": "PLSP_guidingpds",
+                "WS0011": "PLSP_guidingpds"
+            }
+        }
+    ]
+}

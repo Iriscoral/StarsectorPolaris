@@ -1,0 +1,21 @@
+name,id,flux/second,f/s (base rate),f/s (base cap),flux/use,f/u (base rate),f/u (base cap),cr/u,max uses,regen,charge up,active,down,cooldown,toggle,noDissipation,noHardDissipation,hardFlux,noFiring,noTurning,noStrafing,noAccel,noShield,noVent,isPhaseCloak,tags,icon
+Borealis Veil,PLSP_shellsystem,,,,,,0.1,,,,0.1,3,0.4,6,,,TRUE,,TRUE,,,,,,,,graphics/icons/hullsys/fortress_shield.png
+Borealis Shroud,PLSP_shellarea,,,,,,0.1,,,,0.1,5,0.4,9,,,TRUE,,TRUE,,,,,,,,graphics/icons/hullsys/fortress_shield.png
+Timestream Disruptor,PLSP_timedisturbance,1,,,,,,,,,3,,2,15,,,,,,,,,TRUE,,,,graphics/icons/hullsys/phase_cloak.png
+Vortex Drive,PLSP_vortexdrive,1,,,,,,,2,0.1,0.5,0.5,0.5,,,,,,,,TRUE,TRUE,,,,,graphics/icons/hullsys/burn_drive.png
+Minaturized Vortex Drive,PLSP_bluedrive,,,,,,,,1,0.1,0.2,0.5,0.3,,,,,,,,TRUE,TRUE,,,,,graphics/icons/hullsys/burn_drive.png
+Focused Arc Emitter,PLSP_emp,1,,,,,0.2,,,,0.2,1,0.3,8,,,,,TRUE,,,,,,,,graphics/icons/hullsys/emp_emitter.png
+Starburst Displacer,PLSP_displacer,,,,,,0.25,,2,0.05,0.4,,0.1,2,,TRUE,,TRUE,,,,,,,,,graphics/icons/hullsys/displacer.png
+Minaturized Displacer,PLSP_reddisplacer,,,,,,,,1,0.1,0.4,,0.1,0,,TRUE,,TRUE,,,,,,,,,graphics/icons/hullsys/displacer.png
+Flux Condenser,PLSP_energycondenser,,,0.05,,,,,,,1,,1,3,TRUE,,,TRUE,,,,,,,,,graphics/icons/hullsys/high_energy_focus.png
+Repair Link,PLSP_repairlink,,,,,,0.3,,,,0.5,8,1.5,10,,,,,,,,,,,,,graphics/icons/hullsys/targeting_feed.png
+Subspace Seismic Burst,PLSP_darkcollapse,,,,,,0.3,,,,2,,0.2,20,,TRUE,TRUE,TRUE,TRUE,,,,TRUE,TRUE,,,graphics/icons/hullsys/quantum_disruptor.png
+Area Disruptor,PLSP_eventdisturb,,,,,,0.2,,,,0.3,,0.2,10,,,TRUE,TRUE,TRUE,,,,,TRUE,,,graphics/icons/hullsys/temporal_shell.png
+Nodal Regulator Feeds,PLSP_targetingfeed,,,,,,0.4,,,,0.5,9,0.5,10,,,,,,,,,,,,,graphics/icons/hullsys/targeting_feed.png
+Polar Accelerator,PLSP_polegenerator,1,,,,,,,3,0.05,0.25,3,0.25,,,,TRUE,TRUE,TRUE,,,,,,,,graphics/icons/hullsys/high_energy_focus.png
+Omni Sensor Disruptor,PLSP_sensordisturb,,,,,,0.4,,,,0.5,6,0.5,15,,,,TRUE,TRUE,,,,,,,,graphics/icons/hullsys/drone_sensor.png
+Solar Barrier,PLSP_solarwind,1,,,,,0.2,,,,2,,0.5,15,,,TRUE,TRUE,,,,,,,,,graphics/icons/hullsys/temporal_shell.png
+Warp Stream Engine,PLSP_axisdrive,,,,,,,,,,0.1,0.3,0.1,6,,,TRUE,,,,,TRUE,TRUE,,,,graphics/icons/hullsys/burn_drive.png
+Striker Drone,PLSP_reservedrone,,,,,,0.35,,,,0.5,,0.5,45,,,,TRUE,,,,,,,,,graphics/icons/hullsys/reserve_deployment.png
+Wane Fluctuator,PLSP_wanestrike,,,,,,0.25,,2,0.1,0.25,,0.25,0,,,,,,,,,,,,,graphics/icons/hullsys/interdictor_array.png
+#,,,,,,,,,,,,,,,,,,,,,,,,,

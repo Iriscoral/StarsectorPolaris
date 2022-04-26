@@ -1,0 +1,17 @@
+{
+	"displayName": "Bomber",
+	"fluxCapacitors": 0,
+	"fluxVents": 0,
+	"hullId": "PLSP_subobject",
+	"hullMods": [],
+	"variantId": "PLSP_subobject_variant",
+	"weaponGroups": [
+	{
+		"autofire": true,
+		"mode": "LINKED",
+		"weapons": {
+		"WS0001": "PLSP_lighter"
+		}
+	}
+	]
+}

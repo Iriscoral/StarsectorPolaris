@@ -1,0 +1,17 @@
+{
+	"id":"PLSP_interferometerdegeneracy_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	"onHitEffect":"data.scripts.weapons.PLSP_InterferometerDegeneracyOnHitEffect",
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	"passThroughMissiles":true,
+	"length":20.0,
+	"width":26.0,
+	"fadeTime":0.15,
+	"fringeColor":[170,100,190,255],
+	"coreColor":[240,115,240,200],
+	"textureType":"ROUGH",  # only needed for BEAM spawnType
+	"textureScrollSpeed":-256.0,
+	"pixelsPerTexel":1.0
+}

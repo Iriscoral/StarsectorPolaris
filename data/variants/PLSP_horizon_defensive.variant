@@ -1,0 +1,43 @@
+{
+    "displayName": "Defensive",
+    "fluxCapacitors": 10,
+    "fluxVents": 28,
+    "goalVariant": true,
+    "hullId": "PLSP_horizon",
+    "hullMods": [
+        "PLSP_fluxlink",
+        "hardened_subsystems"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_horizon_defensive",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "PLSP_guidingpdl",
+                "WS0002": "PLSP_guidingpdl"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0015": "PLSP_magneticl",
+                "WS0016": "PLSP_magneticl"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0007": "ionbeam"}
+        }
+    ],
+    "wings": [
+        "PLSP_occultation_wing",
+        "PLSP_occultation_wing",
+        "PLSP_occultation_wing",
+        "PLSP_occultation_wing"
+    ]
+}

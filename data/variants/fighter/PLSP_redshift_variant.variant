@@ -1,0 +1,17 @@
+{
+	"displayName": "重型战机",
+	"fluxCapacitors": 0,
+	"fluxVents": 0,
+	"hullId": "PLSP_redshift",
+	"hullMods": [],
+	"variantId": "PLSP_redshift_variant",
+	"weaponGroups": [
+	{
+		"autofire": true,
+		"mode": "LINKED",
+		"weapons": {
+		"WS0001": "PLSP_redshiftw"
+		}
+	}
+	]
+}

@@ -1,0 +1,37 @@
+{
+    "displayName": "Assault",
+    "fluxCapacitors": 19,
+    "fluxVents": 12,
+    "goalVariant": true,
+    "hullId": "PLSP_corona",
+    "hullMods": [
+        "PLSP_clustermodulator",
+        "fluxbreakers"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_corona_assault",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "heavyneedler"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0002": "PLSP_streampolarization",
+                "WS0003": "PLSP_streampolarization"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0005": "PLSP_electgenerator",
+                "WS0006": "PLSP_electgenerator"
+            }
+        }
+    ]
+}

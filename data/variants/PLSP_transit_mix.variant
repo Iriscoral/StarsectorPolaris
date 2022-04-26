@@ -1,0 +1,53 @@
+{
+    "displayName": "Mix",
+    "fluxCapacitors": 28,
+    "fluxVents": 48,
+    "goalVariant": true,
+    "hullId": "PLSP_transit",
+    "hullMods": [
+        "targetingunit",
+        "PLSP_clustermodulator",
+        "turretgyros",
+        "fluxbreakers"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_transit_mix",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "tachyonlance"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0002": "PLSP_impulsem",
+                "WS0003": "PLSP_impulsem",
+                "WS0004": "PLSP_impulsem",
+                "WS0005": "PLSP_impulsem"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0006": "heavyneedler",
+                "WS0007": "heavyneedler"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0010": "PLSP_guidingpds",
+                "WS0011": "PLSP_guidingpds",
+                "WS0012": "PLSP_guidingpds",
+                "WS0013": "PLSP_guidingpds",
+                "WS0016": "PLSP_guidingpds",
+                "WS0017": "PLSP_guidingpds"
+            }
+        }
+    ]
+}

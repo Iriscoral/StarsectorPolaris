@@ -1,0 +1,35 @@
+{
+    "displayName": "Mix",
+    "fluxCapacitors": 11,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "PLSP_lightcone",
+    "hullMods": [
+        "targetingunit",
+        "PLSP_solarscope",
+        "PLSP_hardenedsafety"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_lightcone_mix",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "PLSP_interferometerdegeneracy"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0005": "PLSP_impulses",
+                "WS0006": "PLSP_impulses"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0002": "PLSP_guidingpds"}
+        }
+    ]
+}

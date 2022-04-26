@@ -1,0 +1,64 @@
+{
+    "displayName": "Assault",
+    "fluxCapacitors": 50,
+    "fluxVents": 34,
+    "goalVariant": true,
+    "hullId": "PLSP_flocculus",
+    "hullMods": [
+        "PLSP_clustermodulator",
+        "targetingunit",
+        "PLSP_clusteraddition",
+        "magazines",
+        "PLSP_solarscope"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_flocculus_assault",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "autopulse",
+                "WS0002": "autopulse",
+                "WS0003": "autopulse"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0004": "PLSP_magneticm",
+                "WS0005": "PLSP_magneticm",
+                "WS0010": "PLSP_magneticm",
+                "WS0011": "PLSP_magneticm"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0006": "ionpulser",
+                "WS0007": "ionpulser"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0012": "PLSP_guidingpds",
+                "WS0013": "PLSP_guidingpds",
+                "WS0014": "PLSP_guidingpds",
+                "WS0015": "PLSP_guidingpds"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0016": "PLSP_iccannon",
+                "WS0017": "PLSP_iccannon"
+            }
+        }
+    ]
+}

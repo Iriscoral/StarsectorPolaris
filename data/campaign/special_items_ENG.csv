@@ -1,0 +1,5 @@
+name,id,tags,tech/manufacturer,rarity,base price,stack size,cargo space,baseRaidDanger,icon,sound id,sound id drop,plugin,plugin params,desc,order
+Polaris Basic Blueprint Package,PLSP_package_bp,package_bp,Polaris,0.6,25000,1000,1,,graphics/icons/cargo/blueprint_plsp_bp.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,PLSP_bp,"Allows heavy industries to build some common Polaris ships, weapons and fighter LPCs.",200.12
+Polaris Advanced Blueprint Package,PLSP_package_rp,package_bp,Polaris,0.2,35000,1000,1,,graphics/icons/cargo/blueprint_plsp_rp.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,PLSP_rp,"Allows heavy industries to build a few more advanced Polaris ships, weapons and fighter LPCs.",200.22
+
+Skill Picker,PLSP_skillpicker,,,,0,1,1,,graphics/icons/cargo/PLSP_skillpicker.png,combat1,ui_char_decrease_skill,data.scripts.campaign.items.PLSP_SkillPicker,,,0

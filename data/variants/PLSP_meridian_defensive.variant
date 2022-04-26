@@ -1,0 +1,55 @@
+{
+    "displayName": "Defensive",
+    "fluxCapacitors": 9,
+    "fluxVents": 27,
+    "goalVariant": true,
+    "hullId": "PLSP_meridian",
+    "hullMods": [
+        "targetingunit",
+        "PLSP_clustermodulator",
+        "PLSP_magnetdamper"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_meridian_defensive",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0009": "PLSP_streaminvert",
+                "WS0010": "PLSP_streaminvert"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0001": "PLSP_magneticm",
+                "WS0002": "PLSP_magneticm"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0011": "PLSP_streampolarization",
+                "WS0012": "PLSP_streampolarization"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "PLSP_guidingpds",
+                "WS0004": "PLSP_guidingpds",
+                "WS0013": "PLSP_guidingpds",
+                "WS0014": "PLSP_guidingpds"
+            }
+        }
+    ],
+    "wings": [
+        "PLSP_moonphase_wing",
+        "PLSP_moonphase_wing"
+    ]
+}

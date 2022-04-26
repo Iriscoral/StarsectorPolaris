@@ -1,0 +1,31 @@
+{
+	"id":"PLSP_displacer",
+	"type":"DISPLACER",
+	"aiType":"PHASE_DISPLACER",
+	
+	"statsScript":"data.shipsystems.scripts.PLSP_DisplacerStats",
+	
+	"jitterColor":[150,215,255,155],
+	#"jitterColor":[255,100,255,150],
+	"jitterCopies":10,
+	"jitterRange":0,
+	"jitterRangeRadiusFraction":0.5,
+	
+	"engineGlowColor":[100,165,255,125],
+
+	"range":1000,
+	"randomRange":0,
+	
+	"renderCopyDuringTeleport":false,
+	
+	"fadeActivationSoundOnChargedown":false,
+	"useSound":"PLSP_displacer_active",
+	"deactivateSound":"PLSP_displacer_deactive",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+		"activeSpeedIncrease":0,
+		"burstMovementPotential":200,
+		"averageSpeedIncrease":30,
+	}
+}

@@ -1,0 +1,49 @@
+{
+    "displayName": "Support",
+    "fluxCapacitors": 30,
+    "fluxVents": 23,
+    "goalVariant": true,
+    "hullId": "PLSP_collapse",
+    "hullMods": [
+        "targetingunit",
+        "PLSP_clustermodulator",
+        "PLSP_solarscope"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_collapse_support",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0004": "heavyneedler",
+                "WS0005": "heavyneedler"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0009": "PLSP_magnetics",
+                "WS0010": "PLSP_magnetics"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0002": "PLSP_streampolarization",
+                "WS0003": "ionbeam"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0006": "PLSP_guidingpds",
+                "WS0007": "PLSP_guidingpds"
+            }
+        }
+    ]
+}

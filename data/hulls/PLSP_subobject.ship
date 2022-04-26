@@ -1,0 +1,52 @@
+{
+  "hullName": "PLSP_subobject",
+  "hullId": "PLSP_subobject",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighter/PLSP_subobject.png",
+  "style": "PLSP_TECH",
+  "height": 38,
+  "width": 42,
+  "center": [21, 21],
+  "collisionRadius": 35.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 30,
+  "viewOffset": 0,
+  "builtInMods": [
+
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [7, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-8.5, 8],
+      "length": 21.5,
+      "width": 5,
+      "angle": -180,
+      "contrailSize": 5,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-8.5, -8],
+      "length": 21.5,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 5,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    9.5, -4,
+    -9, -16,
+    -9, 16,
+    9.5, 4
+  ]
+}

@@ -1,0 +1,30 @@
+{
+    "displayName": "Defensive",
+    "fluxCapacitors": 2,
+    "fluxVents": 9,
+    "goalVariant": true,
+    "hullId": "PLSP_quadrant",
+    "hullMods": [
+        "PLSP_clustermodulator",
+        "PLSP_magnetdamper",
+        "hardened_subsystems"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_quadrant_defensive",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "PLSP_streampolarization"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0002": "railgun",
+                "WS0003": "railgun"
+            }
+        }
+    ]
+}

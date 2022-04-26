@@ -1,0 +1,21 @@
+{
+	"id":"PLSP_solarwind",
+	"type":"STAT_MOD",
+	"aiType":"CUSTOM",
+	"aiScript":"data.shipsystems.scripts.ai.PLSP_SolarWindAI",
+	"statsScript":"data.shipsystems.scripts.PLSP_SolarWindStats",
+	
+	"jitterUnderColor":[170,200,180,55],
+	"jitterUnderCopies":25,
+	"jitterUnderMinRange":0,
+	"jitterUnderRange":8,
+	"jitterUnderRangeRadiusFraction":0,
+	
+	"engineGlowGlowMult":2,
+	
+	"useSound":"system_high_energy_focus_activate",
+	"loopSound":"PLSP_solarwind_loop",
+	"deactivateSound":"system_high_energy_focus_deactivate",
+	
+	"outOfUsesSound":"gun_out_of_ammo",
+}

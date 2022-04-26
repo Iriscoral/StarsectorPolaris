@@ -1,0 +1,30 @@
+{
+	"id":"PLSP_wanestrike",
+	"type":"STAT_MOD",
+	"aiType":"MINE_STRIKE",
+	
+	"statsScript":"data.shipsystems.scripts.PLSP_WaneStrikeStats",
+
+	"jitterColor":[255,155,255,75],
+	"jitterCopies":4,
+	"jitterMinRange":0,
+	"jitterRange":3,
+	"jitterRangeRadiusFraction":0.1,
+	
+	"jitterUnderColor":[255,155,255,155],
+	"jitterUnderCopies":14,
+	"jitterUnderMinRange":2,
+	"jitterUnderRange":20,
+	"jitterUnderRangeRadiusFraction":0.1,
+
+	"fadeActivationSoundOnChargedown":true,
+	"useSound":"system_flare_launcher_active",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+		"threatRange":1500,
+		"threatAmount":3,
+		"threatAngle":0,
+		"threatArc":360,
+	}
+}

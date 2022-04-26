@@ -1,0 +1,28 @@
+{
+	"id":"PLSP_interferometerresonant",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"ENERGY",
+	"size":"MEDIUM",
+	"turretSprite":"graphics/weapons/PLSP_interferometerresonant_turret_base.png",
+	"turretGlowSprite":"graphics/weapons/PLSP_interferometerresonant_turret_glow.png",
+	"hardpointSprite":"graphics/weapons/PLSP_interferometerresonant_hardpoint_base.png",
+	"hardpointGlowSprite":"graphics/weapons/PLSP_interferometerresonant_hardpoint_glow.png",
+	"glowColor":[50,200,255,255],
+	"turretOffsets":[3, 2, 3, -2],
+	"turretAngleOffsets":[30, -30],
+	"hardpointOffsets":[4, 2, 4, -2],
+	"hardpointAngleOffsets":[30, -30],
+	"barrelMode":"LINKED", # or LINKED.  whether barrels fire at the same time or alternate.
+	#"animationType":"GLOW",
+	"animationType":"GLOW_AND_FLASH",
+	"muzzleFlashSpec":{"length":30.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":5.0,
+					   "particleSizeMin":15.0,
+					   "particleSizeRange":20.0,
+					   "particleDuration":0.12,
+					   "particleCount":10,
+					   "particleColor":[165,235,210,255]},
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"projectileSpecId":"PLSP_interferometerresonant_shot",  # projectile that will be fired
+	"fireSoundTwo":"PLSP_interferometerresonant_fire",
+}

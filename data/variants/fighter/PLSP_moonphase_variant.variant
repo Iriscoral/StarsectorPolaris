@@ -1,0 +1,18 @@
+{
+	"displayName": "支援机",
+	"fluxCapacitors": 0,
+	"fluxVents": 0,
+	"hullId": "PLSP_moonphase",
+	"hullMods": [],
+	"variantId": "PLSP_moonphase_variant",
+	"weaponGroups": [
+	{
+		"autofire": true,
+		"mode": "LINKED",
+		"weapons": {
+		"WS0001": "PLSP_guidingpds",
+		"WS0002": "PLSP_guidingpds"
+		}
+	}
+	]
+}

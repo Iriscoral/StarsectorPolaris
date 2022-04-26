@@ -1,0 +1,49 @@
+{
+    "displayName": "Assault",
+    "fluxCapacitors": 17,
+    "fluxVents": 15,
+    "goalVariant": true,
+    "hullId": "PLSP_collapse",
+    "hullMods": [
+        "targetingunit",
+        "PLSP_clustermodulator",
+        "PLSP_magnetdamper"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_collapse_assault",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0004": "heavyneedler",
+                "WS0005": "heavyneedler"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0009": "PLSP_impulses",
+                "WS0010": "PLSP_impulses"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0002": "PLSP_electemitter",
+                "WS0003": "PLSP_electemitter"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0006": "PLSP_guidingpds",
+                "WS0007": "PLSP_guidingpds"
+            }
+        }
+    ]
+}

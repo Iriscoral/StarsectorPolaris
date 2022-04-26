@@ -1,0 +1,36 @@
+{
+    "displayName": "Combat",
+    "fluxCapacitors": 14,
+    "fluxVents": 20,
+    "goalVariant": true,
+    "hullId": "PLSP_pemumbra",
+    "hullMods": [
+        "PLSP_clustermodulator",
+        "PLSP_solarscope",
+        "PLSP_flashbooster",
+        "advancedoptics"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_pemumbra_combat",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "PLSP_streampolarization",
+                "WS0002": "PLSP_streampolarization",
+                "WS0003": "PLSP_streampolarization"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0004": "PLSP_streammicrowave",
+                "WS0005": "PLSP_streammicrowave",
+                "WS0006": "PLSP_streammicrowave"
+            }
+        }
+    ]
+}

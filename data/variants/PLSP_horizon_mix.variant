@@ -1,0 +1,44 @@
+{
+    "displayName": "Mix",
+    "fluxCapacitors": 24,
+    "fluxVents": 43,
+    "goalVariant": true,
+    "hullId": "PLSP_horizon",
+    "hullMods": ["PLSP_fluxlink"],
+    "permaMods": [],
+    "variantId": "PLSP_horizon_mix",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0015": "locust",
+                "WS0016": "locust"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "PLSP_guidingpdl"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0002": "PLSP_guidingpdl"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0013": "PLSP_guidingpds",
+                "WS0014": "PLSP_guidingpds"
+            }
+        }
+    ],
+    "wings": [
+        "PLSP_blueshift_wing",
+        "PLSP_blueshift_wing",
+        "PLSP_blueshift_wing",
+        "PLSP_blueshift_wing"
+    ]
+}

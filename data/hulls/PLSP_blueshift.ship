@@ -1,0 +1,66 @@
+{
+  "hullName": "PLSP_blueshift",
+  "hullId": "PLSP_blueshift",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighter/PLSP_blueshift.png",
+  "style": "PLSP_TECH",
+  "height": 38,
+  "width": 34,
+  "center": [17, 18],
+  "collisionRadius": 26.5,
+  "shieldCenter": [1, 0],
+  "shieldRadius": 23.5,
+  "viewOffset": 0,
+  "builtInMods": [
+
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 30,
+      "angle": 0,
+      "locations": [7.5, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HIDDEN",
+      "arc": 120,
+      "angle": 0,
+      "locations": [-2, 9.5]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HIDDEN",
+      "arc": 120,
+      "angle": -0,
+      "locations": [-2, -9.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-6, -0],
+      "length": 27,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    17, -2,
+    -3, -11,
+    -15, -4,
+    -8.5, -3.5,
+    -8.5, 3.5,
+    -15, 4,
+    -3, 11,
+    17, 2
+  ]
+}

@@ -1,0 +1,33 @@
+{
+    "displayName": "Mix",
+    "fluxCapacitors": 0,
+    "fluxVents": 8,
+    "goalVariant": true,
+    "hullId": "PLSP_magnitude",
+    "hullMods": [
+        "expanded_deck_crew",
+        "hardened_subsystems"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_magnitude_mix",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "ionbeam"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0004": "PLSP_guidingpds",
+                "WS0005": "PLSP_guidingpds"
+            }
+        }
+    ],
+    "wings": [
+        "PLSP_comettail_wing",
+        "PLSP_comettail_wing"
+    ]
+}

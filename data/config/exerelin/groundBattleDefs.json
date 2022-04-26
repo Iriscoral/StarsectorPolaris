@@ -1,0 +1,14 @@
+{
+	"industries":{
+		"PLSP_militaryacademy":{
+			"tags":["preventInspire"],
+			"strengthMult":1.2,
+			"troopCounts":{
+				"militia":0.2,
+				"marine":0.2,
+				"heavy":0.2,
+			},
+		},
+	},
+	
+}

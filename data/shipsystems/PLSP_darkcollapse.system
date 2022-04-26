@@ -1,0 +1,12 @@
+{
+	"id":"PLSP_darkcollapse",
+	"type":"STAT_MOD",
+	"aiType":"WEAPON_BOOST",
+	
+	"statsScript":"data.shipsystems.scripts.PLSP_DarkCollapseStats",
+	
+	"useSound":"PLSP_darkcollapse_active",
+	"loopSound":"system_high_energy_focus_loop",
+	"deactivateSound":"system_high_energy_focus_deactivate",
+	"outOfUsesSound":"gun_out_of_ammo",
+}

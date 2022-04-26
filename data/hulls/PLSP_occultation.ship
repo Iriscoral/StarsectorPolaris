@@ -1,0 +1,57 @@
+{
+  "hullName": "PLSO_occultation",
+  "hullId": "PLSP_occultation",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighter/PLSP_occultation.png",
+  "style": "PLSP_TECH",
+  "height": 58,
+  "width": 58,
+  "center": [29, 29],
+  "collisionRadius": 62.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 52.5,
+  "viewOffset": 0,
+  "builtInMods": [
+
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [6, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-1, 12.5],
+      "length": 14.5,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-1, -12.5],
+      "length": 14.5,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 6,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    6.5, -4.5,
+    22.5, -5,
+    -9, -24,
+    3.5, -12,
+    -16, -0,
+    3.5, 12,
+    -9, 24,
+    22.5, 5,
+    6.5, 4.5
+  ]
+}

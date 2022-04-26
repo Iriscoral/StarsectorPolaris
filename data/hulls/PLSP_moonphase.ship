@@ -1,0 +1,64 @@
+{
+  "hullName": "PLSP_moonphase",
+  "hullId": "PLSP_moonphase",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighter/PLSP_moonphase.png",
+  "style": "PLSP_TECH",
+  "height": 58,
+  "width": 58,
+  "center": [29, 29],
+  "collisionRadius": 41.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 36.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "advancedcore"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [20.5, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 30,
+      "locations": [1, 12]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": -30,
+      "locations": [1, -12]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-8.5, -0],
+      "length": 36.5,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 5,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    15, -6,
+    -1.5, -20,
+    -18, -4.5,
+    -18, 4.5,
+    -1.5, 20,
+    15, 6
+  ]
+}

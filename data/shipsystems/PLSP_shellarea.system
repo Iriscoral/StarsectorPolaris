@@ -1,0 +1,26 @@
+{
+	"id":"PLSP_shellarea",
+	"type":"SHIELD_MOD",
+	"aiType":"CUSTOM",
+	"aiScript":"data.shipsystems.scripts.ai.PLSP_ShellSystemAI",
+	"statsScript":"data.shipsystems.scripts.PLSP_ShellAreaStats",
+	
+	"shieldRingColor":[30,190,240,255],
+	"shieldInnerColor":[255,100,255,75],
+	"shieldThicknessMult":1,
+	"shieldFluctuationMult":0,
+	
+	"soundFilterType":"LOWPASS",
+	"soundFilterGain":0.75,
+	"soundFilterGainHF":0.0,
+	
+	"jitterUnderColor":[255,100,255,55],
+	"jitterUnderCopies":25,
+	"jitterUnderMinRange":0,
+	"jitterUnderRange":8,
+	"jitterUnderRangeRadiusFraction":0,
+	
+	"useSound":"PLSP_shellarea_active",
+	"loopSound":"system_fortress_shield_loop",
+	"outOfUsesSound":"gun_out_of_ammo",	
+}

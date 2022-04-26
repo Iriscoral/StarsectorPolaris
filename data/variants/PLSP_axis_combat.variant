@@ -1,0 +1,63 @@
+{
+    "displayName": "Combat",
+    "fluxCapacitors": 35,
+    "fluxVents": 42,
+    "goalVariant": true,
+    "hullId": "PLSP_axis",
+    "hullMods": [
+        "auxiliarythrusters",
+        "targetingunit",
+        "advancedshieldemitter",
+        "turretgyros"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_axis_combat",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0006": "salamanderpod",
+                "WS0008": "salamanderpod"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0005": "sabotpod",
+                "WS0007": "sabotpod"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "PLSP_electprojecter",
+                "WS0003": "PLSP_electprojecter"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0002": "PLSP_guidingpdl",
+                "WS0004": "PLSP_guidingpdl",
+                "WS0009": "PLSP_iccannon",
+                "WS0010": "PLSP_iccannon",
+                "WS0011": "PLSP_iccannon",
+                "WS0012": "PLSP_iccannon",
+                "WS0013": "PLSP_iccannon",
+                "WS0014": "PLSP_iccannon",
+                "WS0015": "PLSP_iccannon",
+                "WS0016": "PLSP_iccannon"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0017": "PLSP_etherstrike"}
+        }
+    ]
+}

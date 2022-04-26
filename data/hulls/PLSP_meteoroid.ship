@@ -1,0 +1,111 @@
+{
+  "hullName": "PLSP_meteoroid",
+  "hullId": "PLSP_meteoroid",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/PLSP_meteoroid.png",
+  "style": "PLSP_TECH",
+  "height": 80,
+  "width": 70,
+  "center": [35, 33],
+  "collisionRadius": 69.5,
+  "shieldCenter": [7, 0],
+  "shieldRadius": 55.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "PLSP_starlightadapter",
+    "PLSP_nodelock"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [12, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 30,
+      "locations": [-5, 14.5]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": -30,
+      "locations": [-5, -14.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-28, 17],
+      "length": 18.5,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-28, -17],
+      "length": 18.5,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-27, -0],
+      "length": 34,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    22.5, -7,
+    9.5, -9,
+    19, -13,
+    25.5, -7,
+    46, -6.5,
+    25.5, -18.5,
+    7.5, -29.5,
+    6, -21.5,
+    -15.5, -23,
+    -7, -29,
+    -19, -34,
+    -32, -31.5,
+    -22.5, -20,
+    -27.5, -17.5,
+    -23, -15.5,
+    -30.5, -9,
+    -16.5, -8.5,
+    -27, -3,
+    -27, 3,
+    -16.5, 8.5,
+    -30.5, 9,
+    -23, 15.5,
+    -27.5, 17.5,
+    -22.5, 20,
+    -32, 31.5,
+    -19, 34,
+    -7, 29,
+    -15.5, 23,
+    6, 21.5,
+    7.5, 29.5,
+    25.5, 18.5,
+    46, 6.5,
+    25.5, 7,
+    19, 13,
+    9.5, 9,
+    22.5, 7
+  ]
+}

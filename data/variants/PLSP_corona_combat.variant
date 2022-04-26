@@ -1,0 +1,30 @@
+{
+    "displayName": "Combat",
+    "fluxCapacitors": 20,
+    "fluxVents": 7,
+    "goalVariant": true,
+    "hullId": "PLSP_corona",
+    "hullMods": [
+        "PLSP_clustermodulator",
+        "PLSP_flashbooster",
+        "fluxbreakers"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_corona_combat",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "PLSP_pulseo"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0002": "PLSP_electemitter",
+                "WS0003": "PLSP_electemitter"
+            }
+        }
+    ]
+}

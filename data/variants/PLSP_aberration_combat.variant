@@ -1,0 +1,38 @@
+{
+    "displayName": "Combat",
+    "fluxCapacitors": 13,
+    "fluxVents": 12,
+    "goalVariant": true,
+    "hullId": "PLSP_aberration",
+    "hullMods": [
+        "missleracks",
+        "PLSP_clustermodulator",
+        "fluxbreakers"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_aberration_combat",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0002": "PLSP_electemitter",
+                "WS0003": "PLSP_electemitter"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "PLSP_magneticm"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0004": "railgun",
+                "WS0005": "railgun"
+            }
+        }
+    ]
+}

@@ -1,0 +1,49 @@
+战列舰
+已完成制作   视界线Horizon 级 战航
+已完成制作   子午线Meridian 级 战列舰
+已完成制作   凌日Transit 级 战列舰
+已完成制作   谱斑Flocculus 级 战列舰
+已完成制作   天轴Axis 级 战列巡洋舰
+
+巡洋舰
+已完成制作   天体学者CBS 级 航母
+已完成制作   光谱Spectrum 级 巡洋舰
+已完成制作   类星体Quasar 级 巡洋舰
+已完成制作   氦闪Helium F. 级 巡洋舰
+已完成制作   坍缩Collapse 级 巡洋舰
+已占用名字   卦限Octant 级 巡洋舰
+已完成制作   黄道带Zodiac 级 货舰
+
+驱逐舰
+已完成制作   光行差Aberration 级 驱逐舰
+已完成制作   耀变体Blazar 级 驱逐舰
+已完成制作   光锥L.Cone 级 驱逐舰
+已完成制作   冕Corona 级 驱逐舰
+已完成制作   本影Pemumbra 级 驱逐舰
+已完成制作   星等Magnitude 级 驱逐舰
+已占用名字   吸积盘Accretion D. 级 货舰
+
+护卫舰
+已完成制作   象限Quadrant 级 护卫舰
+已完成制作   流星体Meteoroid 级 护卫舰
+已完成制作   演化Evolution 级 护卫舰
+已完成制作   新月Crescent 级 护卫舰
+已完成制作   光斑Facula 级 护卫舰
+已占用名字   暗带D.Belt 级 货舰
+
+战机
+已完成制作   红移R.Shift 级 战机
+已完成制作   蓝移B.Shift 级 战机
+已完成制作   摄动Perturbation 级 轰炸机
+已完成制作   彗尾C.Tail 级 截击机
+已完成制作   月掩Occultation 级 截击机
+已完成制作   月相M.Phase 级 支援机
+
+天青石
+已占用名字   等轴簇Cubic C. 级 战列舰
+已占用名字   六方簇Hexagonal C. 级 巡洋舰
+已占用名字   四方簇Tetragonal C. 级 驱逐舰
+已占用名字   三方簇Trigonal C. 级 驱逐舰
+已占用名字   斜方簇Orthorhombic C. 级 护卫舰
+已占用名字   三斜簇Anorthic C. 级 护卫舰
+已占用名字   单斜簇Monoclinic C. 级 战机

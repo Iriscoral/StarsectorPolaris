@@ -1,0 +1,69 @@
+{
+  "hullName": "PLSP_comettail",
+  "hullId": "PLSP_comettail",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighter/PLSP_comettail.png",
+  "style": "PLSP_TECH",
+  "height": 36,
+  "width": 58,
+  "center": [29, 15],
+  "collisionRadius": 36,
+  "shieldCenter": [3, 0],
+  "shieldRadius": 31.5,
+  "viewOffset": 0,
+  "builtInMods": [
+
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HIDDEN",
+      "arc": 120,
+      "angle": 0,
+      "locations": [11, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HIDDEN",
+      "arc": 210,
+      "angle": 0,
+      "locations": [15.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-9, 12.5],
+      "length": 24.5,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 5,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-9, -12.5],
+      "length": 24.5,
+      "width": 5,
+      "angle": -180,
+      "contrailSize": 5,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    18.5, -1.5,
+    1.5, -10,
+    15, -11,
+    -5.5, -24,
+    -2, -13.5,
+    -9, -5.5,
+    -9, 5.5,
+    -2, 13.5,
+    -5.5, 24,
+    15, 11,
+    1.5, 10,
+    18.5, 1.5
+  ]
+}

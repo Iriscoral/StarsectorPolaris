@@ -1,0 +1,41 @@
+{
+    "displayName": "Defensive",
+    "fluxCapacitors": 2,
+    "fluxVents": 2,
+    "goalVariant": true,
+    "hullId": "PLSP_celestialobjectscholar",
+    "hullMods": [
+        "hardened_subsystems",
+        "expanded_deck_crew"
+    ],
+    "permaMods": [],
+    "variantId": "PLSP_celestialobjectscholar_defensive",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0002": "PLSP_streampolarization",
+                "WS0003": "PLSP_streampolarization"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "PLSP_impulsel"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0006": "PLSP_guidingpds",
+                "WS0007": "PLSP_guidingpds"
+            }
+        }
+    ],
+    "wings": [
+        "PLSP_comettail_wing",
+        "PLSP_comettail_wing",
+        "PLSP_comettail_wing"
+    ]
+}

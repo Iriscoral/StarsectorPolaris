@@ -1,0 +1,42 @@
+{
+	"id":"PLSP_perturbationw_shot",
+	"specClass":"missile",	
+	"missileType":"MISSILE",
+	"sprite":"graphics/missiles/PLSP_flare.png",
+	"size":[20,40],	
+	"center":[10,20],
+	"collisionRadius":10,
+	"collisionClass":"MISSILE_NO_FF",
+	"explosionColor":[60,60,255,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":60, # purely visual
+	"engineSpec":{"turnAcc":3600,
+				  "turnRate":720,
+				  "acc":2400,
+				  "dec":1200},
+	"fadeTime":0.1,
+	"flameoutTime":0.1,
+	"alwaysAccelerate":true,
+	"useHitGlowWhenDestroyed":true,
+	"noCollisionWhileFading":true,
+	"engineSlots":[{"id":"ES1",
+					"loc":[15, 0],
+				    #"style":"MISSILE_HIGH_TECH",
+				    "style":"CUSTOM",
+					"styleSpec":{
+						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+						"engineColor":[35,240,255,10],
+						"contrailDuration":1.5,
+						"contrailWidthMult":20,
+						"contrailWidthAddedFractionAtEnd":-0.5,  # can be negative. makes trail spread out/narrow at the end
+						"contrailMinSeg":1, # min segment length, in pixels
+						"contrailMaxSpeedMult":0f,
+						"contrailAngularVelocityMult":0f,
+						"contrailSpawnDistMult":0,
+						"contrailColor":[35,240,255,100],
+						"type":"GLOW" # GLOW or SMOKE; additive or regular blend mode
+					},
+				    "width":1.0,
+				    "length":1.0,
+				    "angle":180.0},
+				    ]
+}

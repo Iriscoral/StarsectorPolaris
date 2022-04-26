@@ -1,0 +1,26 @@
+{
+    "displayName": "Mix",
+    "fluxCapacitors": 3,
+    "fluxVents": 5,
+    "goalVariant": true,
+    "hullId": "PLSP_meteoroid",
+    "hullMods": ["PLSP_solarscope"],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_meteoroid_mix",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "PLSP_electemitter"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0002": "PLSP_magnetics",
+                "WS0003": "PLSP_magnetics"
+            }
+        }
+    ]
+}

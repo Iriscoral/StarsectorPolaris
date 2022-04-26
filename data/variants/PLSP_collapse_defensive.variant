@@ -1,0 +1,47 @@
+{
+    "displayName": "Defensive",
+    "fluxCapacitors": 17,
+    "fluxVents": 9,
+    "goalVariant": true,
+    "hullId": "PLSP_collapse",
+    "hullMods": [
+        "targetingunit",
+        "PLSP_clustermodulator",
+        "PLSP_hardenedsafety"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_collapse_defensive",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "PLSP_interferometerresonant",
+                "WS0002": "PLSP_interferometerresonant",
+                "WS0003": "PLSP_interferometerresonant"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0009": "PLSP_impulses",
+                "WS0010": "PLSP_impulses"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0004": "PLSP_icflak",
+                "WS0005": "PLSP_icflak"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0008": "PLSP_guidingpds"}
+        }
+    ]
+}

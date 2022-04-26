@@ -1,0 +1,17 @@
+{
+	"displayName": "战机",
+	"fluxCapacitors": 0,
+	"fluxVents": 0,
+	"hullId": "PLSP_occultation",
+	"hullMods": [],
+	"variantId": "PLSP_occultation_variant",
+	"weaponGroups": [
+	{
+		"autofire": true,
+		"mode": "LINKED",
+		"weapons": {
+		"WS0001": "PLSP_nebulablaze"
+		}
+	}
+	]
+}

@@ -1,0 +1,26 @@
+{
+    "displayName": "Mix",
+    "fluxCapacitors": 10,
+    "fluxVents": 4,
+    "goalVariant": true,
+    "hullId": "PLSP_quadrant",
+    "hullMods": ["PLSP_solarscope"],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_quadrant_mix",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "PLSP_electemitter"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0002": "PLSP_pulsehp",
+                "WS0003": "PLSP_pulsehp"
+            }
+        }
+    ]
+}

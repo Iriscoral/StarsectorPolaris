@@ -1,0 +1,46 @@
+{
+  "hullName": "PLSP_perturbation",
+  "hullId": "PLSP_perturbation",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/fighter/PLSP_perturbation.png",
+  "style": "PLSP_TECH",
+  "height": 42,
+  "width": 48,
+  "center": [24, 21],
+  "collisionRadius": 28,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 25,
+  "viewOffset": 0,
+  "builtInMods": [
+
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [0, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-11, -0],
+      "length": 31,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    19, -4,
+    -0.5, -20.5,
+    -14.5, -4,
+    -14.5, 4,
+    -0.5, 20.5,
+    19, 4
+  ]
+}

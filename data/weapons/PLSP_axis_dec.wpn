@@ -1,0 +1,27 @@
+{
+	"id":"PLSP_axis_dec",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"DECORATIVE",
+	"size":"LARGE",
+	"turretSprite":"graphics/weapons/PLSP_axis_dec00.png",
+	"hardpointSprite":"graphics/weapons/PLSP_axis_dec00.png",	
+	"renderBelowAllWeapons":true,
+	"renderHints":["RENDER_ADDITIVE"],
+	"numFrames":2,	
+	"frameRate":1,
+	"alwaysAnimate":"false",
+	"turretOffsets":[0, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[0, 0],
+	"hardpointAngleOffsets":[0],	
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"MUZZLE_FLASH",  # NONE, GLOW, MUZZLE_FLASH, SMOKE
+	"muzzleFlashSpec":{"length":0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":0,
+					   "particleSizeMin":0,
+					   "particleSizeRange":0,
+					   "particleDuration":0,
+					   "particleCount":0,
+					   "particleColor":[0,0,0,0]},	
+	"projectileSpecId":"PLSP_none",  # projectile that will be fired
+}

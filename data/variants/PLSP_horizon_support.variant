@@ -1,0 +1,34 @@
+{
+    "displayName": "Support",
+    "fluxCapacitors": 0,
+    "fluxVents": 31,
+    "goalVariant": true,
+    "hullId": "PLSP_horizon",
+    "hullMods": ["PLSP_fluxlink"],
+    "permaMods": [],
+    "variantId": "PLSP_horizon_support",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "PLSP_guidingpdl",
+                "WS0002": "PLSP_guidingpdl"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0015": "PLSP_impulsel",
+                "WS0016": "PLSP_impulsel"
+            }
+        }
+    ],
+    "wings": [
+        "PLSP_redshift_wing",
+        "PLSP_redshift_wing",
+        "PLSP_redshift_wing",
+        "PLSP_redshift_wing"
+    ]
+}

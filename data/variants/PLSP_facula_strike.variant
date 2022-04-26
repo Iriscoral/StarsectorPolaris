@@ -1,0 +1,31 @@
+{
+    "displayName": "Strike",
+    "fluxCapacitors": 8,
+    "fluxVents": 4,
+    "goalVariant": true,
+    "hullId": "PLSP_facula",
+    "hullMods": ["PLSP_solarscope"],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_facula_strike",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0003": "amblaster",
+                "WS0004": "ioncannon"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS0002": "PLSP_impulses"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS0001": "PLSP_streampolarization"}
+        }
+    ]
+}

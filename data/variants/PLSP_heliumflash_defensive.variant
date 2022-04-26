@@ -1,0 +1,35 @@
+{
+    "displayName": "Defensive",
+    "fluxCapacitors": 17,
+    "fluxVents": 30,
+    "goalVariant": true,
+    "hullId": "PLSP_heliumflash",
+    "hullMods": [
+        "targetingunit",
+        "PLSP_magnetdamper"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "PLSP_heliumflash_defensive",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "PLSP_streampolarization",
+                "WS0002": "PLSP_streampolarization",
+                "WS0003": "PLSP_streampolarization",
+                "WS0004": "PLSP_streampolarization",
+                "WS0005": "PLSP_streampolarization"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0006": "PLSP_impulsem",
+                "WS0007": "PLSP_impulsem"
+            }
+        }
+    ]
+}
