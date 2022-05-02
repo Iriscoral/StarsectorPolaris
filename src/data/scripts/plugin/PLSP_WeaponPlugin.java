@@ -164,14 +164,14 @@ public class PLSP_WeaponPlugin extends BaseEveryFrameCombatPlugin {
 				if (tick <= 0f) {
 					for (MissileAPI target : CombatUtils.getMissilesWithinRange(location, data.radius))  {
 						if (target.getOwner() != data.source.getOwner()) {
-							float damage = target.getVelocity().length() * 0.15f + 3f;
+							float damage = target.getVelocity().length() * 0.15f + Math.abs(target.getAngularVelocity()) * 0.1f + 3f;
 							engine.applyDamage(target, target.getLocation(), damage, DamageType.KINETIC, 0f, false, false, data.source);
 						}
 					}
 
 					for (ShipAPI target : CombatUtils.getShipsWithinRange(location, data.radius)) {
 						if (target.getOwner() != data.source.getOwner()) {
-							float damage = target.getVelocity().length() * 0.15f + 3f;
+							float damage = target.getVelocity().length() * 0.15f + Math.abs(target.getAngularVelocity()) * 0.1f + 3f;
 							Vector2f damageLocation = PLSP_Util.getShipCollisionPoint(location, target.getLocation(), target);
 							if (damageLocation != null) engine.applyDamage(target, damageLocation, damage, DamageType.KINETIC, 0f, false, false, data.source);
 						}
