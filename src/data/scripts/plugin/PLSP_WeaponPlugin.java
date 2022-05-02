@@ -7,6 +7,7 @@ import data.scripts.util.PLSP_Util;
 import org.lazywizard.lazylib.CollisionUtils;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.VectorUtils;
+import org.lazywizard.lazylib.combat.CombatUtils;
 import org.lwjgl.util.vector.Vector2f;
 
 import java.awt.*;
@@ -161,18 +162,18 @@ public class PLSP_WeaponPlugin extends BaseEveryFrameCombatPlugin {
 				}
 
 				if (tick <= 0f) {
-					for (MissileAPI target : Global.getCombatEngine().getMissiles())  {
-						if (target.getOwner() != data.source.getOwner() && MathUtils.getDistance(target, location) < data.radius) {
+					for (MissileAPI target : CombatUtils.getMissilesWithinRange(location, data.radius))  {
+						if (target.getOwner() != data.source.getOwner()) {
 							float damage = target.getVelocity().length() * 0.15f + 3f;
 							engine.applyDamage(target, target.getLocation(), damage, DamageType.KINETIC, 0f, false, false, data.source);
 						}
 					}
 
-					for (ShipAPI target : Global.getCombatEngine().getShips()) {
-						if (target.getOwner() != data.source.getOwner() && MathUtils.getDistance(target, location) < data.radius&& !target.isShuttlePod()) {
+					for (ShipAPI target : CombatUtils.getShipsWithinRange(location, data.radius)) {
+						if (target.getOwner() != data.source.getOwner()) {
 							float damage = target.getVelocity().length() * 0.15f + 3f;
-							Vector2f damageLocation = PLSP_Util.getCollisionPointEX(location, target.getLocation(), target);
-							engine.applyDamage(target, damageLocation, damage, DamageType.KINETIC, 0f, false, false, data.source);
+							Vector2f damageLocation = PLSP_Util.getShipCollisionPoint(location, target.getLocation(), target);
+							if (damageLocation != null) engine.applyDamage(target, damageLocation, damage, DamageType.KINETIC, 0f, false, false, data.source);
 						}
 					}
 
