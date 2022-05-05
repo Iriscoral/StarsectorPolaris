@@ -22,7 +22,7 @@ public class PLSP_MASpotInit extends BaseCommandPlugin {
 		MemoryAPI memory = memoryMap.get(MemKeys.LOCAL);
 
 		List<SpecialItemData> spot = new ArrayList<>();
-		spot.add(new SpecialItemData(PLSP_MAData.SKILL_PICKER_ITEM_ID, PLSP_MAData.SPOT_EXPERIENCE_ID));
+		spot.add(new SpecialItemData(PLSP_MAData.SKILL_PICKER_ITEM_ID, PLSP_MAData.SPOT_EXPERIENCE_SKILL));
 
 		memory.set("$PLSP_MA_targetSkills", spot);
 

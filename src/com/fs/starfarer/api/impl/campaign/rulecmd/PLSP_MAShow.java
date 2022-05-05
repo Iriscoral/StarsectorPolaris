@@ -71,6 +71,7 @@ public class PLSP_MAShow extends BaseCommandPlugin {
 				optionPanel.clearOptions();
 				optionPanel.addOption(getString("continue"), "PLSP_MA_spotExperience_2");
 				optionPanel.addOption(getString("return"), "PLSP_MA_backToStart");
+				optionPanel.setShortcut("PLSP_MA_backToStart", Keyboard.KEY_ESCAPE, false, false, false, false);
 				if (!PLSP_MAData.canAffordSpot(playerFleet)) {
 					optionPanel.setEnabled("PLSP_MA_spotExperience_2", false);
 					optionPanel.setTooltip("PLSP_MA_spotExperience_2", getString("cantafford2"));
