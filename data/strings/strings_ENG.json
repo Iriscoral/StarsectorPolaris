@@ -62,8 +62,8 @@
 		"PLSP_hardenedsafetyDO":"Incompatible with Safety Overrides",
 		"PLSP_hardenedsafetyUN1":"Conflicts with Safety Overrides",
 
-		"PLSP_nodelockTEXT1":"立刻占领位于自身占领范围内的点位，即使它处于敌方控制下",
-		"PLSP_nodelockTEXT2":"除非该点位附近有其他携带本插件的敌方舰船",
+		"PLSP_nodelockTEXT1":"Immediately occupy a Capture Point within your own occupation range, even if it is under enemy control",
+		"PLSP_nodelockTEXT2":"Unless there are other enemy ships with this hullmod in the vicinity of the point",
 
 		"PLSP_heiTEXT1":"Ordnance Point cost of Large Energy Mounts are reduced by %s ",
 		
