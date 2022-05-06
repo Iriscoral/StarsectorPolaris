@@ -4,7 +4,7 @@
 	],
 	
 	"plsp_public":{
-		"name":"Polaris Message",
+		"name":"Polaris Message Board",
 		"logo":"graphics/icons/intel/comms.png",
 		"icon":"graphics/icons/intel/comms.png",
 		"image":"graphics/factions/plsp.png",
@@ -14,7 +14,7 @@
 		"shortType":"News",
 	},
 	"plsp_internal":{
-		"name":"Polaris Intelligence",
+		"name":"Polaris Intelligence Service",
 		"logo":"graphics/icons/intel/secure_comms.png",
 		"icon":"graphics/icons/intel/secure_comms.png",
 		"image":"graphics/factions/plsp.png",
