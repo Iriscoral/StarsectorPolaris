@@ -1,10 +1,10 @@
 {
 	"id":"Polaris_Prime",
-	"name":"Polaris Prime",
+	"name":"北极星之首 [Polaris Prime]",
 	"version":{"major":0, "minor":3, "patch":1},
 	"gameVersion":"0.95.1a-RC6",
-	"author":"Lead: AnyIDElse, A_PIAO_JUN\nFor all staff, see credits_and_thanks.txt",
-	"description":"An unknown force that comes from outside the Sector",
+	"author":"主创:AnyIDElse, A_PIAO_JUN\n对于所有成员，请查看 credits_and_thanks.txt",
+	"description":"一个或许来自北天极之外的势力",
 	"dependencies": [
 		{
 			"id": "lw_lazylib",
