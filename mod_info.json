@@ -1,9 +1,9 @@
 {
 	"id":"Polaris_Prime",
 	"name":"北极星之首 [Polaris Prime]",
-	"version":{"major":0, "minor":3, "patch":1},
+	"version":{"major":0, "minor":3, "patch":2},
 	"gameVersion":"0.95.1a-RC6",
-	"author":"主创:AnyIDElse, A_PIAO_JUN\n对于所有成员，请查看 credits_and_thanks.txt",
+	"author":"\n主创:\nAnyIDElse\n阿朴君\n\n主要美术:\n阿朴君\n\n主要音效/贴图辅助:\n影之光\n\n文本指导:\nFAX\nsaya39\n\n技术支持:\nOriginem\n\n精神支柱:\n溶子\n\n图标:game-icons.net",
 	"description":"一个或许来自北天极之外的势力",
 	"dependencies": [
 		{

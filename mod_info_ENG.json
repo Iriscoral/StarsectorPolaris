@@ -1,9 +1,9 @@
 {
 	"id":"Polaris_Prime",
 	"name":"Polaris Prime",
-	"version":{"major":0, "minor":3, "patch":1},
+	"version":{"major":0, "minor":3, "patch":2},
 	"gameVersion":"0.95.1a-RC6",
-	"author":"Lead: AnyIDElse, A_PIAO_JUN\nFor all staff, see credits_and_thanks.txt",
+	"author":"\nLead:\nAnyIDElse\nA_PIAO_JUN\n\nArt Design:\nA_PIAO_JUN\n\nSound Design/Graphic Support:\nShadowLight\n\nText Support:\nFAX\nsaya39\n\nTech Support:\nOriginem\n\nSpiritual Support:\nTenshi\n\nIcon:game-icons.net\n\nTranslation:\nScarlet-MagicianX26",
 	"description":"An unknown force that comes from outside the Sector",
 	"dependencies": [
 		{

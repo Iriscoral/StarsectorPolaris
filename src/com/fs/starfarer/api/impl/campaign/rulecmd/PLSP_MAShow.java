@@ -44,7 +44,7 @@ public class PLSP_MAShow extends BaseCommandPlugin {
 			}
 			case "PLSP_MAOfficers": {
 				optionPanel.clearOptions();
-				dialog.showCustomDialog(500f, 500f, new PLSP_MAShowOfficersDelegate(dialog, memory));
+				dialog.showCustomDialog(640f, 500f, new PLSP_MAShowOfficersDelegate(dialog, memory));
 
 				optionPanel.addOption(getString("back"), "PLSP_MA_backToStart");
 				optionPanel.setShortcut("PLSP_MA_backToStart", Keyboard.KEY_ESCAPE, false, false, false, false);

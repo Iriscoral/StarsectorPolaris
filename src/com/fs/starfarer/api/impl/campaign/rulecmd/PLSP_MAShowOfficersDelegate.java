@@ -27,6 +27,7 @@ public class PLSP_MAShowOfficersDelegate implements CustomDialogDelegate {
 	private static final float BUTTON_HEIGHT = 20f;
 	private static final float BUTTON_WIDTH = 120f;
 	private static final float UNDER_PADDING = 20f;
+	private static final int MAX_DISPLAY_COUNT = 7;
 
 	private static final Color BASE_COLOR = Misc.getBasePlayerColor();
 	private static final Color DARK_COLOR = Misc.getDarkPlayerColor();
@@ -94,17 +95,17 @@ public class PLSP_MAShowOfficersDelegate implements CustomDialogDelegate {
 			subArea.addPara(levelString, padS);
 
 			for (SkillLevelAPI skill : person.getStats().getSkillsCopy()) {
-				if (images.size() > 4) break;
+				if (images.size() >= MAX_DISPLAY_COUNT) break;
 
 				if (skill.getSkill().isAptitudeEffect()) continue;
 				images.add(skill.getSkill().getSpriteName());
 			}
 
-			for (int i = images.size(); i < 5; i++) { // i don't know why
+			for (int i = images.size(); i < MAX_DISPLAY_COUNT; i++) { // i don't know why
 				images.add(Global.getSettings().getSpriteName("misc", "PLSP_emptySkill"));
 			}
 
-			float widthForSkills = width - 10f - OFFICER_SPRITE_HEIGHT - pad - 15f;
+			float widthForSkills = width - OFFICER_SPRITE_HEIGHT - pad - 5f;
 			subArea.addImages(widthForSkills, SKILL_SPRITE_HEIGHT, padS, pad, images.toArray(new String[0]));
 			totalList.addImageWithText(OFFICER_AREA_HEIGHT);
 			images.clear();
@@ -157,7 +158,8 @@ public class PLSP_MAShowOfficersDelegate implements CustomDialogDelegate {
 			dialog.getOptionPanel().addOption(getString("continue"), "PLSP_MA_selectedOfficer");
 			dialog.getOptionPanel().addOption(getString("back"), "PLSP_MA_backToStart");
 		} else {
-
+			dialog.getOptionPanel().clearOptions();
+			FireBest.fire(null, dialog, memoryMap, "MAMainOpts");
 		}
 	}
 
