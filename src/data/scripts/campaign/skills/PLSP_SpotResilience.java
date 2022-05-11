@@ -1,4 +1,4 @@
-package data.scripts.campaign;
+package data.scripts.campaign.skills;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.characters.PersonAPI;

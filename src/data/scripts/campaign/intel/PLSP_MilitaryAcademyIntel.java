@@ -66,7 +66,7 @@ public class PLSP_MilitaryAcademyIntel extends BaseIntelPlugin {
 
 		if (timeLeft <= 0f) {
 			triggeredEnd = true;
-			sendUpdateIfPlayerHasIntel(new Object(), false, false);
+			sendUpdateIfPlayerHasIntel(new Object(), false);
 
 			if (lastMACheck) {
 				Global.getLogger(PLSP_MilitaryAcademyIntel.class).info("MA Success Intel Done.");
