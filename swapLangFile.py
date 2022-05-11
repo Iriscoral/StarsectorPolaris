@@ -41,18 +41,18 @@ def main():
                 os.rename(file_path, original_file_path)
 
                 if extension.find('variant') is not -1:
-                    lines = open(new_file_path).readlines()
+                    lines = open(new_file_path, encoding='utf-8').readlines()
                     os.remove(new_file_path)
-                    fp = open(new_file_path, 'w')
+                    fp = open(new_file_path, 'w', encoding='utf-8')
                     for s in lines:
                         if s.find('variantId') is not -1:
                             fp.write(s.replace('",', suffix_to_append + '",'))
                         else:
                             fp.write(s)
 
-                    lines = open(original_file_path).readlines()
+                    lines = open(original_file_path, encoding='utf-8').readlines()
                     os.remove(original_file_path)
-                    fp = open(original_file_path, 'w')
+                    fp = open(original_file_path, 'w', encoding='utf-8')
                     for s in lines:
                         fp.write(s.replace(suffix_to_remove, ''))
 
