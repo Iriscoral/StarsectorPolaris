@@ -69,8 +69,8 @@
 		
 		"PLSP_commissionTEXT1":"Forms a command network with other ships that can be used within a distance of %s.",
 		"PLSP_commissionTEXT2":"Ships in the same network will have the range of their weapons increased.",
-		"PLSP_commissionTEXT3":"The closer ships are, the greater the range increase, hull size provides %s/%s/%s/%s.",
-		"PLSP_commissionTEXT4":"With the maximum range increase being %s."
+		"PLSP_commissionTEXT3":"The closer ships are, the greater the range increase, providing %s/%s/%s/%s for each hull size respectively",
+		"PLSP_commissionTEXT4":"Maximum range bonus granted through the Low-Entropy Channel is %s."
 	},
 	
 	"ShipSystem": {
@@ -172,15 +172,34 @@
 	},
 	
 	"CMD": {
-		"PLSP_level": "Grade",
-		"PLSP_canlevelup": "- Upgradable",
-		"PLSP_maxlevel": "- Reached maximum level",
-		"PLSP_atacademy": "- Already undergoing course",
-		"PLSP_cantafford": "- Cannot afford",
-		"PLSP_empty": "No officer available",
-		"PLSP_nextpage": "Next Page",
-		"PLSP_lastpage": "Previous Page",
+		"PLSP_level": "Level: ",
+		"PLSP_officerlevel": "Level: ",
+		"PLSP_maxlevel": " - Already reached maximum level",
+		"PLSP_cantafford": " - Insufficient Funds",
+		"PLSP_cantafford2": "Insufficient Credits",
+		"PLSP_norep": "Insufficient Reputation with Polaris",
+		"PLSP_selectedskills": "Selected Skills:",
+		"PLSP_creditscost": "Credits Required",
+		"PLSP_corecost": "Requires an Alpha Core:",
+		"PLSP_amountlimit": "Skill limit reached",
+		"PLSP_selectofficer": "Select an Officer",
+		"PLSP_selectskill": "Select a Skill",
+
+		"PLSP_reselectofficer": "Reselect Officer",
+		"PLSP_backtomenu": "Back to Main Menu",
+		"PLSP_trust": "Trustworthy",
+		"PLSP_pilotedship": "(piloted ship) %s",
+		"PLSP_pilotedfighter": "(fighters on piloted ship) %s",
+
+		"PLSP_select": "Select",
+		"PLSP_noselect": "Don't select",
+		"PLSP_ready": "Ready",
+		"PLSP_confirm": "Confirm",
+		"PLSP_continue": "Continue",
+		"PLSP_cancel": "Cancel",
 		"PLSP_back": "Back",
+		"PLSP_return": "Back",
+		"PLSP_empty": "No available objects",
 		
 		"PLSP_normalexperience": "General Education",
 		"PLSP_normalexperience_tooltip": "The road from proficiency to mastery never ends, but naval doctrine lesson plans do.\nIncrease officer experience and gain appropriate combat skills.",
@@ -188,7 +207,7 @@
 		"PLSP_spotexperience": "Immersion Training",
 		"PLSP_spotexperience_tooltip": "Reality always comes in harsher than theory, but knowing what have to do is always more important than most things.\nOfficer will learn a special skill that will enable them to adapt to complex environments in battlefield.",
 		"PLSP_spotexperience_des": "At the end of normal, the officer will learn special skill \"Spot Resilience\"",
-		"PLSP_spotexperience_des2": "In addition to credits, an additional 1 Alpha AI Core is required as cost.",
+		"PLSP_spotexperience_des2": "In addition to credits, an additional Alpha Core is required as cost.",
 		
 		"PLSP_help": "Help",
 		"PLSP_cutlink": "Cut the comm link"
