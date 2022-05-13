@@ -22,6 +22,7 @@ public class PLSP_Commission extends BaseHullMod {
 
 	private static final Map<HullSize, Float> mag = new HashMap<>();
 	static {
+		mag.put(HullSize.FIGHTER, 0f);
 		mag.put(HullSize.FRIGATE, 0.4f);
 		mag.put(HullSize.DESTROYER, 0.6f);
 		mag.put(HullSize.CRUISER, 0.8f);
@@ -72,6 +73,8 @@ public class PLSP_Commission extends BaseHullMod {
 		}
 
 		if (ship.isStationModule()) return;
+		if (ship.isFighter() || ship.isDrone()) return;
+
 		if (!shipsMap.containsKey(ship)) {
 			shipsMap.put(ship, new CommState(ship));
 		} else {
