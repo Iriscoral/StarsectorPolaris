@@ -83,50 +83,50 @@ $faction.id == plsp",,"You have been declared a public enemy by the $theFaction 
 ,,,,,,
 PLSP_MA_greeting,PickGreeting,"$faction.friendlyToPlayer
 $PLSP_MA_isPort score:1000","ShowPersonVisual
-FireAll MAMainOpts
-$PLSP_MA_page = 0 0","在短暂的等候之后，你成功联系上一位北极星学院的外务负责人。屏幕另一侧所传递而来的声音显得十分正式但平缓。
+FireAll MAMainOpts","""Greetings, this is the North Celestial Akademia's Office for External Affairs.""
 
-""您好，北极星-北天极学院外务处。省去不必要的寒暄吧，我们本不对外界军官提供什么资源，但近来倒是可以有限地公开一些作战资料...
-您是已经做好了决定，还是需要再了解一些相关内容？""",,
+After a short wait, you manage to reach the Akademia. The officer that you have reach speaks to you calmly and formally, and wastes no time in getting to the point. 
 
+""...Yes, the Akademia does not typically provide resources for outside groups, although recently we've started a experimental scheme for training non-Polaris personnel. Are you here to take part in that scheme, or would you like to know more?""",,
+,,,,,,
+,,,,,,
+PLSP_MA_greetingFail,PickGreeting,$PLSP_MA_isPort score:100,"ShowPersonVisual
+SetShortcut cutCommLink ESCAPE","After a long while and several attempts, you haven't been able to get in contact with the Academia.
+Perhaps your chances will improve if you were to improve your relationship with Polaris.",cutCommLink:Cut the comm link,
+,,,,,,
+,,,,,,
+PLSP_MA_help,DialogOptionSelected,$option == PLSP_MA_help,SetShortcut PLSP_MA_backToStart ESCAPE,"""As you are aware, the Chief Provost of the Akademia has granted permission to use some of the Akademia's teaching material to be repurposed as an experimental course, with the process and education being overseen by the Akademia itself. The attendant must be present on the grounds throughout the course, and all materials being confidential are restricted to the grounds itself...""
 
-PLSP_MA_greetingFail,PickGreeting,"$PLSP_MA_isPort score:100","ShowPersonVisual
-SetShortcut cutCommLink ESCAPE","在长久的等候之后，你依然没有联系上任何相关人员。
-或许这与他们对于你的谨慎态度有关，也许在你们的关系得到改善后，情况将有所好转。",cutCommLink:切断通讯链接,
+Details:
+- This will send your officer for re-education in a skill of their choice. Payment and time taken will be based on the number of skills selected.
+- During this time the officer will not be able to command the ship and will be paid as usual, but will be available for other interactions.
+- If the Akademia is damaged or the colony changes ownership during this time, the operation will fail and the adjutant will return immediately.
 
+""Now, if you are still interested, I am able to inform you that if you are willing to spare additional resources, beyond your officer's education and for the Akademia as a whole...my superiors will be able to provide you with some...benefit, as a sign of your cooperation.""
 
-PLSP_MA_help,DialogOptionSelected,$option == PLSP_MA_help,SetShortcut PLSP_MA_backToStart ESCAPE,"""我们依然不接受任何外籍学员，尤其是不稳定的民间舰长...
-但出于加强外界沟通的考虑，总教务长准许有偿公开一些基于影像和植入物的高级作战资料，但学习它们的过程必须受到北天极学院的监管，实地监管，而且不能带离任何物质资源。""
-
-派遣你的副官进行再教育，为其自选技能。付费和耗时将根据选择技能的数量而定。
-在此期间该副官无法指挥舰船且工资照常发放，但可以抽空进行其他交互操作。
-如果在此期间北极星学院遭到破坏或殖民地所有权变更，则行动将失败，副官将立刻返回。
-
-""不过，若是你能为我们的发展提供某些足够有价值的资源，那我相信上层决策会为你提供一些...深入合作的待遇。""
-
-支付更加高昂的代价可以学习某个强力的独特技能。",10:PLSP_MA_backToStart:返回,
-
-
-PLSP_MA_NE_selectOfficer,DialogOptionSelected,"$option == PLSP_MA_normalExperience","$PLSP_MA_reqType = PLSP_MA_normalExperience
+- Paying a more exorbitant price allows you to learn a certain powerful and unique skill.",10:PLSP_MA_backToStart:Back,
+,,,,,,
+,,,,,,
+PLSP_MA_NE_selectOfficer,DialogOptionSelected,$option == PLSP_MA_normalExperience,"$PLSP_MA_reqType = PLSP_MA_normalExperience
 FireAll MAOfficerOpts",,,
 PLSP_MA_NE_selectedOfficer,DialogOptionSelected,"$option == PLSP_MA_selectedOfficer
 $PLSP_MA_reqType == PLSP_MA_normalExperience",PLSP_MAShow PLSP_MASkills,,,
-
-
-PLSP_MA_SE_showSpotData,DialogOptionSelected,"$option == PLSP_MA_spotExperience","$PLSP_MA_reqType = PLSP_MA_spotExperience
+,,,,,,
+,,,,,,
+PLSP_MA_SE_showSpotData,DialogOptionSelected,$option == PLSP_MA_spotExperience,"$PLSP_MA_reqType = PLSP_MA_spotExperience
 PLSP_MAShow PLSP_MASpotData",,,
-PLSP_MA_SE_selectOfficer,DialogOptionSelected,"$option == PLSP_MA_spotExperience_2","$PLSP_MA_reqType = PLSP_MA_spotExperience
+PLSP_MA_SE_selectOfficer,DialogOptionSelected,$option == PLSP_MA_spotExperience_2,"$PLSP_MA_reqType = PLSP_MA_spotExperience
 FireAll MAOfficerOpts",,,
 PLSP_MA_SE_selectedOfficer,DialogOptionSelected,"$option == PLSP_MA_selectedOfficer
 $PLSP_MA_reqType == PLSP_MA_spotExperience",PLSP_MASpotInit,,,
-
-
+,,,,,,
+,,,,,,
 PLSP_MA_officerOption,MAOfficerOpts,,PLSP_MAShow PLSP_MAOfficers,,,
 PLSP_MA_confirm,MAConfirm,,"PLSP_MAConfirm
 SetTextHighlights $PLSP_MA_selectedOfficerName
-SetShortcut PLSP_MA_backToStart ESCAPE","你们很快处理完了相关手续，并安排好了{$PLSP_MA_selectedOfficerName}的其余一切相关事宜。",10:PLSP_MA_backToStart:返回,
-
-
+SetShortcut PLSP_MA_backToStart ESCAPE","""Details have been confirmed. We will arrange matters related to $PLSP_MA_targetName as soon as possible. Thank you for your support of the Akademia.""",10:PLSP_MA_backToStart:Back,
+,,,,,,
+,,,,,,
 PLSP_MA_backToStart,DialogOptionSelected,$option == PLSP_MA_backToStart,FireAll MAMainOpts,,,
 PLSP_MA_mainOptionDisplay,MAMainOpts,,"PLSP_MAShow PLSP_MAServices
 SetShortcut cutCommLink ESCAPE",,,
