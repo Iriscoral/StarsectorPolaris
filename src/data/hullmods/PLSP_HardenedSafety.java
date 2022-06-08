@@ -9,12 +9,13 @@ import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import data.scripts.util.PLSP_ColorData;
 import data.scripts.util.PLSP_DataBase;
+import data.scripts.util.PLSP_Util.I18nSection;
 import data.scripts.weapons.ai.PLSP_InvertedBeamMoteAI;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.VectorUtils;
 import org.lwjgl.util.vector.Vector2f;
 
-import java.awt.*;
+import java.awt.Color;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -40,9 +41,7 @@ public class PLSP_HardenedSafety extends BaseHullMod {
 		speedPenalty.put(HullSize.CAPITAL_SHIP, 15f);
 	}
 	
-	private static String getString(String key) {
-		return Global.getSettings().getString("HullMod", "PLSP_" + key);
-	}
+	public static final I18nSection strings = I18nSection.getInstance("HullMod", "PLSP_");
 
 	@Override
 	public boolean shouldAddDescriptionToTooltip(ShipAPI.HullSize hullSize, ShipAPI ship, boolean isForModSpec) {
@@ -54,13 +53,13 @@ public class PLSP_HardenedSafety extends BaseHullMod {
 		float pad = 10f;
 		float padS = 2f;
 
-		tooltip.addPara("%s " + getString("hardenedsafetyTEXT1"), pad, Misc.getPositiveHighlightColor(), "#", "30%");
-		tooltip.addPara("%s " + getString("hardenedsafetyTEXT2"), padS, Misc.getPositiveHighlightColor(), "#", "800", "30%");
-		tooltip.addPara("%s " + getString("hardenedsafetyTEXT3"), padS, Misc.getPositiveHighlightColor(), "#", "800", "1400", "30%");
-		tooltip.addPara("%s " + getString("hardenedsafetyTEXT4"), pad, Misc.getHighlightColor(), "#", "20", "20", "20", "15");
-		tooltip.addPara("%s " + getString("hardenedsafetyTEXT5"), padS, Misc.getPositiveHighlightColor(), "#", "2", "2", "1.5", "1");
-		tooltip.addPara("%s " + getString("hardenedsafetyDO"), pad, Misc.getNegativeHighlightColor(), "#", Global.getSettings().getHullModSpec("safetyoverrides").getDisplayName());
-		tooltip.addPara("%s " + getString("HAO"), padS, Misc.getNegativeHighlightColor(), "#");
+		tooltip.addPara("%s " + strings.get("hardenedsafetyTEXT1"), pad, Misc.getPositiveHighlightColor(), "#", "30%");
+		tooltip.addPara("%s " + strings.get("hardenedsafetyTEXT2"), padS, Misc.getPositiveHighlightColor(), "#", "800", "30%");
+		tooltip.addPara("%s " + strings.get("hardenedsafetyTEXT3"), padS, Misc.getPositiveHighlightColor(), "#", "800", "1400", "30%");
+		tooltip.addPara("%s " + strings.get("hardenedsafetyTEXT4"), pad, Misc.getHighlightColor(), "#", "20", "20", "20", "15");
+		tooltip.addPara("%s " + strings.get("hardenedsafetyTEXT5"), padS, Misc.getPositiveHighlightColor(), "#", "2", "2", "1.5", "1");
+		tooltip.addPara("%s " + strings.get("hardenedsafetyDO"), pad, Misc.getNegativeHighlightColor(), "#", Global.getSettings().getHullModSpec("safetyoverrides").getDisplayName());
+		tooltip.addPara("%s " + strings.get("HAO"), padS, Misc.getNegativeHighlightColor(), "#");
 	}
 	
 	@Override
@@ -140,7 +139,7 @@ public class PLSP_HardenedSafety extends BaseHullMod {
 	@Override
 	public String getUnapplicableReason(ShipAPI ship) {
 		if (ship.getVariant().getHullMods().contains("safetyoverrides")) {
-			return String.format(getString("hardenedsafetyUN1"), Global.getSettings().getHullModSpec("safetyoverrides").getDisplayName());
+			return String.format(strings.get("hardenedsafetyUN1"), Global.getSettings().getHullModSpec("safetyoverrides").getDisplayName());
 		}
 		
 		return null;

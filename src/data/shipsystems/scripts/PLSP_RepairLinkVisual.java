@@ -11,8 +11,7 @@ import org.lazywizard.lazylib.VectorUtils;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.util.vector.Vector2f;
 
-import java.awt.*;
-import java.util.List;
+import java.awt.Color;
 import java.util.*;
 
 public class PLSP_RepairLinkVisual extends BaseCombatLayeredRenderingPlugin {

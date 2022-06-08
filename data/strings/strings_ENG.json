@@ -36,7 +36,7 @@
 		"PLSP_solarscopeTEXT1":"Friendly ships with %s installed increased %s/%s/%s/%s shipsystem cooldown rate",
 		"PLSP_solarscopeTEXT2":"Stackable, up to %s",
 		
-		"PLSP_clustermodulatorTEXT1":"Forms a flux energy network with other ships with the %s installed within %s distance,",
+		"PLSP_clustermodulatorTEXT1":"Forms a flux energy network with other ships(within %s distance) with the %s installed,",
 		"PLSP_clustermodulatorTEXT2":"with two ships at a time automatically transmitting soft flux and synchronizing flux levels.",
 		"PLSP_clustermodulatorTEXT3":"The transmission rate is the lesser of the dissipation rates of both ships.",
 		"PLSP_clustermodulatorTEXT4":"Every %s transmissions imposes extra %s/%s shield/other damage taken.",
@@ -148,14 +148,15 @@
 		"PLSP_mission2C":"ISS Fortune must survive",
 		"PLSP_mission2D":"At least 50% of our ships must evacuate.",
 		"PLSP_mission3A":"Dawn Line Task Force",
-		"PLSP_mission3B":"Hokander Expeditionary Fleet",
+		"PLSP_mission3B":"Hokander's Expeditionary Fleet",
 		"PLSP_mission3C":"PLSP Disintegration must survive.",
 		"PLSP_mission3D":"Build flux network around flagship.",
-		"PLSP_mission4A":"The Battlecruiser under the command of Scyathea",
+		"PLSP_mission4A":"The Battlecruiser under the command of Scya Thea",
 		"PLSP_mission4B":"Ambush Fleet",
 		"PLSP_mission4C":"Turn the opponent's quantitative advantage into qualitative disadvantage.",
 		
 		"PLSP_spotresilience":"At the start of battle, temporarily gain a unlearned skill at random.",
+		"PLSP_spotresilienceElite":"Upgrade the temporarily skill to its elite version.",
 		"PLSP_spotresilienceMessage":"gained %s.",
 
 		"PLSP_relay":"Celestial Link R",
@@ -209,6 +210,8 @@
 		"PLSP_spotexperience_des2": "In addition to credits, an additional Alpha Core is required as cost.",
 		
 		"PLSP_help": "Help",
-		"PLSP_cutlink": "Cut the comm link"
+		"PLSP_cutlink": "Cut the comm link",
+
+		"PLSP_designType":"Polaris"
 	}
 }

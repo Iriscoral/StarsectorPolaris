@@ -3,11 +3,12 @@ package data.scripts;
 import com.fs.starfarer.api.campaign.SectorAPI;
 import exerelin.campaign.SectorManager;
 
-public class PLSP_SetNEXSettings {
+public class PLSP_NEXGenerate extends PLSP_NormalGenerate {
 	
-	public static void generate(SectorAPI sector) {
+	@Override
+	public void generate(SectorAPI sector) {
 		if (SectorManager.getManager().isCorvusMode()) {
-			PLSPModPlugin.newGenerate(sector);
+			super.generate(sector);
 		}
 	}
 }

@@ -1,8 +1,8 @@
 {
 	id:"plsp",
 	"color":[65,230,243,255],
-	"baseUIColor":[98,154,210,200],
-	"darkUIColor":[73,214,230,175],
+	"baseUIColor":[73,214,230,175],
+	"darkUIColor":[65,133,201,200],
 	"gridUIColor":[51,247,222,75],
 	"displayName":"北极星",
 	"displayNameWithArticle":"北极星(Polaris)",

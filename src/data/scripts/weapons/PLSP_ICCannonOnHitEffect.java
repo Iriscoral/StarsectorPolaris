@@ -6,7 +6,7 @@ import com.fs.starfarer.api.combat.listeners.ApplyDamageResultAPI;
 import com.fs.starfarer.api.loading.DamagingExplosionSpec;
 import org.lwjgl.util.vector.Vector2f;
 
-import java.awt.*;
+import java.awt.Color;
 
 public class PLSP_ICCannonOnHitEffect implements OnHitEffectPlugin {
 	private static final Color PARTICLE_COLOR = new Color(255, 255, 155, 255);

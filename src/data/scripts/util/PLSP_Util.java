@@ -18,6 +18,7 @@ import com.fs.starfarer.api.impl.campaign.ids.*;
 import com.fs.starfarer.api.plugins.OfficerLevelupPlugin;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
+import com.sun.istack.internal.Nullable;
 import data.scripts.plugins.MagicRenderPlugin;
 import org.dark.shaders.distortion.DistortionShader;
 import org.dark.shaders.distortion.RippleDistortion;
@@ -29,7 +30,7 @@ import org.lazywizard.lazylib.VectorUtils;
 import org.lazywizard.lazylib.combat.AIUtils;
 import org.lwjgl.util.vector.Vector2f;
 
-import java.awt.*;
+import java.awt.Color;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -245,16 +246,12 @@ public class PLSP_Util {
 		return Global.getCombatEngine().isInCampaign() || Global.getCombatEngine().getCombatUI() == null;
 	}
 
-	public static int getPlayerOrAllyOwner() {
-		return 0;
-	}
-
 	public static boolean isPlayerOrAllyOwner(CombatEntityAPI entity) {
-		return entity.getOwner() == getPlayerOrAllyOwner();
+		return entity.getOwner() == Misc.OWNER_PLAYER;
 	}
 
 	public static boolean isExactlyPlayerOwner(ShipAPI ship) {
-		return ship.getOwner() == getPlayerOrAllyOwner() && !ship.isAlly();
+		return ship.getOwner() == Misc.OWNER_PLAYER && !ship.isAlly();
 	}
 
 	public static boolean isPlayerShipOwner(ShipAPI ship) {
@@ -345,23 +342,6 @@ public class PLSP_Util {
 			fadeOut = 1f;
 		}
 		Vector2f lightpoint = MathUtils.getRandomPointInCircle(center, radius);
-		StandardLight light = new StandardLight();
-		light.setLocation(lightpoint);
-		light.setColor(color);
-		light.setSize(size);
-		light.setIntensity(intensity);
-		light.fadeOut(fadeOut);
-		LightShader.addLight(light);
-	}
-
-	public static void addRandomLightOnCircle(Vector2f center, float radius, float size, float intensity, float fadeOut, Color color) {
-		if (intensity == -1f) {
-			intensity = size / 10f;
-		}
-		if (fadeOut == -1f) {
-			fadeOut = 1f;
-		}
-		Vector2f lightpoint = MathUtils.getRandomPointOnCircumference(center, radius);
 		StandardLight light = new StandardLight();
 		light.setLocation(lightpoint);
 		light.setColor(color);
@@ -480,12 +460,9 @@ public class PLSP_Util {
 	public static List<DamagingProjectileAPI> getFriendlyProjectilesWithinRange(Vector2f location, float range, int owner) {
 		List<DamagingProjectileAPI> projectiles = new ArrayList<>();
 		for (DamagingProjectileAPI tmp : Global.getCombatEngine().getProjectiles()) {
-			if (tmp instanceof MissileAPI) {
-				continue;
-			}
-			if (tmp.getOwner() != owner) {
-				continue;
-			}
+			if (tmp instanceof MissileAPI) continue;
+			if (tmp.getOwner() != owner) continue;
+
 			if (MathUtils.isWithinRange(tmp.getLocation(), location, range)) {
 				projectiles.add(tmp);
 			}
@@ -496,12 +473,9 @@ public class PLSP_Util {
 	public static List<DamagingProjectileAPI> getEnemyProjectilesWithinRange(Vector2f location, float range, int owner) {
 		List<DamagingProjectileAPI> projectiles = new ArrayList<>();
 		for (DamagingProjectileAPI tmp : Global.getCombatEngine().getProjectiles()) {
-			if (tmp instanceof MissileAPI) {
-				continue;
-			}
-			if (tmp.getOwner() == owner) {
-				continue;
-			}
+			if (tmp instanceof MissileAPI) continue;
+			if (tmp.getOwner() == owner) continue;
+
 			if (MathUtils.isWithinRange(tmp.getLocation(), location, range)) {
 				projectiles.add(tmp);
 			}
@@ -594,32 +568,42 @@ public class PLSP_Util {
 	}
 
 	public static MarketAPI pickMarket(FactionAPI faction) {
-		return pickMarket(faction, true);
+		return pickMarket(faction, null, null);
 	}
 
-	public static MarketAPI pickMarket(FactionAPI faction, boolean priority) {
-		StarSystemAPI systemB = Global.getSector().getStarSystem("Triglav");
-		if (priority && systemB != null) {
-			PlanetAPI planetB = (PlanetAPI)systemB.getEntityById("PLSP_planet1");
-			if (planetB != null && planetB.getMarket() != null && planetB.getMarket().getFaction() == faction) {
-				return planetB.getMarket();
+	public static MarketAPI pickMarket(FactionAPI faction, boolean withPriority) {
+		if (withPriority) return pickMarket(faction, "Triglav", "PLSP_planet1");
+		return pickMarket(faction);
+	}
+
+	public static MarketAPI pickMarket(FactionAPI faction, String prioritySystem, String priorityPlanet) {
+		if (priorityPlanet != null) {
+			PlanetAPI planetToP = (PlanetAPI)Global.getSector().getEntityById(priorityPlanet);
+			if (planetToP != null && planetToP.getMarket() != null && planetToP.getMarket().getFaction() == faction) {
+				return planetToP.getMarket();
 			}
 		}
 
 		Random random = new Random();
 		WeightedRandomPicker<MarketAPI> markets = new WeightedRandomPicker<>(random);
 		for (StarSystemAPI system : Global.getSector().getStarSystems()) {
+			float base = 0.1f;
+			if (prioritySystem != null && system.getId().contentEquals(prioritySystem)) {
+				base = 100000f;
+			}
+
 			for (PlanetAPI planet : system.getPlanets()) {
 				if (planet.getMarket() != null && planet.getMarket().getFaction() == faction) {
-					markets.add(planet.getMarket(), planet.getMarket().getSize());
+					markets.add(planet.getMarket(), base * planet.getMarket().getSize());
 				}
 			}
 			for (SectorEntityToken entity : system.getEntitiesWithTag(Tags.STATION)) {
 				if (entity.getMarket() != null && entity.getMarket().getFaction() == faction) {
-					markets.add(entity.getMarket(), entity.getMarket().getSize());
+					markets.add(entity.getMarket(), base * entity.getMarket().getSize());
 				}
 			}
 		}
+
 		return markets.pick();
 	}
 
@@ -895,6 +879,71 @@ public class PLSP_Util {
 			}
 
 			return total;
+		}
+	}
+
+	public static class I18nSection {
+		private final String category;
+		private final String keyPrefix;
+
+		public I18nSection(String category, String keyPrefix) {
+			this.category = category;
+			if (keyPrefix != null) {
+				this.keyPrefix = keyPrefix;
+			} else {
+				this.keyPrefix = "";
+			}
+
+			sections.add(this);
+		}
+
+		public I18nSection(String category) {
+			this(category, null);
+		}
+
+		public String format(String keyMainBody, @Nullable Object... args) {
+			if (args != null && args.length > 0) {
+				return absFormat(keyMainBody, args);
+			}
+			return get(keyMainBody);
+		}
+
+		public String get() {
+			try {
+				return Global.getSettings().getString(category, keyPrefix);
+			} catch (Exception e) {
+				return "[NULL]";
+			}
+		}
+
+		public String get(String key) {
+			try {
+				return Global.getSettings().getString(category, keyPrefix + key);
+			} catch (Exception e) {
+				return "[NULL]";
+			}
+		}
+
+		private String absFormat(String key, Object... args) {
+			String result;
+			try {
+				result = String.format(get(key), args);
+			} catch (Exception e) {
+				return "[NULL]";
+			}
+
+			return result;
+		}
+
+		private static final List<I18nSection> sections = new ArrayList<>();
+		public static I18nSection getInstance(String category, String keyPrefix) {
+			for (I18nSection section : sections) {
+				if (section.category.contentEquals(category) && section.keyPrefix.contentEquals(keyPrefix)) {
+					return section;
+				}
+			}
+
+			return new I18nSection(category, keyPrefix);
 		}
 	}
 }

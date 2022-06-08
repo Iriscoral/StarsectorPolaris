@@ -9,7 +9,7 @@ import data.scripts.util.PLSP_ColorData;
 import data.scripts.util.PLSP_Util;
 import org.lwjgl.util.vector.Vector2f;
 
-import java.awt.*;
+import java.awt.Color;
 
 public class PLSP_DisplacerLine extends PLSP_TrailLine {
 

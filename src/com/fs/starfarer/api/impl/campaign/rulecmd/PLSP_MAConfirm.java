@@ -6,11 +6,12 @@ import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.SpecialItemData;
 import com.fs.starfarer.api.campaign.rules.MemKeys;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
+import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActionEnvelope;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActions;
-import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.util.Misc;
 import data.scripts.campaign.intel.PLSP_MilitaryAcademyIntel;
+import data.scripts.util.PLSP_Util.I18nSection;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,9 +19,7 @@ import java.util.Map;
 
 public class PLSP_MAConfirm extends BaseCommandPlugin {
 
-	private static String getString(String key) {
-		return Global.getSettings().getString("CMD", "PLSP_" + key);
-	}
+	public static final I18nSection strings = I18nSection.getInstance("CMD", "PLSP_");
 
 	@Override
 	public boolean execute(String ruleId, InteractionDialogAPI dialog, List<Misc.Token> params, Map<String, MemoryAPI> memoryMap) {
@@ -42,7 +41,7 @@ public class PLSP_MAConfirm extends BaseCommandPlugin {
 		RepActions action = RepActions.TRADE_EFFECT;
 		Global.getSector().adjustPlayerReputation(new RepActionEnvelope(action, 0.05f, null,
 				dialog.getTextPanel(), false, true,
-				getString("trust")), "plsp");
+				strings.get("trust")), "plsp");
 
 		List<String> skillsToAdd = new ArrayList<>();
 		for (SpecialItemData data : skills) {

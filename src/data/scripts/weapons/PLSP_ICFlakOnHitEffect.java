@@ -7,7 +7,7 @@ import com.fs.starfarer.api.loading.DamagingExplosionSpec;
 import data.scripts.plugin.PLSP_WeaponPlugin;
 import org.lwjgl.util.vector.Vector2f;
 
-import java.awt.*;
+import java.awt.Color;
 import java.util.Map;
 
 public class PLSP_ICFlakOnHitEffect implements OnHitEffectPlugin {

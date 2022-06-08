@@ -151,11 +151,12 @@
 		"PLSP_mission3B":"Hokander 带领的远征舰队",
 		"PLSP_mission3C":"PLSP Disintegration 必须存活",
 		"PLSP_mission3D":"围绕旗舰构筑幅能网络",
-		"PLSP_mission4A":"Scyathea 指挥的战列巡洋舰",
+		"PLSP_mission4A":"Scya Thea 指挥的战列巡洋舰",
 		"PLSP_mission4B":"伏击舰队",
 		"PLSP_mission4C":"将对方的数量优势变为单体劣势",
 		
 		"PLSP_spotresilience":"战斗开始时，临时随机获得 1 级未习得的技能。",
+		"PLSP_spotresilienceElite":"将临时获得的技能提升为精英化技能。",
 		"PLSP_spotresilienceMessage":"获得了 %s。",
 		
 		"PLSP_relay":"星链 R",
@@ -209,6 +210,8 @@
 		"PLSP_spotexperience_des2": "除 %s 星币外，需要额外支付 %s 个 Alpha AI 核心。",
 		
 		"PLSP_help": "查阅帮助",
-		"PLSP_cutlink": "切断通讯链接"
+		"PLSP_cutlink": "切断通讯链接",
+
+		"PLSP_designType":"北极星"
 	},
 }

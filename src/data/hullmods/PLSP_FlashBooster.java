@@ -10,6 +10,7 @@ import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import data.scripts.util.PLSP_ColorData;
 import data.scripts.util.PLSP_DataBase;
+import data.scripts.util.PLSP_Util.I18nSection;
 import org.lazywizard.lazylib.MathUtils;
 import org.lwjgl.util.vector.Vector2f;
 
@@ -32,9 +33,7 @@ public class PLSP_FlashBooster extends BaseHullMod {
 		SIZE_FACTOR.put(WeaponSize.LARGE, 4f);
 	}
 	
-	private static String getString(String key) {
-		return Global.getSettings().getString("HullMod", "PLSP_" + key);
-	}
+	public static final I18nSection strings = I18nSection.getInstance("HullMod", "PLSP_");
 
 	@Override
 	public boolean shouldAddDescriptionToTooltip(ShipAPI.HullSize hullSize, ShipAPI ship, boolean isForModSpec) {
@@ -46,12 +45,12 @@ public class PLSP_FlashBooster extends BaseHullMod {
 		float pad = 10f;
 		float padS = 2f;
 
-		tooltip.addPara("%s " + getString("flashboosterTEXT1"), pad, Misc.getHighlightColor(), "#");
-		tooltip.addPara("    %s " + getString("flashboosterTEXT2"), padS, Misc.getPositiveHighlightColor(), "#", "+40%");
-		tooltip.addPara("    %s " + getString("flashboosterTEXT3"), padS, Misc.getPositiveHighlightColor(), "#", "+20%");
-		tooltip.addPara("    %s " + getString("flashboosterTEXT4"), padS, Misc.getHighlightColor(), "#", "1", "2", "4");
-		tooltip.addPara("%s " + getString("flashboosterTEXT5"), padS, Misc.getNegativeHighlightColor(), "#");
-		tooltip.addPara("%s " + getString("HAO"), pad, Misc.getNegativeHighlightColor(), "#");
+		tooltip.addPara("%s " + strings.get("flashboosterTEXT1"), pad, Misc.getHighlightColor(), "#");
+		tooltip.addPara("    %s " + strings.get("flashboosterTEXT2"), padS, Misc.getPositiveHighlightColor(), "#", "+40%");
+		tooltip.addPara("    %s " + strings.get("flashboosterTEXT3"), padS, Misc.getPositiveHighlightColor(), "#", "+20%");
+		tooltip.addPara("    %s " + strings.get("flashboosterTEXT4"), padS, Misc.getHighlightColor(), "#", "1", "2", "4");
+		tooltip.addPara("%s " + strings.get("flashboosterTEXT5"), padS, Misc.getNegativeHighlightColor(), "#");
+		tooltip.addPara("%s " + strings.get("HAO"), pad, Misc.getNegativeHighlightColor(), "#");
 	}
 	
 	@Override
@@ -145,7 +144,7 @@ public class PLSP_FlashBooster extends BaseHullMod {
 
 			if (ship == engine.getPlayerShip()) {
 				float percent = 100f * ratio;
-				engine.maintainStatusForPlayerShip(id, "graphics/icons/hullsys/active_flare_launcher.png", Global.getSettings().getHullModSpec("PLSP_flashbooster").getDisplayName(), getString("flashboosterA") + (int)percent + "%", false);
+				engine.maintainStatusForPlayerShip(id, "graphics/icons/hullsys/active_flare_launcher.png", Global.getSettings().getHullModSpec("PLSP_flashbooster").getDisplayName(), strings.get("flashboosterA") + (int)percent + "%", false);
 			}
 		}
 	}

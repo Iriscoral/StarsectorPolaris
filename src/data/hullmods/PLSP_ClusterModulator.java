@@ -10,6 +10,7 @@ import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import data.scripts.util.PLSP_DataBase;
 import data.scripts.util.PLSP_Util;
+import data.scripts.util.PLSP_Util.I18nSection;
 import org.lazywizard.lazylib.FastTrig;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.VectorUtils;
@@ -22,9 +23,7 @@ public class PLSP_ClusterModulator extends BaseHullMod {
 	private static final String id = "PLSP_ClusterModulator";
 	private static final Vector2f ZERO = new Vector2f();
 
-	private static String getString(String key) {
-		return Global.getSettings().getString("HullMod", "PLSP_" + key);
-	}
+	public static final I18nSection strings = I18nSection.getInstance("HullMod", "PLSP_");
 
 	@Override
 	public boolean shouldAddDescriptionToTooltip(ShipAPI.HullSize hullSize, ShipAPI ship, boolean isForModSpec) {
@@ -36,14 +35,14 @@ public class PLSP_ClusterModulator extends BaseHullMod {
 		float pad = 10f;
 		float padS = 2f;
 
-		tooltip.addPara("%s " + getString("clustermodulatorTEXT1"), pad, Misc.getHighlightColor(), "#", "800", Global.getSettings().getHullModSpec("PLSP_clustermodulator").getDisplayName());
-		tooltip.addPara("    %s " + getString("clustermodulatorTEXT2"), padS, Misc.getHighlightColor(), "#");
-		tooltip.addPara("    %s " + getString("clustermodulatorTEXT3"), padS, Misc.getHighlightColor(), "#");
-		tooltip.addPara("    %s " + getString("clustermodulatorTEXT4"), padS, Misc.getNegativeHighlightColor(), "#", "20", "+1%", "+0.5%");
-		//tooltip.addPara("    %s " + getString("clustermodulatorTEXT5"), padS, Misc.getNegativeHighlightColor(), "#", "20", "+0.5%");
-		tooltip.addPara("%s " + getString("clustermodulatorTEXT6"), padS, Misc.getHighlightColor(), "#");
-		tooltip.addPara("%s " + getString("clustermodulatorTEXT7"), padS, Misc.getHighlightColor(), "#");
-		tooltip.addPara("%s " + getString("HAO"), pad, Misc.getNegativeHighlightColor(), "#");
+		tooltip.addPara("%s " + strings.get("clustermodulatorTEXT1"), pad, Misc.getHighlightColor(), "#", "800", Global.getSettings().getHullModSpec("PLSP_clustermodulator").getDisplayName());
+		tooltip.addPara("    %s " + strings.get("clustermodulatorTEXT2"), padS, Misc.getHighlightColor(), "#");
+		tooltip.addPara("    %s " + strings.get("clustermodulatorTEXT3"), padS, Misc.getHighlightColor(), "#");
+		tooltip.addPara("    %s " + strings.get("clustermodulatorTEXT4"), padS, Misc.getNegativeHighlightColor(), "#", "20", "+1%", "+0.5%");
+		//tooltip.addPara("    %s " + strings.get("clustermodulatorTEXT5"), padS, Misc.getNegativeHighlightColor(), "#", "20", "+0.5%");
+		tooltip.addPara("%s " + strings.get("clustermodulatorTEXT6"), padS, Misc.getHighlightColor(), "#");
+		tooltip.addPara("%s " + strings.get("clustermodulatorTEXT7"), padS, Misc.getHighlightColor(), "#");
+		tooltip.addPara("%s " + strings.get("HAO"), pad, Misc.getNegativeHighlightColor(), "#");
 	}
 
 	@Override
@@ -57,6 +56,7 @@ public class PLSP_ClusterModulator extends BaseHullMod {
 		if (!engine.isEntityInPlay(ship) || !ship.isAlive()) {
 			if (!ship.isAlive() && shipsMap.containsKey(ship)) {
 				ModulatorState data = shipsMap.get(ship);
+				data.unapplyLinkingTarget(shipsMap);
 				data.resetAlpha();
 				shipsMap.remove(ship);
 			}
@@ -89,19 +89,13 @@ public class PLSP_ClusterModulator extends BaseHullMod {
 
 			FluxTrackerAPI flux = ship.getFluxTracker();
 			if (flux.isOverloadedOrVenting()) {
-				if (availableToIncreaseEffectLevel) {
-					data.effectLevel -= amount * 2f;
-					data.effectLevel = Math.max(data.effectLevel, 0f);
-					availableToIncreaseEffectLevel = false;
-				}
+				availableToIncreaseEffectLevel = false;
 			}
 
 			float maxRange = 800f;
 			ShipAPI mostEffectiveTarget = findEffectiveTarget(shipsMap, ship, maxRange); // so here pick target to send flux
 			if (mostEffectiveTarget != data.linkingTarget) {
 				if (mostEffectiveTarget == null && availableToIncreaseEffectLevel) { // means should cut off
-					data.effectLevel -= amount * 2f;
-					data.effectLevel = Math.max(data.effectLevel, 0f);
 					availableToIncreaseEffectLevel = false;
 				}
 				if (mostEffectiveTarget != null && data.effectLevel <= 0f) { // means should connect another one
@@ -112,8 +106,6 @@ public class PLSP_ClusterModulator extends BaseHullMod {
 			} // otherwise keep current
 
 			if (availableToIncreaseEffectLevel && MathUtils.getDistance(ship, data.linkingTarget) > maxRange + 20f) {
-				data.effectLevel -= amount * 2f;
-				data.effectLevel = Math.max(data.effectLevel, 0f);
 				availableToIncreaseEffectLevel = false;
 			}
 
@@ -131,6 +123,9 @@ public class PLSP_ClusterModulator extends BaseHullMod {
 			if (availableToIncreaseEffectLevel) {
 				data.effectLevel += amount * 2f;
 				data.effectLevel = Math.min(data.effectLevel, 1f);
+			} else {
+				data.effectLevel -= amount * 2f;
+				data.effectLevel = Math.max(data.effectLevel, 0f);
 			}
 
 			if (data.linkingTarget != null && data.effectLevel <= 0f) {

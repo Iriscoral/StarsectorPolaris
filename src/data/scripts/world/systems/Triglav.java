@@ -4,24 +4,23 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.*;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.impl.MusicPlayerPluginImpl;
-import com.fs.starfarer.api.impl.campaign.procgen.StarAge;
 import com.fs.starfarer.api.impl.campaign.ids.Terrain;
+import com.fs.starfarer.api.impl.campaign.procgen.StarAge;
 import com.fs.starfarer.api.impl.campaign.terrain.MagneticFieldTerrainPlugin.MagneticFieldParams;
 import com.fs.starfarer.api.util.Misc;
 import data.scripts.util.PLSP_Util;
+import data.scripts.util.PLSP_Util.I18nSection;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.VectorUtils;
 import org.lwjgl.util.vector.Vector2f;
 
 import java.awt.Color;
-import java.util.Arrays;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Triglav {
 	
-	private static String getString(String key) {
-		return Global.getSettings().getString("Misc", "PLSP_" + key);
-	}
+	public static final I18nSection strings = I18nSection.getInstance("Misc", "PLSP_");
 	
 	public void generate(SectorAPI sector) {
 		StarSystemAPI system = sector.createStarSystem("Triglav");
@@ -74,15 +73,15 @@ public class Triglav {
 		PLSP_planet6.getSpec().setCloudColor(new Color(220, 220, 200, 150));
 		PLSP_planet6.applySpecChanges();
 
-		SectorEntityToken PLSP_relay = system.addCustomEntity("PLSP_relay", getString("relay"), "comm_relay", "plsp"); 
+		SectorEntityToken PLSP_relay = system.addCustomEntity("PLSP_relay", strings.get("relay"), "comm_relay", "plsp");
 		PLSP_relay.setOrbit(Global.getFactory().createCircularOrbit(star, 230, 4300, 130));
-		SectorEntityToken PLSP_sensor = system.addCustomEntity("PLSP_sensor", getString("sensor"), "sensor_array", "plsp");
+		SectorEntityToken PLSP_sensor = system.addCustomEntity("PLSP_sensor", strings.get("sensor"), "sensor_array", "plsp");
 		PLSP_sensor.setOrbit(Global.getFactory().createCircularOrbit(star, 350, 4300, 130));
-		SectorEntityToken PLSP_nav = system.addCustomEntity("PLSP_nav", getString("nav"), "nav_buoy", "plsp");
+		SectorEntityToken PLSP_nav = system.addCustomEntity("PLSP_nav", strings.get("nav"), "nav_buoy", "plsp");
 		PLSP_nav.setOrbit(Global.getFactory().createCircularOrbit(star, 110, 4300, 130));
 		//PLSP_relay.setCustomDescriptionId("PLSP_relay");
 
-		JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("PLSP_planet1_jump_point", "Veles " + getString("jumpPoint"));
+		JumpPointAPI jumpPoint = Global.getFactory().createJumpPoint("PLSP_planet1_jump_point", "Veles " + strings.get("jumpPoint"));
 		jumpPoint.setOrbit(Global.getFactory().createCircularOrbit(PLSP_planet2, 0, 1200, 130));
 		jumpPoint.setRelatedPlanet(PLSP_planet2);
 		jumpPoint.setStandardWormholeToHyperspaceVisual();

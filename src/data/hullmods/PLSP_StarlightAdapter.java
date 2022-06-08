@@ -12,10 +12,11 @@ import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import data.scripts.PLSPModPlugin;
 import data.scripts.util.PLSP_Util;
+import data.scripts.util.PLSP_Util.I18nSection;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.combat.AIUtils;
 
-import java.awt.*;
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -23,9 +24,7 @@ import java.util.Map;
 
 public class PLSP_StarlightAdapter extends BaseHullMod {
 	
-	private static String getString(String key) {
-		return Global.getSettings().getString("HullMod", "PLSP_" + key);
-	}
+	public static final I18nSection strings = I18nSection.getInstance("HullMod", "PLSP_");
 	
 	@Override
 	public boolean shouldAddDescriptionToTooltip(HullSize hullSize, ShipAPI ship, boolean isForModSpec) {
@@ -53,10 +52,10 @@ public class PLSP_StarlightAdapter extends BaseHullMod {
 		float padS = 2f;
 		float bonus = getRangeBonus(ship);
 
-		tooltip.addPara("%s " + getString("starlightadapterTEXT1"), pad, Misc.getHighlightColor(), "#", "1", "+1%");
-		tooltip.addPara("%s " + getString("starlightadapterTEXT2"), padS, Misc.getHighlightColor(), "#", "30%");
-		tooltip.addPara("%s " + getString("starlightadapterTEXT3"), padS, Misc.getPositiveHighlightColor(), "#", "+" + (int)bonus + "%");
-		tooltip.addPara("%s " + getString("starlightadapterTEXT4"), pad, Misc.getHighlightColor(), "#", "50%");
+		tooltip.addPara("%s " + strings.get("starlightadapterTEXT1"), pad, Misc.getHighlightColor(), "#", "1", "+1%");
+		tooltip.addPara("%s " + strings.get("starlightadapterTEXT2"), padS, Misc.getHighlightColor(), "#", "30%");
+		tooltip.addPara("%s " + strings.get("starlightadapterTEXT3"), padS, Misc.getPositiveHighlightColor(), "#", "+" + (int)bonus + "%");
+		tooltip.addPara("%s " + strings.get("starlightadapterTEXT4"), pad, Misc.getHighlightColor(), "#", "50%");
 	}
 	
 	@Override

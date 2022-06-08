@@ -1,6 +1,5 @@
 package data.missions.PLSP_mission2;
 
-import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BattleCreationContext;
 import com.fs.starfarer.api.fleet.FleetGoal;
 import com.fs.starfarer.api.fleet.FleetMemberType;
@@ -8,23 +7,24 @@ import com.fs.starfarer.api.impl.combat.EscapeRevealPlugin;
 import com.fs.starfarer.api.mission.FleetSide;
 import com.fs.starfarer.api.mission.MissionDefinitionAPI;
 import com.fs.starfarer.api.mission.MissionDefinitionPlugin;
+import data.scripts.util.PLSP_Util.I18nSection;
 
 public class MissionDefinition implements MissionDefinitionPlugin {
+
+
 	
-	private static String getString(String key) {
-		return Global.getSettings().getString("Misc", "PLSP_" + key);
-	}
+	public static final I18nSection strings = I18nSection.getInstance("Misc", "PLSP_");
 
 	@Override
 	public void defineMission(MissionDefinitionAPI api) {
 		api.initFleet(FleetSide.PLAYER, "ISS", FleetGoal.ESCAPE, false, 5);
 		api.initFleet(FleetSide.ENEMY, "", FleetGoal.ATTACK, true);
 
-		api.setFleetTagline(FleetSide.PLAYER, getString("mission2A"));
-		api.setFleetTagline(FleetSide.ENEMY, getString("mission2B"));
+		api.setFleetTagline(FleetSide.PLAYER, strings.get("mission2A"));
+		api.setFleetTagline(FleetSide.ENEMY, strings.get("mission2B"));
 
-		api.addBriefingItem(getString("mission2C"));
-		api.addBriefingItem(getString("mission2D"));
+		api.addBriefingItem(strings.get("mission2C"));
+		api.addBriefingItem(strings.get("mission2D"));
 
 		api.addToFleet(FleetSide.PLAYER, "PLSP_flocculus_defensive", FleetMemberType.SHIP, "ISS Fortune", true);
 		api.addToFleet(FleetSide.PLAYER, "wolf_PD", FleetMemberType.SHIP, false);

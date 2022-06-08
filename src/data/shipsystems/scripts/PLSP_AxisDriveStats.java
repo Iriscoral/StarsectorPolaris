@@ -1,10 +1,10 @@
 package data.shipsystems.scripts;
 
-import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.impl.combat.BaseShipSystemScript;
 import data.scripts.util.PLSP_ColorData;
+import data.scripts.util.PLSP_Util.I18nSection;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.VectorUtils;
 import org.lazywizard.lazylib.combat.CombatUtils;
@@ -14,9 +14,7 @@ public class PLSP_AxisDriveStats extends BaseShipSystemScript {
 
 	private float facing = -1f;
 
-	private static String getString(String key) {
-		return Global.getSettings().getString("ShipSystem", "PLSP_" + key);
-	}
+	public static final I18nSection strings = I18nSection.getInstance("ShipSystem", "PLSP_");
 
 	@Override
 	public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
@@ -67,7 +65,7 @@ public class PLSP_AxisDriveStats extends BaseShipSystemScript {
 	@Override
 	public StatusData getStatusData(int index, State state, float effectLevel) {
 		if (index == 0) {
-			return new StatusData(getString("axisdriveS1"), false);
+			return new StatusData(strings.get("axisdriveS1"), false);
 		}
 		return null;
 	}

@@ -9,6 +9,7 @@ import com.fs.starfarer.api.impl.combat.BaseShipSystemScript;
 import com.fs.starfarer.api.impl.combat.MineStrikeStatsAIInfoProvider;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
 import data.scripts.util.PLSP_Util;
+import data.scripts.util.PLSP_Util.I18nSection;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.VectorUtils;
 import org.lwjgl.util.vector.Vector2f;
@@ -17,9 +18,7 @@ public class PLSP_WaneStrikeStats extends BaseShipSystemScript implements MineSt
 	private static final float RANGE_FACTOR = 1500f;
 	private static final float MIN_SPAWN_DIST = 50f;
 
-	private static String getString(String key) {
-		return Global.getSettings().getString("ShipSystem", "PLSP_" + key);
-	}
+	public static final I18nSection strings = I18nSection.getInstance("ShipSystem", "PLSP_");
 
 	public static float getRange(ShipAPI ship) {
 		if (ship == null) return RANGE_FACTOR;
@@ -117,9 +116,9 @@ public class PLSP_WaneStrikeStats extends BaseShipSystemScript implements MineSt
 			float dist = MathUtils.getDistance(ship, target);
 			float max = getMineRange(ship) + ship.getCollisionRadius();
 			if (dist > max) {
-				return getString("wanestrikeS2");
+				return strings.get("wanestrikeS2");
 			} else {
-				return getString("wanestrikeS1");
+				return strings.get("wanestrikeS1");
 			}
 		}
 

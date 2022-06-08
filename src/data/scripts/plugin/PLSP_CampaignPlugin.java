@@ -11,7 +11,6 @@ import com.fs.starfarer.api.characters.ImportantPeopleAPI;
 import com.fs.starfarer.api.characters.OfficerDataAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
-import com.fs.starfarer.api.util.IntervalUtil;
 import data.scripts.campaign.PLSP_MilitaryAcademy;
 import data.scripts.util.PLSP_Util;
 
@@ -19,7 +18,6 @@ import java.util.Random;
 
 public class PLSP_CampaignPlugin extends BaseCampaignEventListener implements EveryFrameScript {
 	private final Random random = new Random();
-	private final IntervalUtil trackerShort = new IntervalUtil(1f, 1f);
 
 	public PLSP_CampaignPlugin() {
 		super(true);
@@ -35,7 +33,45 @@ public class PLSP_CampaignPlugin extends BaseCampaignEventListener implements Ev
 		return true;
 	}
 
+	@Override
+	public void reportPlayerOpenedMarket(MarketAPI market) {
+		if (MACheck(market)) {
+			for (PersonAPI person : market.getPeopleCopy()) {
+				if (person.getMemoryWithoutUpdate().contains("$PLSP_MA_isPort")) {
+					return;
+				}
+			}
 
+			ImportantPeopleAPI ip = Global.getSector().getImportantPeople();
+			PersonAPI person = market.getFaction().createRandomPerson();
+			String rankId = Ranks.GROUND_MAJOR;
+			if (market.getSize() >= 6) {
+				rankId = Ranks.GROUND_GENERAL;
+			} else if (market.getSize() >= 4) {
+				rankId = Ranks.GROUND_COLONEL;
+			}
+			person.setPostId("PLSP_MA_Port");
+			person.setRankId(rankId);
+			person.getMemoryWithoutUpdate().set("$PLSP_MA_isPort", true);
+
+			market.getCommDirectory().addPerson(person);
+			market.addPerson(person);
+
+			ip.addPerson(person);
+			ip.getData(person).getLocation().setMarket(market);
+			ip.checkOutPerson(person, "permanent_staff");
+		} else {
+			for (PersonAPI person : market.getPeopleCopy()) {
+				if (person.getMemoryWithoutUpdate().contains("$PLSP_MA_isPort")) {
+					ImportantPeopleAPI ip = Global.getSector().getImportantPeople();
+					ip.removePerson(person);
+					market.getCommDirectory().removePerson(person);
+					market.removePerson(person);
+					break;
+				}
+			}
+		}
+	}
 
 	@Override
 	public void reportFleetSpawned(CampaignFleetAPI fleet) {
@@ -70,51 +106,7 @@ public class PLSP_CampaignPlugin extends BaseCampaignEventListener implements Ev
 	}
 
 	@Override
-	public void advance(float amount) {
-		final float days = Global.getSector().getClock().convertToDays(amount);
-
-		trackerShort.advance(days);
-		if (trackerShort.intervalElapsed()) {
-			for (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {
-				if (MACheck(market)) {
-					for (PersonAPI person : market.getPeopleCopy()) {
-						if (person.getMemoryWithoutUpdate().contains("$PLSP_MA_isPort")) {
-							return;
-						}
-					}
-
-					ImportantPeopleAPI ip = Global.getSector().getImportantPeople();
-					PersonAPI person = market.getFaction().createRandomPerson();
-					String rankId = Ranks.GROUND_MAJOR;
-					if (market.getSize() >= 6) {
-						rankId = Ranks.GROUND_GENERAL;
-					} else if (market.getSize() >= 4) {
-						rankId = Ranks.GROUND_COLONEL;
-					}
-					person.setPostId("PLSP_MA_Port");
-					person.setRankId(rankId);
-					person.getMemoryWithoutUpdate().set("$PLSP_MA_isPort", true);
-
-					market.getCommDirectory().addPerson(person);
-					market.addPerson(person);
-
-					ip.addPerson(person);
-					ip.getData(person).getLocation().setMarket(market);
-					ip.checkOutPerson(person, "permanent_staff");
-				} else {
-					for (PersonAPI person : market.getPeopleCopy()) {
-						if (person.getMemoryWithoutUpdate().contains("$PLSP_MA_isPort")) {
-							ImportantPeopleAPI ip = Global.getSector().getImportantPeople();
-							ip.removePerson(person);
-							market.getCommDirectory().removePerson(person);
-							market.removePerson(person);
-							break;
-						}
-					}
-				}
-			}
-		}
-	}
+	public void advance(float amount) {}
 
 	private static boolean MACheck(MarketAPI market) {
 		return market.getFaction() == Global.getSector().getFaction("plsp") && market.hasIndustry("PLSP_militaryacademy") && market.getIndustry("PLSP_militaryacademy").isFunctional();

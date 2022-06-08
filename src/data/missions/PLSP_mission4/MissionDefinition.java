@@ -1,28 +1,26 @@
 package data.missions.PLSP_mission4;
 
-import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.fleet.FleetGoal;
 import com.fs.starfarer.api.fleet.FleetMemberType;
 import com.fs.starfarer.api.mission.FleetSide;
 import com.fs.starfarer.api.mission.MissionDefinitionAPI;
 import com.fs.starfarer.api.mission.MissionDefinitionPlugin;
+import data.scripts.util.PLSP_Util.I18nSection;
 
 public class MissionDefinition implements MissionDefinitionPlugin {
-	
-	private static String getString(String key) {
-		return Global.getSettings().getString("Misc", "PLSP_" + key);
-	}
+
+	public static final I18nSection strings = I18nSection.getInstance("Misc", "PLSP_");
 
 	@Override
 	public void defineMission(MissionDefinitionAPI api) {
 		api.initFleet(FleetSide.PLAYER, "PLSP", FleetGoal.ATTACK, false, 10);
 		api.initFleet(FleetSide.ENEMY, "TTS", FleetGoal.ATTACK, true);
 
-		api.setFleetTagline(FleetSide.PLAYER, getString("mission4A"));
-		api.setFleetTagline(FleetSide.ENEMY, getString("mission4B"));
+		api.setFleetTagline(FleetSide.PLAYER, strings.get("mission4A"));
+		api.setFleetTagline(FleetSide.ENEMY, strings.get("mission4B"));
 
-		api.addBriefingItem(getString("missionbase"));
-		api.addBriefingItem(getString("mission4C"));
+		api.addBriefingItem(strings.get("missionbase"));
+		api.addBriefingItem(strings.get("mission4C"));
 
 		api.addToFleet(FleetSide.PLAYER, "PLSP_axis_combat", FleetMemberType.SHIP, "PLSP Infinite Skies", true);
 

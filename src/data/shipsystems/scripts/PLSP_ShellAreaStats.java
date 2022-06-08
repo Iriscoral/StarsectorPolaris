@@ -3,18 +3,17 @@ package data.shipsystems.scripts;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.*;
 import com.fs.starfarer.api.impl.combat.BaseShipSystemScript;
+import data.scripts.util.PLSP_Util.I18nSection;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.combat.AIUtils;
 
-import java.awt.*;
+import java.awt.Color;
 import java.util.List;
 
 public class PLSP_ShellAreaStats extends BaseShipSystemScript {
 	private static final float RANGE_FACTOR = 1500f;
 
-	private static String getString(String key) {
-		return Global.getSettings().getString("ShipSystem", "PLSP_" + key);
-	}
+	public static final I18nSection strings = I18nSection.getInstance("ShipSystem", "PLSP_");
 
 	public static float getRange(ShipAPI ship) {
 		if (ship == null) return RANGE_FACTOR;
@@ -89,13 +88,13 @@ public class PLSP_ShellAreaStats extends BaseShipSystemScript {
 	@Override
 	public StatusData getStatusData(int index, State state, float effectLevel) {
 		if (index == 0) {
-			return new StatusData(getString("shellareaS3") + (int)(80f * effectLevel) + "%", false);
+			return new StatusData(strings.get("shellareaS3") + (int)(80f * effectLevel) + "%", false);
 		}
 		if (index == 1) {
-			return new StatusData(getString("shellareaS4"), false);
+			return new StatusData(strings.get("shellareaS4"), false);
 		}
 		if (index == 2) {
-			return new StatusData(getString("shellareaS5"), true);
+			return new StatusData(strings.get("shellareaS5"), true);
 		}
 		return null;
 	}
@@ -105,8 +104,8 @@ public class PLSP_ShellAreaStats extends BaseShipSystemScript {
 		if (system.getState() != ShipSystemAPI.SystemState.IDLE) return "";
 		List<ShipAPI> targets = AIUtils.getNearbyAllies(ship, getRange(ship));
 		if (!targets.isEmpty()) {
-			return getString("shellareaS1") + targets.size();
+			return strings.get("shellareaS1") + targets.size();
 		}
-		return getString("shellareaS2");
+		return strings.get("shellareaS2");
 	}
 }

@@ -10,8 +10,7 @@ import org.lazywizard.lazylib.VectorUtils;
 import org.lazywizard.lazylib.combat.CombatUtils;
 import org.lwjgl.util.vector.Vector2f;
 
-import java.awt.*;
-import java.util.List;
+import java.awt.Color;
 import java.util.*;
 
 public class PLSP_WeaponPlugin extends BaseEveryFrameCombatPlugin {

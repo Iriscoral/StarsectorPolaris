@@ -179,7 +179,7 @@ PLSP_shellarea,SHIP_SYSTEM,激发一套携带了能量配送器的暂时性护�
 PLSP_displacer,SHIP_SYSTEM,借助四个不同子空间的同位置涨落差分解自身以避免违背物理法则。长程传送大型舰体，同时抹除敌意抛射体。,机动,,
 PLSP_reddisplacer,SHIP_SYSTEM,适配于战机的星潜闪现，以使用次数的急剧降低为代价完成了设备小型化。,机动,,
 PLSP_energycondenser,SHIP_SYSTEM,将武器产生的幅能导入预先冷却的附属核心并留至此后处理，降低武器幅能产生并提升峰值火力限度。核心控制器起效时将持续产生硬幅能。,进攻,,
-PLSP_repairlink,SHIP_SYSTEM,这种物质传输装置能以脉冲形式将轻质材料运输至战机的装甲缺陷处并粘合，也可以借助派生效果大幅缓解目标的幅能压力。,战机,,
+PLSP_repairlink,SHIP_SYSTEM,物质传输装置，能以脉冲形式将轻质材料运输至战机的装甲缺陷处并粘合，也可以借助派生效果大幅缓解目标的幅能压力。,战机,,
 PLSP_darkcollapse,SHIP_SYSTEM,暂时将 P 空间的一小片叠加到一定距离内的指定区域中，对影响范围内的任何目标造成毁灭性打击。无法锁定战机或战列舰以及空间站目标。,进攻,,
 PLSP_eventdisturb,SHIP_SYSTEM,为一定范围内的一个非战机友军目标(包括自身)施加一层事件解构屏障，在一段时间内为其抹除可能命中自身的弹幕。,防御,,
 PLSP_targetingfeed,SHIP_SYSTEM,启动一套经过精心重定向过的逆变馈送器，实时调节战机的护盾发生器以将来袭伤害转为幅能耗散。,战机,,
@@ -187,7 +187,7 @@ PLSP_polegenerator,SHIP_SYSTEM,直连主控系统的小型时流设备，与大�
 PLSP_sensordisturb,SHIP_SYSTEM,类似于通讯干扰器，但它反制的是所有舰船都配备的格式传感阵列。极大程度降低一定范围内所有敌舰的索敌能力和武器射程。,防御,,
 PLSP_solarwind,SHIP_SYSTEM,吸收星际物质，短暂加热后投射出足以比拟微型太阳风的灼热物质，极大地减缓影响范围内敌方的速度并对其施加高爆伤害。,防御,,
 PLSP_axisdrive,SHIP_SYSTEM,更为精巧的翘曲设备，利用舰船质量惯性而非指定方向以开辟曲率通道。向舰船速度方向高速位移一段距离，期间允许调整舰船姿态，且调制稳态力场将使舰船免疫非能量伤害。,机动,,
-PLSP_reservedrone,SHIP_SYSTEM,投送携带有燃星级鱼雷的无人机，对失去护盾的目标造成无法挽回的沉重打击。无人机将在实施单次轰炸后返航。,进攻,,
+PLSP_reservedrone,SHIP_SYSTEM,投送携带有燃星级鱼雷的无人机，对失去护盾的目标造成无法挽回的沉重打击。成功返航的无人机可以减免冷却时间。,进攻,,
 PLSP_wanestrike,SHIP_SYSTEM,传送两枚隙片到目标附近，每一枚造成适量能量范围伤害，拥有一次冗余充能。,进攻,,
 
 

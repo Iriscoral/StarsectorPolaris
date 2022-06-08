@@ -183,7 +183,7 @@ PLSP_polegenerator,SHIP_SYSTEM,Uses a small time-flow device connected to the ma
 PLSP_sensordisturb,SHIP_SYSTEM,"Significantly reduces the ability of all enemy ships within a given range to detect allies, while reducing their weapons range.",Defensive,,
 PLSP_solarwind,SHIP_SYSTEM,"Absorbs interstellar matter, and then projects a scorching substance comparable to a miniature solar wind, dramatically slowing down the enemy in influence area and inflicting high explosive damage.",Defensive,,
 PLSP_axisdrive,SHIP_SYSTEM,An advanced warp field generator that increases the ship's momentum in its direction of motion while rendering it immune to non-energy damage. ,Movement,,
-PLSP_reservedrone,SHIP_SYSTEM,Launches a wing of drones armed with Starblaze Torpedoes that are particularly devastating against unshielded enemies. Drones will return after a single bombing run.,Offensive,,
+PLSP_reservedrone,SHIP_SYSTEM,Launches a wing of drones armed with Starblaze Torpedoes that are particularly devastating against unshielded enemies. Successfully returned drones can reduce cooldown.,Offensive,,
 PLSP_wanestrike,SHIP_SYSTEM,Teleports two dark particles to the target area. The particles will explodes a few seconds after their proximity triggers are activated.,Offensive,,
 ,,,,,
 ,,,,,

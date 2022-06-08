@@ -11,11 +11,12 @@ import data.scripts.plugin.PLSP_SystemPlugin.LocalData;
 import data.scripts.plugin.PLSP_SystemPlugin.SolarData;
 import data.scripts.plugin.PLSP_TrailLine;
 import data.scripts.util.PLSP_Util;
+import data.scripts.util.PLSP_Util.I18nSection;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.VectorUtils;
 import org.lwjgl.util.vector.Vector2f;
 
-import java.awt.*;
+import java.awt.Color;
 import java.util.Map;
 
 public class PLSP_SolarWindStats extends BaseShipSystemScript {
@@ -27,9 +28,7 @@ public class PLSP_SolarWindStats extends BaseShipSystemScript {
 	private static final Color SOLAR = new Color(255, 217, 163, 200);
 	private static final Vector2f ZERO = new Vector2f();
 
-	private static String getString(String key) {
-		return Global.getSettings().getString("ShipSystem", "PLSP_" + key);
-	}
+	public static final I18nSection strings = I18nSection.getInstance("ShipSystem", "PLSP_");
 
 	public static float getRange(ShipAPI ship) {
 		if (ship == null) return RANGE_FACTOR;
@@ -133,7 +132,7 @@ public class PLSP_SolarWindStats extends BaseShipSystemScript {
 	@Override
 	public StatusData getStatusData(int index, State state, float effectLevel) {
 		if (index == 0) {
-			return new StatusData(getString("solarwindS1"), true);
+			return new StatusData(strings.get("solarwindS1"), true);
 		}
 		return null;
 	}

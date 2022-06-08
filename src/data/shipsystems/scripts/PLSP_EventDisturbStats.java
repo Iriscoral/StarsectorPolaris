@@ -8,6 +8,7 @@ import com.fs.starfarer.api.util.WeightedRandomPicker;
 import data.scripts.plugins.MagicRenderPlugin;
 import data.scripts.util.PLSP_ColorData;
 import data.scripts.util.PLSP_Util;
+import data.scripts.util.PLSP_Util.I18nSection;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.VectorUtils;
 import org.lazywizard.lazylib.combat.AIUtils;
@@ -23,9 +24,7 @@ public class PLSP_EventDisturbStats extends BaseShipSystemScript {
 
 	private EventDisturbStats data = null;
 
-	private static String getString(String key) {
-		return Global.getSettings().getString("ShipSystem", "PLSP_" + key);
-	}
+	public static final I18nSection strings = I18nSection.getInstance("ShipSystem", "PLSP_");
 
 	public static float getRange(ShipAPI ship) {
 		if (ship == null) return RANGE_FACTOR;
@@ -50,7 +49,7 @@ public class PLSP_EventDisturbStats extends BaseShipSystemScript {
 		} else {
 
 			if (!data.launched && (data.target == engine.getPlayerShip() || ship == engine.getPlayerShip())) {
-				data.target.getFluxTracker().showOverloadFloatyIfNeeded(getString("eventdisturbS3"), PLSP_ColorData.TEXT_GREY, 4f, true);
+				data.target.getFluxTracker().showOverloadFloatyIfNeeded(strings.get("eventdisturbS3"), PLSP_ColorData.TEXT_GREY, 4f, true);
 				data.launched = true;
 			}
 
@@ -158,10 +157,10 @@ public class PLSP_EventDisturbStats extends BaseShipSystemScript {
 
 		ShipAPI located = ship.getShipTarget();
 		if (isTargetValid(ship, located) && MathUtils.isWithinRange(ship, located, getRange(ship))) {
-			return getString("eventdisturbS1");
+			return strings.get("eventdisturbS1");
 		}
 
-		return getString("eventdisturbS2");
+		return strings.get("eventdisturbS2");
 	}
 
 	@Override

@@ -1,18 +1,16 @@
 package data.hullmods;
 
-import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import data.scripts.util.PLSP_DataBase;
+import data.scripts.util.PLSP_Util.I18nSection;
 
 public class PLSP_NodeLock extends BaseHullMod {
 
-	private static String getString(String key) {
-		return Global.getSettings().getString("HullMod", "PLSP_" + key);
-	}
+	public static final I18nSection strings = I18nSection.getInstance("HullMod", "PLSP_");
 
 	@Override
 	public boolean shouldAddDescriptionToTooltip(HullSize hullSize, ShipAPI ship, boolean isForModSpec) {
@@ -24,8 +22,8 @@ public class PLSP_NodeLock extends BaseHullMod {
 		float pad = 10f;
 		float padS = 2f;
 
-		tooltip.addPara("%s " + getString("nodelockTEXT1"), pad, Misc.getPositiveHighlightColor(), "#");
-		tooltip.addPara("%s " + getString("nodelockTEXT2"), padS, Misc.getHighlightColor(), "#");
+		tooltip.addPara("%s " + strings.get("nodelockTEXT1"), pad, Misc.getPositiveHighlightColor(), "#");
+		tooltip.addPara("%s " + strings.get("nodelockTEXT2"), padS, Misc.getHighlightColor(), "#");
 	}
 	
 	@Override

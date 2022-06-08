@@ -1,16 +1,14 @@
 package data.shipsystems.scripts;
 
-import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipCommand;
-import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.impl.combat.BaseShipSystemScript;
+import data.scripts.util.PLSP_Util.I18nSection;
 
 public class PLSP_ShellSystemStats extends BaseShipSystemScript {
 	
-	private static String getString(String key) {
-		return Global.getSettings().getString("ShipSystem", "PLSP_" + key);
-	}
+	public static final I18nSection strings = I18nSection.getInstance("ShipSystem", "PLSP_");
 
 	@Override
 	public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
@@ -40,10 +38,10 @@ public class PLSP_ShellSystemStats extends BaseShipSystemScript {
 	@Override
 	public StatusData getStatusData(int index, State state, float effectLevel) {
 		if (index == 0) {
-			return new StatusData(getString("shellsystemS1") + (int)(90f * effectLevel) + "%", false);
+			return new StatusData(strings.get("shellsystemS1") + (int)(90f * effectLevel) + "%", false);
 		}
 		if (index == 1) {
-			return new StatusData(getString("shellsystemS2"), true);
+			return new StatusData(strings.get("shellsystemS2"), true);
 		}
 		return null;
 	}
