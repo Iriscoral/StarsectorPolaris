@@ -1,218 +1,214 @@
 id,type,text1,text2,text3,notes
-
-PLSP_electgenerator,WEAPON,电荷发生器运用最简单的线性加速器和难以计量的电容组，能在短期内爆发出一阵难以规避的火力，尤其适合中距离交战。,突击,,
-PLSP_electemitter,WEAPON,以脉冲形式借助隐藏在外壳之下的数个回旋加速器，这种进阶设备同步发射最终混合了多种核的粒子束，在任何有效的闪避行为被实施之前击中目标。,突击,,
-PLSP_electprojecter,WEAPON,相较于这一系列武器的其他版本，它做出的最大改进就是以一套庞大的幅能分流器替代暂存设备，这使它的缓冲与预载需求被降为了最低。,突击,,
-PLSP_impulses,WEAPON,这种发射管是北极星滥用线性加速器的最好证明。以如此高出膛速度介入战斗的重型动能弹头，能在短兵交接之际损毁一切在其行动路径上的目标。,打击,,
-PLSP_impulsem,WEAPON,秉承此系列一贯设计风格的双管发射台，更大的载弹量和异步发射设计能通过波次策略，有效地解决单次打击效果溢出的问题。,打击,,
-PLSP_impulsel,WEAPON,连续发射填装了更具毁灭性的战斗部和更多续航燃料的动能导弹，这款将杀伤能力反复体现的发射器能造成的战术效果无需重复强调。,打击,,
-PLSP_pulsehp,WEAPON,采用波次射击模式，能在顷刻之间倾泻大量重粒子团的脉冲炮。部分表现的射线性质使之更适合瓦解装甲和结构而非护盾，或者进行覆盖打击。,突击,,
-PLSP_pulseo,WEAPON,叠加式脉冲炮是一种相对简单的改进型号，采用支持能力更强的导引和聚焦系统以及电容器，明显地提高每一小团无序抛射物的杀伤能力。,突击,,
-PLSP_pulsesc,WEAPON,"它的使用者大多不知道""超临界""到底对应着哪种解释，然而这毫不影响这类宏伟脉冲炮的极高效率。大幅提升过的单次伤害能力，意味着最重型的装甲也会在几次投射内被融尽。",突击,,
-PLSP_etherstrike,WEAPON,来自天堂与大地的四重打击，专用发射极能够将抛射体的速度增幅到难以想象的程度。,打击,,
-PLSP_guidingpds,WEAPON,这种点防御武器使用了一种特殊的场效应延拓加速器。它可以将极化束缚的能量团以极高的速度射出，并控制其弹道诱导追踪目标。,点防御,,
-PLSP_guidingpdm,WEAPON,放大线性加速腔，提升了功率，优化了束缚效率，并且扩展额外的附加式场效应延拓加速器，精准击落任何来袭的导弹或战机。,点防御,,
-PLSP_guidingpdl,WEAPON,多个大小不一的场效应控制器，四联重型场效应延拓加速器阵列，联合式二级加速单元，高扭矩复合武器挂仓。这一系列的设备升级将展现无与伦比的顶级点防御性能。,点防御,,
-PLSP_streammicrowave,WEAPON,将缓存在电容组之中的能源在一瞬间内全数注入激光器中，威力足以穿透陨石，并在此后通过布满武器全身的微管导出产生的幅能。为了保持其高精度，发射前需要预瞄校准。,压制,,
-PLSP_streampolarization,WEAPON,除了更大的电容组，更密集的幅能微管之外，优化的频谱重定向协议使其能够投射出更加纯净、更具破坏力的粒子射流。,压制,,
-PLSP_streaminvert,WEAPON,大型武器适配的零件规格允许将激光器的谐振腔也用于能量储备。在能量转换时的多重逆反馈效应爆发出的能量洪流，若控制不当则足以撕裂时空。,压制,,
-PLSP_iccannon,WEAPON,将高度单晶化金属氢压缩至准临界状态，并将不稳定的菱晶状弹体发射出膛。弹体在命中目标后会瞬间碎裂，以蕴含高动能的无数晶块碎片覆盖一大片区域。,区域防御,,
-PLSP_icflak,WEAPON,碎晶高炮采用更大质量的预处理载荷，由于质量的增加，弹体会在碰撞的瞬间越过临界状态并产生爆炸。除此之外，碎裂的晶块仍然带有极高动量，在受到冲击后会再次碎裂，造成次级范围打击。,区域防御,,
-PLSP_icculverin,WEAPON,最大型的碎晶武装加装了通常用于弹射大质量实体的线性加速器，使其能将处于极限宏观稳定质量的氢块投送到相当远的距离，形成一阵混乱的晶体风暴撕裂一切护盾结构。,区域防御,,
-PLSP_interferometerhyperbolic,WEAPON,武器化射线发生器，每次宏展开一枚光子并使之以诡异的路径轰击目标，足以彻底摧毁任何轻质装甲或小型船体。,压制,,
-PLSP_interferometerresonant,WEAPON,运用宏粒子下的谐振技巧，使得加装了额外波能组件的加速极能并行激发两枚弹丸形成投射波次，但依然精准地足以比拟激光武器。,压制,,
-PLSP_interferometerdegeneracy,WEAPON,缩退模式下运作的衍射组件能一次激发大群有效弹丸，使之以近似球状闪电的半随机状态烧毁任何实体结构材料。,压制,,
-PLSP_magnetics,WEAPON,装载了微量极高密度物质的弹头，在接近目标时使之定向融合并产生极度可怕的射线、磁场与高能带电射流。因安全性与成本考虑，单枚 MIRV 携带的材料远远不足以引发伽马射线暴。,打击,,
-PLSP_magneticm,WEAPON,装配 磁陀星 级弹头，虽然大小仅为无人机规格，但作为等体积下爆发能力最强的射线源，它安置了两组共四单位能维持高密度物质稳定的引力消退容器，能产生更猛烈的电磁洪流。,打击,,
-PLSP_magneticl,WEAPON,为了弥补即使是大型舰载槽位也无法搭载""磁星""系列下空际导弹规格武装的缺陷，它转而将更多的内部容积用于安置拓展发射架和无惯性装填器，以更大的投射量贯穿任何防御。,打击,,
-
-
-
-PLSP_redshiftw,WEAPON,一种具有可怕功率和极高幅能效率的脉冲激光炮，为射程所限制。,突击,,
-PLSP_blueshiftw,WEAPON,弹射大量引力子炮弹，塌陷效应对护盾和精密电器能造成毁灭性打击。,突击,,
-PLSP_nebulablaze,WEAPON,内嵌于特殊战机的主武器，迅捷的抛射物具有类似于重型冲击波的强大破坏力。,突击,,
-PLSP_perturbationw,WEAPON,三联装能量飞弹，由位于轰炸机中心的聚能环进行充能并投射，射程极佳。,轰炸,,
-
-
-
-PLSP_perturbation,SHIP,"这种缓慢的能量轰炸机以吸附性微缩载体为基础发射脉冲，内嵌在机体中央的环状聚能器提供了爆发潜力，使其足以在安全距离完成它的一切轰炸职能。
-
-为了弥补脉冲环所带来的结构缺陷，它内置了一套阻尼力场以最小化必要时刻的风险。",,,
-PLSP_redshift,SHIP,"昂贵的重型战斗机，过度武装和一体化闪现系统使其在对付大型目标上自如无比，对于其他战斗机的截击也有一战之力。
-
-总体而言，这种难以评价的重火力设计已经诠释了北极星注重于质量而非数量的战机理念。",,,
-PLSP_blueshift,SHIP,"注重于速度和护盾能力的轻型战斗机，以最全方位的防护能力保护脆弱的结构。相较于造成直接损伤，固化于核心部分的武器组更适合进行大面积瘫痪。
-
-过度紧凑的设计还在引擎前方区域加装了微型旋流驱动设备，但这也显著增加了对于后勤的压力。",,,
-PLSP_comettail,SHIP,"与通常以数量淹没敌方战机或以高精度打击抵御导弹完全不同，这种战机采取最简单直接的方法净空一大片区域，丝毫不给任何漏网之鱼留下出现的机会。
-
-相较于针对携带厚重装甲的英仙座现行设计，它原更预期用于应对携带坚固护盾的先进战机。",,,
-PLSP_occultation,SHIP,"月掩级支援机将防御与反击完美结合，它能通过产生相对自身体积而言较大的坚固护盾，避免附近的其他战机遭到损失，并在壳层系统停止运作时迅捷地爆发能量洪流。
-
-其内置武器的原本名称为脉冲波发射器，但大部分舰长一致认为它需要一个更具特色的代号。",,,
-PLSP_moonphase,SHIP,"舰队联防学说的成果之一，旨在从纵观上通过大量长距离点防御发射器和攻击型超距涨落设备覆盖整个舰队附近的领空，以应对大量低机动高装药量导弹的威胁。
-
-然而，过大的武器载体使之最终只能以单机形成连队，却也降低了硬性整备速率要求。",,,
-PLSP_subobject,SHIP,"一种纯粹的无人轰炸机，机械而高效地重复着整备—启航—轰炸—返航这一标准循环。",,,
-
-
-
-PLSP_meteoroid,SHIP,"可能是北极星舰船蓝图库中最小巧精致而致命的设计，如同穿梭机大小的体型并没有限制它的战斗潜力。
-
-围绕着一套以物理手段和硬编码特别加固过的控制设备所搭建的陨体级，在牺牲了部分拓展性的同时获得了远超其视觉印象所能支持的幅能系统，以及标准火力配置。它的配备能弥补任何一支舰队关于小型高机动舰船的空缺。
-
-据称，它的前置武器插槽以及附属外廓结构，都是以重型冲击波的大小为参照设计的。",,,
-PLSP_crescent,SHIP,"如此轻量级的护卫舰并非脆弱而不堪一击，相反，它极其优秀的构架设计提供了该体积下最为灵活的作战能力。
-
-如果新月级的复合武器组难以在限定时间内完成歼灭任务，那么隐藏在尖端之后的聚焦电弧发生器将足以让任何坚固的堡垒不得不做出反应。能在一瞬间反复激发多次的脉冲将瘫痪一切防备不及的对手，甚至直接击穿薄弱的装甲。
-
-只要它的船体结构能够再厚实一些，它就将成为北极星护卫舰永远的典范。然而这微小的缺陷并不妨碍它被大量装配并成建制地递送至前线，造成相当有效的战略效果。",,,
-PLSP_quadrant,SHIP,"象限级护卫舰并非是小规模战斗的主力，而是在大型战场上突入乱军之中，利用时流裂位仪对敌方造成混乱的特种角色。
-
-平常甚至于平庸的外表数据分析面板结果之下，埋藏着的是难以估量的战术潜力。相较于直接进入战场造成杀伤，它更适合在较为安稳的位置借由一套先进的时流设备造成干扰，从而安全地在战场上发挥应有的作用。
-
-尽管它的辅助能力已经得到了充分的强调，舰长们依然难以忽视它的火力配置在紧急情况下所带来的自保能力。",,,
-PLSP_facula,SHIP,"作为北极星的一种主流护卫舰，光斑级有着相对稳健地多的幅能系统，易于操作而全方位火力覆盖的武器组和远超该水平的应急护盾固化器。
-
-圆滑而厚实的共振反应外壳带来了更为值得信赖的装甲防护，但相较于此，它更为值得注意的是一套紧凑的代号为固能壳的护盾强充能系统。借用了与护盾堡垒相似的激励和一套用于限制能耗的制停器，这艘护卫舰能做出最大限度的防御行为。
-
-而作为主力必不可少的总和武器阵列，也为它的战术选择带来了无数种结果。尽管在速度上并不见长，光斑级护卫舰依然能胜任绝大部分不需要直面战斗机群的任务。",,,
-PLSP_evolution,SHIP,"这种中规中矩的护卫舰组成了北极星舰队们的先锋梯队，演化级护卫舰凭借着经典而有着充分灵活性的火力配置和旋流驱动系统活跃于这个势力涉足的任何一场战斗中。
-
-最为常见并不意味着平庸，它集成到幅能核心的护盾协稳器提供了毫不逊色于任何同规模舰船的直接防御。而身为护卫舰所具有的高机动性，连带那一套往往被用于快速转场和躲避高伤害抛射物的驱动装置，使演化级护卫舰有能力避开任何难以攻克的目标。
-
-如同锤头级一样意义重大的标杆设计。",,,
-PLSP_lightcone,SHIP,"光锥级驱逐舰是一种专注于在二线进行中远距离支援的设计，紧凑的中部结构被单个固定测距系统和为炮塔传导幅能的管线所占用，而护盾发生器和战备维持系统则做出了一定程度的牺牲。
-
-相较于北极星一贯的重视耗散能力的风格，这艘庞大的驱逐舰在幅能容量负载器和耗散接口的数量上取得了均衡。而除了强大的的攻坚能力之外，一套能作用于低质量目标的事件扰断装置则提供了额外的防护能力，让它在大规模会战中能够委身于辅助更大的友方单位。
-
-它重视两侧超重型装甲的舰船构造直接影响了引擎的排布和角度，尽管限制了最大速度，但与此同时提高了飞行稳定程度，显著增加可操控性。",,,
-PLSP_pemumbra,SHIP,"令所有与之交锋的舰长印象深刻的激进设计，半影级驱逐舰以不同寻常的突进能力，体现着与大部分出自北极星的舰船不同的战斗风格。
-
-数个几乎固定指向前方的炮塔与标志性的旋流驱动系统，已经从硬件上提供了难以比拟的快速打击能力，尽管护盾发生器的地位将受到此布局的限制。不过，相较于单舰从战线侧面切入，它更适合成编队地集群行动，或者带领其他搭载了同样战术系统的舰船英勇陷阵。
-
-需要特别注意的是，它为核心区域空间大小而做出了让步的幅能稳流器，使它的幅能容量即使以北极星标准来评定都被认为是相当低的水准。",,,
-PLSP_corona,SHIP,"一种以调控战场情景而对战局进行影响的辅助型舰船，冕级驱逐舰能在稳居战线后方的同时直接以可怕的效率和令人胆寒的气势冲击远处的敌舰，迫使对方维持劣势战线。
-
-其设计风格所惯有的多个炮塔，它们的主轴朝向各异而覆盖区域大的射角，能为舰船提供全方位防护。而除了这些以及优异的损伤管制系统之外，其最亮眼的特质是一套金贵的日冕压缩器，将大量高热物质以任何战机都无法躲避的速度广域抛洒而出，清空战场中的轻型装甲单位、延缓对手抛射的弹体，甚至锁定那些能抵抗它直接伤害的舰船的阵型。
-
-更偏向于坚守的设计，通常被成编队地被投放于战场边缘以防止舰队主体被包围，而驾驶它进行突击或正面接敌往往是不被建议的。",,,
-PLSP_aberration,SHIP,"光行差级驱逐舰是一种经济适用的主流驱逐舰，以远高于绝大部分舰船的高压抵抗能力而闻名于所有与北极星为敌的势力之中。
-
-为了弥补作为主力驱逐舰而并不出彩的缺陷，这种保守的舰船采用了更多导弹武器槽位以降低对幅能的依赖，而以此为出发点所设计的一套复杂武器系统，允许它同时使用多种类型的实弹或能量武器。它还附带了一套高度压缩而直连控制系统的通用时流设备，以减少在战线上的额外压力。
-
-在性能方面似乎并无出众之处，但是它压倒性的成本优势和易于组装的特点，使之能以数量优势完胜任何挑战大规模编入光行差级驱逐舰的对手。",,,
-PLSP_blazar,SHIP,"并非活跃在正面战场上的角色，这种轻量级驱逐舰保有灵活的周转能力和追击与敌后袭扰的优势，在驱逐小型舰船时效果拔群。
-
-在所有北极星当代设计中最早搭载辅助性战术系统的前瞻性设计，耀变体级最初的定位是斥候而非战士。它优越的机动性和高度可定制的武器阵列，配合效率远超该势力舰船平均水平的高水准护盾发生器，能够确保它从任何险境安然回归，并在途中引发不小的混乱。
-
-尽管有着种种好处，它依然并不是能和敌方集团正面对抗的主力，这是对于任何一位有幸能驾驶它的舰长的金科玉律。",,,
-PLSP_zodiac,SHIP,"黄道带级运输舰是一种综合了载货与运油功能的庞大载具，在低速的不利条件下保有了普遍超出其规模平均水平的后勤维持能力。
-
-不惜大规模运用空间膜调配器以压缩稳定货物空间所带来的是同体积下难以企及的存储能力，尽管这意味着在大尺度地图下的旅行速度遭到稳定器的限制。但这对于一艘综合性运输舰来说都是值得的。
-
-尽管它的武装阵列的存在只保留其象征意义，对于引擎部分的防护依然足以让从它一些不太危险的区域安然离开。",,,
-PLSP_quasar,SHIP,"主动打破了火力与防御之间的平衡的精英巡洋舰，它往往是一支注重机动性的特遣队的底牌。类星体级巡洋舰的设计理念注重于闪击和速战速决，在一次切入中完成数个战术任务。
-
-大量运用仿生学原理设计舰船模型的北极星舰船往往有结构过于脆弱的话柄，而这一艘激进的巡洋舰则用高度特化的突击能力有效地弥补了这一缺陷。无论是从远处进行支援，还是在近程即时机动，它卓越的表现都能让所有尝试这种先进武装的舰长眼前一亮。
-
-如果忽略掉过于昂贵以及补给需求方面的过高要求，它会成为北极星之首最为灵活而高效的护卫舰杀手。",,,
-PLSP_spectrum,SHIP,"光谱级巡洋舰可以被认为是正面火力特化的玻璃刀式轻型巡洋舰。作为这一规格下的舰船，它远比其他绝大多数常规巡洋舰脆弱，但是被高度重视的远程压制能力将尽可能弥补这一缺点。
-
-相对不足的防御能力并不意味着它只能在小型战场上发挥威力。一套常见但极其重要的紧急控制系统能在关键时刻提供足够的机动能力，而无论是在战术性后撤还是追逐灵活的小型目标上，这种优越的设计都能最大化每一个举动的效益。
-
-它的战后维护流程也简于大部分构造更为复杂的巡洋舰，这在缓解了北极星后勤压力的同时促成了光谱级的大量装配。",,,
-PLSP_heliumflash,SHIP,"舍弃了轻灵的机动，将最大程度的资源转移到对武器组的重视之上的结果。秉承着巡洋舰这传统分级一贯稳健的核心设计思路，它过度武装的炮组和量身定制的幅能冷凝系统将战术反击的策略无比强调。
-
-氦闪级巡洋舰的蓝本最初将其描述为一种能带来决定性火力压制的战列舰，但因成本、生产要求等原因最后被降格为巡洋舰并设计完毕。扭曲的外壳之下隐藏的是高度发达的幅能通道网络和提高输送效率的空间栓，而这些部分再与一个附属核心控制器组合后则成为了它维持火力的保障，在保持强大耗散能力的同时用密集火力网拦下一切敢于靠近的目标。
-
-除了它的主要优点之外，在维持战线的情况之下，低运作效率的护盾使之更倾向于抢占先机而非后来居上，从而加速了战场中伤亡交换的频率。",,,
-PLSP_collapse,SHIP,"坍缩级巡洋舰有着相对该规模平均水平中较小的体积，相较于可自由设计的火力系统，它更擅长于利用一套内置的类震爆设备造成稳定的大规模损伤。
-
-缓慢而笨重，相当厚实的装甲和优秀的抗动能涂层组成了这艘舰船与常规方案完全相同的防御手段。但它的幅能管理思路和北极星主流并不完全匹配，为暂存相位叠加器产生的过量幅能而特化了幅能容量，为低效的护盾创造更充足的缓冲余裕。
-
-对小型目标最具有压迫能力的舰船之一，所有富有经验的护卫舰舰长都会在发现敌方舰队存在坍缩级巡洋舰后选择分散队形，主动放弃集群优势。",,,
-PLSP_celestialobjectscholar,SHIP,"与绝大多数强调抢占制空权的航母设计不同，天体学者级航母更注重在优势下的围剿与在战场对落单目标的快速收割。
-
-这种非传统角色的职能行使完全凭借于一套隐藏在主控中心之内的目标馈送器，它全功率实时扫描时的数据输出足以保证任何一次规模不大的轰炸行动的成功。值得一提的是，除去它可能搭载的战机之外，它自身的武装也足以支持对任何敢于进犯的敌人发动小规模雷击。
-
-有大量情报指出，这艘舰船似乎和 趋光议会 存在着一定联系。双方对此均持续保持沉默。",,,
-PLSP_flocculus,SHIP,"被认为是光斑级护卫舰的超重型升级版，这种被命名为谱斑级的战列舰能独自缓解一整个小型舰队的护盾压力，也保有不逊色于任何同级的战线维持能力。
-
-速度方面的短板并没有掩盖住这种庞然大物的续航能力，远胜于子午线级甚至不输于凌日级的幅能容量和极不寻常的厚实结构，都能成为它面对来自猛烈炮火压力时的被动防御选择。除此之外，一套范围特化过的护盾强充能设备还能辅助友军抵御自身处理范围外的袭击。
-
-而在火力方面，任何一位明智的舰长都不会忽视那三个可以集火同一目标的大型炮塔。",,,
-PLSP_meridian,SHIP,"子午线级是一种超规格的高速战列巡洋舰，以舍弃少部分内嵌式防护为代价而在核心区域安置大量用以兼容正面武装的控制管道。而战列巡洋舰一贯的高速风格，也使之能不被战友的步伐限制，在战线侧翼来去自如。
-
-北极星大规模战斗中真正的主要战力来源，保有远超绝大部分其他主力舰的追击、压制能力，在攻坚战斗中也不逊色于任何吨位更大的战列舰。在防护上作出的让步并不会对它突入敌群速战速决的战术造成过多妨碍，战列巡洋舰这一角色一贯的对于小型目标的歼灭能力也在这艘船上体现地淋漓尽致。
-
-除去反传统的外形，这种经典的设计在某些方面往往是最简单高效的。",,,
-PLSP_horizon,SHIP,"与用数量淹没敌人的主流思路相反，视界线级航母更注重于用一套远程增幅设备即时提升战机们的战场能力。除此之外，其本身效率可观的护盾发生器和幅能核心也支持这艘航母在关键时刻亲身上前填补战场空缺。
-
-视界线级的象征意义或许更大于实际意义，鉴于它制造、维护的花销之大，它在战场上的出现更能表明出北极星之首破敌的决心。不过，作为一种设计前卫的战机运载平台，它高效的微缩纳米工厂和固化到控制台下的补助装置也表明这绝非纯粹的花瓶角色。
-
-或许值得一提的是，这种强调质量而非数量的航母理论有效减少了战场中因为战机损失而造成的减员——尽管这并非这个方针的初衷。",,,
-PLSP_transit,SHIP,"凌日级战列舰是本星域常见规格中最为宏伟却轻灵的战列舰之一，稳定，高效，完美。
-
-限制它发挥实力的最大因素是战后的维护与保养工序。在战场中，这种稳健而不失灵敏的战列舰能借助类似于闪现的空间压缩器，对任何方向的目标作出快速反应。而除去花哨的设备，它高密度中子装甲和极度优越的护盾维持阵列，则是它真正作出对应行动的最大保障。仅有的缺憾可能在于它较为贫乏的持续性火力，但它能通过高瞬时爆发能力轻易抹去这个缺点。
-
-只有在必要的时刻才会进入战场的战争机器，不会有任何保持正常理智的舰长愿意面对这种无情的对手。",,,
-PLSP_axis,SHIP,"不常见的侧舷火力战列巡洋舰，有着与北极星风格完全不同的高机动力与战场周旋能力。除了额外的正面火力，它的护盾承载能力也显然高于另一艘热门的核心纪元战列巡洋舰。
-
-全舰围绕极端火力这一特点进行设计，从构架上采用了以武器链接组件为核心排布其他模块的激进方案，从而获得搭载最具毁灭性武器的能力。据称，为了使这一战争平台更具有威慑力，北极星还不惜花费近乎奢华的研发成本设计了一套其专属的惯性加力系统，并附加了相对稳定的幅能耗散器。
-
-其被北极星舰长们称为""启明星""的内置主炮，似乎象征着对某些既有现实的不满和行动的渴望。",,,
-PLSP_magnitude,SHIP,"星等级是一种秉承着防御理念，为确保复杂制空环境下战机的高存活率而设计的特殊航母，但它的外形往往比实际作用要显得更为引人注目。
-
-它紧凑的主体区域内，隐藏着两套直连外置甲板的战机整备线，以在占用最小空间的前提下充当有效机库的职能，且降低了维护不当的潜在风险。在集成化的保障下，它有着充足的余裕空间以安置一套涨落逆变发射器，能够在设备充分冷却的情况下调节子战机最易于受影响的护盾核心，使其免于被大部分常规手段的攻击威胁。
-
-不过，和其他同规格舰船相比较为中庸的速度，限制了它转场的能力。但这个可以被放大到整个体系的缺点，事实上也是北极星舰队学说中不可或缺的一环。",,,
-
-
-
-PLSP_vortexdrive,SHIP_SYSTEM,借由内置到引擎舱的爆发型相位线圈和小规模曲率抚缓器，这一套集成了多个大型组件的系统能让舰船在相位空间中高速突进一段距离，并在回到正常空间前推开附近的阻碍。,机动,,
-PLSP_bluedrive,SHIP_SYSTEM,适配于战机的旋流驱动，以持续时长的急剧降低为代价完成了设备小型化。,机动,,
-PLSP_emp,SHIP_SYSTEM,先进的高压 EMP 打击装置，调整过的电容重放策略能以更好的单次电击效果弥补持续时间的不足。,进攻,,
-PLSP_timedisturbance,SHIP_SYSTEM,借由被称为时流裂位仪的复杂设备，在短暂充能后产生一阵剧烈的相位爆发，显著降低附近所有舰船的时间流动。这个改进后的型号可以使自己和友军幸免于难。,辅助,,
-PLSP_shellsystem,SHIP_SYSTEM,激发一套暂时性护盾固化器，显著提高护盾展开速度和抵抗能力，但在持续过程中无法使用武器或关闭护盾。,防御,,
-PLSP_shellarea,SHIP_SYSTEM,激发一套携带了能量配送器的暂时性护盾固化器，提高自身护盾展开速度和抵抗能力的同时增益附近的友方护盾，但在持续过程中无法使用武器或关闭护盾。,防御,,
-PLSP_displacer,SHIP_SYSTEM,借助四个不同子空间的同位置涨落差分解自身以避免违背物理法则。长程传送大型舰体，同时抹除敌意抛射体。,机动,,
-PLSP_reddisplacer,SHIP_SYSTEM,适配于战机的星潜闪现，以使用次数的急剧降低为代价完成了设备小型化。,机动,,
-PLSP_energycondenser,SHIP_SYSTEM,将武器产生的幅能导入预先冷却的附属核心并留至此后处理，降低武器幅能产生并提升峰值火力限度。核心控制器起效时将持续产生硬幅能。,进攻,,
-PLSP_repairlink,SHIP_SYSTEM,物质传输装置，能以脉冲形式将轻质材料运输至战机的装甲缺陷处并粘合，也可以借助派生效果大幅缓解目标的幅能压力。,战机,,
-PLSP_darkcollapse,SHIP_SYSTEM,暂时将 P 空间的一小片叠加到一定距离内的指定区域中，对影响范围内的任何目标造成毁灭性打击。无法锁定战机或战列舰以及空间站目标。,进攻,,
-PLSP_eventdisturb,SHIP_SYSTEM,为一定范围内的一个非战机友军目标(包括自身)施加一层事件解构屏障，在一段时间内为其抹除可能命中自身的弹幕。,防御,,
-PLSP_targetingfeed,SHIP_SYSTEM,启动一套经过精心重定向过的逆变馈送器，实时调节战机的护盾发生器以将来袭伤害转为幅能耗散。,战机,,
-PLSP_polegenerator,SHIP_SYSTEM,直连主控系统的小型时流设备，与大多数类似的装置相比缺乏持续能力，但它能在提升舰船时间流动速度的同时提升防御能力。,防御,,
-PLSP_sensordisturb,SHIP_SYSTEM,类似于通讯干扰器，但它反制的是所有舰船都配备的格式传感阵列。极大程度降低一定范围内所有敌舰的索敌能力和武器射程。,防御,,
-PLSP_solarwind,SHIP_SYSTEM,吸收星际物质，短暂加热后投射出足以比拟微型太阳风的灼热物质，极大地减缓影响范围内敌方的速度并对其施加高爆伤害。,防御,,
-PLSP_axisdrive,SHIP_SYSTEM,更为精巧的翘曲设备，利用舰船质量惯性而非指定方向以开辟曲率通道。向舰船速度方向高速位移一段距离，期间允许调整舰船姿态，且调制稳态力场将使舰船免疫非能量伤害。,机动,,
-PLSP_reservedrone,SHIP_SYSTEM,投送携带有燃星级鱼雷的无人机，对失去护盾的目标造成无法挽回的沉重打击。成功返航的无人机可以减免冷却时间。,进攻,,
-PLSP_wanestrike,SHIP_SYSTEM,传送两枚隙片到目标附近，每一枚造成适量能量范围伤害，拥有一次冗余充能。,进攻,,
-
-
-
 ,,,,,
-
-plspstar,CUSTOM,"一颗耀眼的 F 级恒星，能间歇性喷发出不那么强劲的太阳耀斑，但对于无反耀斑装置的舰船依然能造成干扰。
-
-其温度约为 6000K，绝对星等约为 2.71。",,,
-PLSP_planet1,CUSTOM,这一颗拥有脆弱生物圈的行星平稳地运行在几条小行星带之间。尽管并不便利的星际交通情况在一定程度上阻碍了这个星系监视点的经济发展，它独特的位置依然造就了它近乎完美的矿业条件和自然星际防御能力。,,,
-PLSP_planet2,CUSTOM,Triglav 星系的关隘，曾经发生在这颗星球高空的拉锯战和低空的轰炸所带来的损伤 已经在它的表面留下了无法抹除的痕迹，但近乎完好无损的地下设施依然有能力安置无数居民和任何必要的军用机构。,,,
-PLSP_planet3,CUSTOM,远在数条小行星带之外的岩质星球，过低的温度使得全球都存在着严实包裹了整个地表的永久冰层。不活跃的地核更大程度地增加了环境的险恶程度，只有被逼无路的落魄者才会考虑在此休整。,,,
-PLSP_planet4,CUSTOM,一颗有着高温高压内核的气态巨星，过度稠密的大气和昏暗的光照阻止了无数次深入探索，被数条紧密的陨石带和两颗大到不正常的卫星所围绕，具有发展为矮褐星的潜质。,, ,
-PLSP_planet5,CUSTOM,这一颗位于小行星带之内的星球 充当着临时军事基地的作用，借助天然屏障的同时抵抗着来自气态巨星巨大的潮汐力。它并没有向外输出远航必需品的职能。,,,
-PLSP_planet6,CUSTOM,与大部分大体情况类似的星球不同的是，它并非全球都处于寒冷的环境之下。少部分依靠地热自然供暖的区域紧挨着绝佳的气矿收集场所，使得这颗行星的战略价值一再提高。,,,
-#PLSP_relay,CUSTOM,基于一种不寻常的 FTL 发射基座所设计的传输装置，这套信号中转设备能在无人操控的情况下在陨石带中穿梭,,,
+PLSP_electgenerator,WEAPON,"Using the simplest of linear accelerators and a hard-to-measure capacitor bank, the Charge Generator can deliver a short burst of hard-to-avoid firepower, making it particularly suited to mid-range engagements.",Assault,,
+PLSP_electemitter,WEAPON,"With the aid of several cyclotron accelerators concealed beneath the casing, this advanced device continously fires a pulsed particle beam composed of nuclei, hitting the target before any effective evasive action can be performed.",Assault,,
+PLSP_electprojecter,WEAPON,"The most significant improvement for the Charge Projector over other versions of its weapon series is the replacement of the staging device with a large set of flux shunts, which minimizes the need for buffering and preloading.",Assault,,
+PLSP_impulses,WEAPON,"This torpedo is demonstrative of Polaris' love of linear accelerator concept. Designed to fire a high-powered kinetic warhead at tremendous speeds, it is capable of taking down shields at the inevitable point of impact.",Strike,,
+PLSP_impulsem,WEAPON,"A larger launch platform for the Impulse Torpedo, the larger magazine size and asynchronous launch design allows for more effective overloading of shields with a single volley.",Strike,,
+PLSP_impulsel,WEAPON,"This launcher features an advanced version of the Impulse Torpedo, which has been fitted with a more destructive warhead and a larger fuel tank for greater range and endurance. ",Strike,,
+PLSP_pulsehp,WEAPON,"A pulse cannon capable of firing a large number of heavy particle clusters in a short interval. The radiant nature of the ordnance fired makes it more suitable for dismantling armor and superstructures rather than shields, or for covering assaults.",Assault,,
+PLSP_pulseo,WEAPON,"The Superimposed Pulse Cannon is a relatively simple improvement on the Particle Pulse Cannon, using better capacitors alongside improvements to its guidance and targeting system, which significantly improves the killing ability of each targeted burst.",Assault,,
+PLSP_pulsesc,WEAPON,"Most of its users do not know what kind of interpretation of ""supercritical"" applies here, but this does not affect the extremely high effectiveness of this magnificent weapon. The greatly improved single damage ability as compared to its predecessors means that even the heaviest armor will also be torn apart in a few shots of its fire.",Assault,,
+PLSP_etherstrike,WEAPON,"The unique built-in weapon marked as ""Heaven and Earth"" in Axis-Class Battlecruiser's weapon system, it brutally destroys enemies with a quadruple high energy burst shot accelerated to unimaginable levels via its built in emitter.",Strike,,
+PLSP_guidingpds,WEAPON,This point defense weapon uses a special field effect extension accelerator to shoot out polarized energy clusters at extremely high speeds. The field effect also allows the weapon to control the trajectory of its projectile to induce tracking on their targets.,Point Defense,,
+PLSP_guidingpdm,WEAPON,"An upscaled version of Polaris' mainstay point defense system, the main differences being an enlarged linear acceleration cavity and additional field-effect accelerators, allowing for more powerful and more accurate projectiles.",Point Defense,,
+PLSP_guidingpdl,WEAPON,"The largest and most definite version of Polaris' point defense systems, this upscaled and upgraded version boasts multiple field controllers of variable sizes, a series of heavy duty field-effect accelerator arrays, combined secondary acceleration units, all mounted on high-torque composite servomotors. All these upgrades combined on a single weapon allows it to demonstrate top-tier point defense interception. ",Point Defense,,
+PLSP_streammicrowave,WEAPON,"A relatively new development in Polaris's arsenal that makes use of unique laser technology to create suppressive pseudo-beam weapons. The energy buffered in the capacitor banks is injected into a series of laser generators, and the resulting flux energy is then pumped through microtubules that are placed throughout the weapon to generate a particle jet.",Close Support,,
+PLSP_streampolarization,WEAPON,"A heavier version of the Microwave Plasma Rifle. In addition to a larger capacitor bank and denser flux energy microtubes, an optimized spectral redirection protocol allows it to project a cleaner, more destructive particle jet.",Close Support,,
+PLSP_streaminvert,WEAPON,"An improved version of Polaris's Particle Rifle technology. Part specifications for large weapon adaptations allow the laser's resonant cavity to be used for energy reserves as well. The multiple counter-feedback effects during the energy transition explode into a torrent of energy that, if not properly controlled, can tear apart space-time.",Close Support,,
+PLSP_iccannon,WEAPON,"A newly developed point defense weapon making use of unusual ammuntion. Beads of monocrystalline metallic hydrogen is compressed to a quasi-critical state, creating an unstable rhombohedral-shaped projectile which is then fired. Upon hitting the target, the projectile shatters, covering a large area with numerous deadly crystal fragments with high kinetic energy.",Point Defense,,
+PLSP_icflak,WEAPON,"This version of the Crystal Autocannon employs a higher mass pre-processing load, allowing for larger projectiles that can break up into bigger pieces. As noted in the name, the fragmented shards of each crystal ammo will still retain a large amount of momentum after shattering, allowing them to shatter again and cover a wider area.",Point Defense,,
+PLSP_icculverin,WEAPON,"These massive weapons, featuring the largest deployments of Polaris crystal technology, utilize large linear accelerators to propell solid blocks of hydrogen of extreme macro-stable mass, creating a chaotic storm of crystals that will tear apart any shield structure.",Area Defense,,
+PLSP_interferometerhyperbolic,WEAPON,"Weaponised ray generators that deploys one set of photons at a time and utilize them it to blast the target in a bizarre path, wrecking heavy damage to light armour or small enough hulls.","Suppression",,
+PLSP_interferometerresonant,WEAPON,"Using the resonance technique under macro particles, the accelerating poles with additional wave energy components are able to excite two projectiles in parallel to form a projection wave, while still maintaining a level of accuracy comparable to that of a laser weapon.","Suppression",,
+PLSP_interferometerdegeneracy,WEAPON,"The diffraction component operating in regression mode can excite a large group of effective projectiles at once, burning any solid structural material with a semi-random state, exhibitig a phenomenon similar to ball lightning.","Suppression",,
+PLSP_magnetics,WEAPON,"The warheads are loaded with traces of high-density exotic material, which on approach to the target cause them to fuse directionally and produce extremely powerful rays, magnetic fields and high-energy charged jets. Due to safety and cost considerations, a single MIRV does not carry the amount of materal required to trigger a gamma-ray burst.","Strike",,
+PLSP_magneticm,WEAPON,"The Magnetar-Class warhead, although the size of a drone, is the most potent explosive-pumped ray emitter of its size, housing two sets of four units of gravitational decay vessels that maintain the stability of the dense material and produce a more violent electromagnetic torrent.","Strike",,
+PLSP_magneticl,WEAPON,"To compensate for the fact that even large shipboard slots are not meant to carry the Magnetar-class warhead, this version of the design instead extends the holding inwards, devoting more internal volume to accommodating extended launchers and inertial-free loaders for greater saturation through any defence.","Strike",,
 ,,,,,
 ,,,,,
 ,,,,,
-plsp,FACTION,"""北极星之首""，一个在大崩塌后迁入英仙座的神秘军阀势力。他们突然出现于第二次 AI 战争末尾的混乱时期，在各大势力忙于收拾残局之时以迅雷之势占据了 Triglav 星系原先由其他独立组织建立的殖民地。在此之后，他们被动地固守占据的领土，严格管控舰队行为和贸易流——这种消极到不正常的态度后来被证明为一种军事孤立主义。
+PLSP_redshiftw,WEAPON,"A special pulse laser with shocking power and very high flux efficiency, only limited for range.",Assault,,
+PLSP_blueshiftw,WEAPON,Ejects a large number of graviton shells with a collapse effect that can cause devastating blows to shields and electronic equipments.,Assault,,
+PLSP_nebulablaze,WEAPON,"Embedded main weapon of the fighter, the swift projectile has a powerful destructive power similar to a heavy blaster.",Assault,,
+PLSP_perturbationw,WEAPON,"A triplet of energy missiles with excellent range, charged and delivered by a concentrator ring located in the center of the bomber.",Bombard,,
+,,,,,
+,,,,,
+,,,,,
+PLSP_perturbation,SHIP,"This slow energy bomber fires pulses based on an adsorptive micro carrier, utilising a ring shaped concentrator embedded in the centre of it body to trigger an explosive release, so as to allow it to perform all its bombing attacks from a safe distance.
 
-北极星之首在和几乎所有势力签订和平协定之后就失去了公众关注，这对其他绝大部分势力都是值得庆幸的，因为它们没有精力也没有必要与这样一个持有外界科技的新兴组织对抗到底。但辛达强权将这种态度作为北极星脆弱的象征，并与后者引发了激烈冲突，即使战争早已陷入僵局，并不平静的冷战也延续至今。
+In order to compensate for the structural defects in its frame caused by the installation of the pulse ring, it has a built-in damping force field to prevent its untimely self-immolation.",,,
+PLSP_redshift,SHIP,"These expensive heavy fighters, ridiculously over-armed and equipped with integrated displacer systems, make them extremely suitable for dealing with large targets, and they are also capable of intercepting other fighters.
 
-或许值得担忧的是，它对于现有星际力量与格局的影响还没有任何展现的迹象，关于它的一切敏感信息都保持着冰冷太空一贯的未知。",,,
+Overall, this difficult-to-match heavy firepower design has demonstrates the Polaris's strikecraft doctrine of focusing on quality rather than quantity.",,,
+PLSP_blueshift,SHIP,"A light fighter focused on speed and shield capabilities, protecting its fragile structures with the most comprehensive of shielding systems. Rather than causing direct damage, its armaments are more suitable for locking down ships with heavy EMP damage.
 
+The designers somehow managed to add a Vortex Drive in the front area of the engine despite its small size - though this means the fighter requires a significantly longer logistics trail.",,,
+PLSP_comettail,SHIP,"In contrast to the usual practice of overwhelming enemy aircraft with numbers or defending missiles with high-precision strikes, this aircraft takes the simplest and most direct approach to clearing a large area, leaving no opportunity for any fish caught in the metaphorical net to emerge.
 
+It was originally intended to take advanced fighters with strong shields down than the current design of the Sector, which carries heavy armor.",,,
+PLSP_occultation,SHIP,"This assault aircraft combines defense and counterattack roles by mounting a compact version of the Borealis Shroud, allowing it to support its fellow fighters by hardening their shields and increasing their survivability.
 
+Its built-in weapon was originally named the Pulse Wave Emitter, but most captains agreed that it needed a more distinctive codename.",,,
+PLSP_moonphase,SHIP,"One of the responses of the Fleet Joint Defense doctrine against the constant threat of missile swarms to cover the entire airspace in the vicinity of the fleet from a longitudinal perspective with a large number of long-range point defense launchers and additional dark particle fluctuator.
 
+However, the Moon Phase fighter's massive bulk, forcing it the deploy in squadrons of one, carries a sizable amount of point-defense weaponry, allowing it to meet the requirements by its lonesome.",,,
+PLSP_subobject,SHIP,"A drone bomber, integrated into the Celestial Object Scholar to allow for surprise strikes on enemy ships.",,,
+,,,,,
+,,,,,
+,,,,,
+PLSP_meteoroid,SHIP,"The smallest design in the Polaris ship catalogue, the size of the Meteoroid shuttle does not limit its combat potential.
+
+Surrounded by a set of physical devices and hard-coded with specially reinforced control equipment, the extra space is sacrificed to gain a range of energy systems far beyond what its exterior can seemingly support, while also supporting a standard firepower configuration. It is equipped to take up vacant spots in fleets that require small, highly mobile ships.
+
+It is said that its front weapon slot and attached outline structure were designed with for the purpose of conducting heavy shock attacks.",,,
+PLSP_crescent,SHIP,"For a seemingly fragile and vulnerable light frigate, the Crescent is anything but. On the contrary, its extremely well-designed architecture design provides the most flexible of combat capabilities for such a small volume.
+
+If it is not possible for a Crescent's weapon suite to complete the annihilate its target in a limited timeframe, the focused arc generator hidden behind the ship's bow will be enough to make even the strongest of star fortresses crumble, as it is capable of paralyzing unprepared opponents by firing multiple EM pulses in a split second.
+
+The only drawback is its lack of hull struct, which prevents it from being the truly exemplary figure of an ideal Polaris-designed frigate. That said, this drawback does not prevent it from being a mainstay of the Polaris naval fleets, giving it a fairly siginficant strategic role.",,,
+PLSP_quadrant,SHIP,"Quadrant-class frigates are not generally used in small-scale battles, instead acting as skirmishers that sow chaos in the enemy battleline on large fleet battles.
+
+Underneath a seemingly ordinary data analysis interface, is buried its incalculable tactical potential. Rather than entering the battlefield for direct hunter-killer roles, it is more suited to conduct its skirmishing operations by means of its advanced Timestream Interference System, so as to disrupt enemy formations with little risk of destruction.
+
+That said, even if its auxiliary capabilities are more fully emphasized, it is still difficult for captain to ignore the self-protective capabilities of its firepower configuration in emergency situations.",,,
+PLSP_facula,SHIP,"As a mainline frigate of the Polaris fleet, the Facula-Class has a robust flux management system, a simple-to-operate weapon group and an emergency shield hardener.
+
+The Borealis Veil provides incredibly powerful protection, but it is more noteworthy that it manages to pack the full output of a Fortress Shield system while utilising various other innovations to limit energy consumption.
+
+Alongside its indispensible weapons loadout, it is capable of bringing many tactical benefits to the battlefield. Though it has a drawback of having a slower combat speed, the Facula-Class is still suitable for most fleet tasks that do not require facing off other frigates or strikecraft that are faster than it.",,,
+PLSP_evolution,SHIP,"This modest frigate constitutes the vanguard of the Polaris fleet. The Evolution-Class is a classic choice for any sizable force thanks to its flexible loadout configuration and its Vortex Drive system.
+
+Being the most common does not necessarily mean mediocrity, as shown by its shield co-stabilizer, integrated into the core of the energy band so that it provides direct defense no less than any ship of the same size. Utilising's a frigate's typical high maneuverability, together with a set of manuevering devices that penetrates the entire design, the Evolution-Class also has the ability to avoid direct combat with any difficult targets.
+
+A benchmark design as significant as other worthy battle corvettes.",,,
+PLSP_lightcone,SHIP,"The Lightcone-Class destroyer is a second-line design focusing on mid-to-long-range support capabilities. The compact central structure is occupied by a single hangar and dedicated flux pipelines for the main turret, though this configuration makes certain sacrifices to the ship's shield generator and combat readiness systems.
+
+Compared to Polaris' usual emphasis on flux dissipative capacity, this huge destroyer has achieved a balance between load capacity and flux dissipators. In addition to its powerful attack capability, it has the Event Disturbance ship system that can act on light and small targets, providing additional protection capabilities.
+
+Lastly, it attaches importance to the concept of dual engine setups, which directly affects the arrangement and angle of the engines, which limits the maximum speed, improves the degree of flight stability, and significantly increases maneuverability.",,,
+PLSP_pemumbra,SHIP,"The Pemumbra-class destroyer, with its radical focus on rapid advances, reflects a different fighting style than most ships from Polaris.
+
+Its several turrets and iconic Vortex Drive system that are fixedly pointing forward provides incomparable fast strike capabilities from its provided hardware, although the position of the shield generator will be limited by this layout. However, rather than a single ship cutting in from the side of the front, it is more suitable for group formation operations.
+
+It is important to note that it has compromised on the the size of the flux stabllizer in favor of increasing the size of the core armor area, making it incredibly vulnerable to bursting strikes.",,,
+PLSP_corona,SHIP,"Another type of auxiliary ship that influences the battle situation by regulating battlefield scenarios, the Corona-Class destroyer is able to hold the rear of the battle line while directly impacting enemy ships in the distance with terrifying efficiency and frightening momentum, forcing the opponent to maintain an inferior battle line.
+
+Its design style has multiple turrets, and their firing angles coordinated to cover directions with almost no dead angles, providing all-round protection. In addition to that and its excellent damage control systems, its most outstanding feature is its expensive Solarwind subsystem. After complex operation processing, it can throws a large amount of high-heat material over a wide area at a speed that nothing in main space can avoid, emptying the battlefield of light armored units, slowing down the projectiles, and even targeting the formations of those ships that can resist its direct damage.
+
+As one of the more stubborn designs in the Polaris arsenal, direct assault or frontal contact with it is often not recommended.",,,
+PLSP_aberration,SHIP,"The Aberration-Class destroyer is an economical suppressive destroyer, renowned for performing better than most ships in high pressure battlefield conditions.
+
+In order to alleviate the shortcomings of the flux-management system, this ship uses more missile weapon slots to reduce its dependence on its flux dissipators. The energy strike weapons are augmented by a set of highly complex time flow accelerators, further enhancing their capabilities.
+
+It doesn't seem to be outstanding in terms of performance, but its overwhelming cost advantage and ease of assembly make it capable of defeating any opponent via a quantitative advantage.",,,
+PLSP_blazar,SHIP,"Not a frontline combatant, this lightweight destroyer has the advantages of flexible turnover capabilities, alongside being capable of conducting chases and backline strikes.
+
+It is also effective at escorting and evacuating small ships. The earliest forward-looking design that was equipped with auxiliary tactical systems in all of Polaris' contemporary designs, the Blazar-Class was initially positioned as a scout rather than for direct combat. Its superior maneuverability and highly customizable weapon array, combined with a shield generator sufficient to handle most situations, ensure that it returns safely from any danger.
+
+Despite its various benefits, it is still not an asset that can confront the enemy directly. It is necessary to pay a close eye to its use in order to avoid unnecessary losses.",,,
+PLSP_zodiac,SHIP,"The Zodiac-Class Freighter is a huge vehicle that integrates cargo and fuel transportation functions. Under low-speed adverse conditions, it has maintained logistic maintenance capabilities that generally exceed its average level of scale.
+
+Use of the space film dispenser to compress and stabilize the cargo space allows for a storage capacity that would be unattainable under the same volume on standard ships, although this means that the travel speed over long distances is limited by the stabilizer. But it's all worth it for an integrated transport ship.
+
+The protections around its engine block are sufficient to allow it to travel safely through more dangerous areas, resulting in its defensive weapon batteries existing only for a symbolic significance.",,,
+PLSP_quasar,SHIP,"This elite cruiser, which breaks the balance between firepower and defense, is usually the backbone of a mobility-focused task force. The design of the Quasar-Class cruiser focuses on flash strikes and quick battles, allowing it to complete several tactical tasks in one shot.
+
+Polaris ships, which make extensive use of bionics to design ship models, often suffer from fragile structures, and this radical cruiser design effectively compensates for this shortcoming with highly specialized assault capabilities. Whether it is supporting from a distance or maneuvering at short range, its outstanding performance under the hand of a skilled captain makes it a force to be reckoned with, earning a reputation for being the prime frigate hunter in the Polaris fleet. That is, if one is able to ignore the hefty and demanding supply requirements. ",,,
+PLSP_spectrum,SHIP,"The Spectrum class cruiser can be considered a specialised 'glass cannon' light cruiser. For a ship of this size, it is far more vulnerable than most other conventional cruisers, but its highly valued long-range suppression capability will compensate for this as much as possible.
+
+The relative lack of defensive capabilities does not mean that it can only be effective on small battlefields, for a common but vital emergency control system provides enough maneuverability at critical times, and whether it's for tactical evacuation or chasing nimble small targets, this superior design maximizes the effectiveness of every move.
+
+Its post-battle maintenance process is also simpler than that of most cruisers of more complex construction, which has eased the logistical strain on Polaris while contributing to the mass assembly of the Spectrum class.",,,
+PLSP_heliumflash,SHIP,"The result of a deliberate design choice to abandon the requirement for nimble manoeuvring and instead focusing on expanding the weapon loadout. Compared to other cruisers' balancing of a consistent combination of firepower, mobiliy and armor, the Heliumflash boasts an over-armed weapon group, accompanied by a tailor-made flux management system.
+
+Original design documents of the Heliumflash-class cruiser initially described it as a battleship that could bring decisive suppressive firepower, but it was eventually downgraded to a cruiser due to cost, production and other reasons and hence its blueprint was designed as such. Hidden under its twisted shell is a highly developed network of energy channels and vents that improve dissipation efficiency. These parts are then combined with an attached AI core controller to ensure that it maintains firepower while maintaining a strong dissipation capacity, resulting in a hail of dense firepower that stops all who would dare approach the Heliumflash.
+
+Despite having a shield with a poor operative efficiency, doctrine encourages captains to counterattack than passively defend, making use of its massive battlefield presence to force a conclusion.",,,
+PLSP_collapse,SHIP,"The Collapse-Class cruiser has a volume slightly smaller than the average cruiser. Combined with a versatile firepower system, it utilizes a set of built-in shock equipment to cause large-scale area-of-effect damage.
+
+Slow and bulky, thick armor and excellent anti-kinetic coating make up the ship's defenses, similar to the conventional scheme. However, the idea behind its flux dissipation system is heavily altered from that of the Polaris mainstream, and its flux capacitors are optimized for temporarily storing the excess flux energy generated by the Subspace Seismic Burst Generator.
+
+A terrifying target for smaller vessels to face, any experienced frigate pack commander will quickly scatter the formation immediately after discovering that the enemy fleet has a Collapse-Class cruiser, as giving up the group advantage is far more preferable to the alternative. ",,,
+PLSP_celestialobjectscholar,SHIP,"Unlike most carrier designs that emphasize seizing strikecraft superiority, Celestial Object Scholar(C.O.S.)-Class carriers are more focused on the encircling or circumventing of superior forces through the rapid micromanagement of orders throughout the battlefield.
+
+This unconventional role is performed entirely by a set of target feeders hidden within the main control center, whose full-power real-time scanning data output is sufficient to ensure the success of any modest bombing campaign. It is worth noting that, in addition to the fighters it may carry, it is armed with an internal drone unit capable of activating a small-scale lightning strike against any enemy that dares to attack.
+
+A large amount of intelligence and its distinct hull shape indicates that this particular design seems to have some connection with the ApproLight Council. Both sides remain silent on this.",,,
+PLSP_flocculus,SHIP,"Considered as a super-heavy version of the Facula-Class frigate, the Flocculus-Class Battleship can alone recieve the same pressure as an entire small fleet and maintain the same battleline combat ability as any other capital class.
+
+The shortcomings in flux dissipation do not hide the endurance of this behemoth, which compares favorably to most other capitals of the Sector. Its flux capacity and unusually thick structure can allow it to withstand intense pressure from enemy forces. In addition, its infamous Borealis Shroud can also help friendly forces defend against attacks outside their own range.
+
+And in terms of firepower, no wise captain will ignore the three large turrets that are capable of tracking the same target.",,,
+PLSP_meridian,SHIP,"The Meridian-Class Battle Cruiser is an over-specced high-speed battlecruiser. At the cost of lacking much structural protection, a large number of flux pipelines are installed in the core area for compatibility with the large frontal batteries. The consistent high-speed also allows it to move freely while engaged.
+
+Polaris’ main doctrine relys on maintaining far greater pursuit and suppression capabilities than most other warships, while not being inferior to any larger tonnage in battle. The concession made in armor protection for the Meridian will not cause too much obstacle in its purpose of breaking into the enemy's battlegroup, demonstrating that traditional and classic designs are often the simplest and most efficient in some ways.",,,
+PLSP_horizon,SHIP,"Contrary to the mainstream idea of overwhelming the enemy with quantity, Horizon-Class carriers are more focused on using a set of long-range amplification equipment to instantly enhance the battlefield capabilities of deployed fighters. In addition, its own highly efficient shield generator and power core means that this combat carrier is capable of filling in missing strikecraft at critical moments without regard to flux load.
+
+As an avant-garde fighter carrier platform, its highly efficient miniature nanofactory and various auxillary systems show that it is not to be taken lightly. That said, given its high cost of manufacturing and maintenance, the Horizon is not seen often, meaning its rare deployment on the battlefield is a sign that Polaris very much wishes for a particular enemy to be exterminated.
+
+It may be worth mentioning that this carrier doctrine of emphasizing quality over quantity, effectively reduces the attrition caused by the loss of fighters in the battlefield - although this is not the original intention of this policy.",,,
+PLSP_transit,SHIP,"The Transit-Class battleship is one of the most magnificent battleships via the common specifications of the Sector, boasting incredible capabilities in exchange for its utterly ruinous maintainence cost.
+
+In the battlefield, this robust yet sensitive battleship can respond quickly to targets in any direction with the help of a space displacer, while the standard weapon group and superior shield projector array, boast maximum protection and destructive capability at any point of combat.
+
+A war machine that enters the battlefield only at the most necessary moment, no captain with a lick of sanity will be willing to face such a ruthless opponent without sizable support.",,,
+PLSP_axis,SHIP,"This uncommon broadsiding battlecruiser has a high engine power and battlefield agility that differentiates it from tradtional Polaris doctrine. While simiar to the popular Conquest-Class Battlecruiser, it boasts an additional front facing tactical main gun and more capable shields.
+
+Its clear that whole ship is designed around the characteristics of extreme firepower, seeing how its framework, a radical design utlising weapon link components to manage other modules, gives it the ability to carry the most destructive weapons. To make this heavy weapons platform more of a deterrence, Polaris designed a unique inertial afterburner system at the expense of nearly luxurious R & D costs, and added a relatively stable flux dissipator.
+
+Its built-in main gun, so called Ether Strike, affectionally known as ""Guiding Star"" by some Polaris captains, seems to symbolize dissatisfaction with the existing reality and a compulsion for action.",,,
+PLSP_magnitude,SHIP,"The Magnitude-Class is a special carrier designed to ensure high survivability in a complex airspace environment, following a defensive philosophy, but its unique shape makes it take up attention outside of its traditional role.
+
+Its compact main body conceals two sets of direct external deck mounted aircraft assembly lines to function as an effective hangar with minimal space requirements and reduce the potential risk of improper maintenance. It also boasts a set of emitter links, which can regulate its strikecraft vulnerable shield cores for maximum performance while the equipment is sufficiently cooled, making them immune to most conventional attack threats.
+
+However, the more moderate speed compared to other ships of its size limits its engagement ability. But this shortcoming, as noted by observers, is actually an integral part of the Polaris fleet doctrine.",,,
+,,,,,
+,,,,,
+,,,,,
+PLSP_vortexdrive,SHIP_SYSTEM,"Utilising a burst phase coil built into the engine room and a small-scale curvature moderator, this system allows the ship to surge through phase space at high speed for a distance and push through nearby obstacles before returning to normal space.",Movement,,
+PLSP_bluedrive,SHIP_SYSTEM,"A Vortex Drive minaturized for strikecraft, trading away phase duration in exchange for its smaller size. ",Movement,,
+PLSP_emp,SHIP_SYSTEM,"Advanced high-voltage EMP striking device, using adjusted capacitors to compensate its small active duration with a better per-shot effect.",Offensive,,
+PLSP_timedisturbance,SHIP_SYSTEM,Uses a complex device known as a time-current splitter to generate a violent phase burst that dramatically reduces the time flow of all nearby ships. Does not affect friendly forces.,Offensive,,
+PLSP_shellsystem,SHIP_SYSTEM,"Activates a series of temporary shield hardeners to significantly increase shield deployment speed and strength, but disables weapons and the ability to deactivate the shield for the duration.",Defensive,,
+PLSP_shellarea,SHIP_SYSTEM,"Activates a series of temporary shield hardeners to significantly increase shield deployment speed and strength, but disables weapons and the ability to deactivate the shield for the duration. Additional energy dispersers allow the effect to be spread to nearby ships. ",Defensive,,
+PLSP_displacer,SHIP_SYSTEM,Using four different subspaces' quantum fluctuation to reform hull and avoid violating the laws of physics. Travelling a long distances while obliterating hostile projectiles.,Movement,,
+PLSP_reddisplacer,SHIP_SYSTEM,"A phase skimmer adapted for fighter uses, but at the cost of a sharp reduction in the number of uses.",Movement,,
+PLSP_energycondenser,SHIP_SYSTEM,Overclocks all weapons and dumps their increased flux into a secondary flux core. Increases weapon rate of fire and reduces flux costs. Generates extra hard flux when active.,Offensive,,
+PLSP_repairlink,SHIP_SYSTEM,"Repairs deployed fighters via a material displacement device, while at the same time reducing their flux via derived effects.",Fighter,,
+PLSP_darkcollapse,SHIP_SYSTEM,"Temporarily superimposes a small piece of P-space into a specified area within range, causing a devastating blow to any target within its area of effect. Unable to lock on to fighters, battleships or spacestations.",Offensive,,
+PLSP_eventdisturb,SHIP_SYSTEM,"Designate any non-fighter friendly target within a certain range (including the piloted ship) to activate a entanglement deconstruction shield on it, removing all nearby hostile projectiles around the target within seconds.",Defensive,,
+PLSP_targetingfeed,SHIP_SYSTEM,Activate a set of carefully redirected inverter feeders that adjust the shield generators of strikecraft in real time to nullify incoming damage via increasing flux dissipation.,Fighter,,
+PLSP_polegenerator,SHIP_SYSTEM,Uses a small time-flow device connected to the main control system to temporarily increase the ship's timeflow and defensive capabilities.,Defensive,,
+PLSP_sensordisturb,SHIP_SYSTEM,"Significantly reduces the ability of all enemy ships within a given range to detect allies, while reducing their weapons range.",Defensive,,
+PLSP_solarwind,SHIP_SYSTEM,"Absorbs interstellar matter, and then projects a scorching substance comparable to a miniature solar wind, dramatically slowing down the enemy in influence area and inflicting high explosive damage.",Defensive,,
+PLSP_axisdrive,SHIP_SYSTEM,An advanced warp field generator that increases the ship's momentum in its direction of motion while rendering it immune to non-energy damage. ,Movement,,
+PLSP_reservedrone,SHIP_SYSTEM,Launches a wing of drones armed with Starblaze Torpedoes that are particularly devastating against unshielded enemies. Successfully returned drones can reduce cooldown.,Offensive,,
+PLSP_wanestrike,SHIP_SYSTEM,Teleports two dark particles to the target area. The particles will explodes a few seconds after their proximity triggers are activated.,Offensive,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+plspstar,CUSTOM,"A dazzling F-class star can emit less powerful solar flares intermittently, but can still cause interference to ships without anti-flare devices.
+
+Its temperature is about 6000K and its absolute magnitude is about 2.71.",,,
+PLSP_planet1,CUSTOM,"Blessed with a fragile biosphere, Perun orbits smoothly between several asteroid belts. Although the inconvenient interstellar traffic situation has hindered the economic development of this planet to a certain extent, its unique location still creates its nearly perfect mining conditions and natural interstellar defense capabilities.",,,
+PLSP_planet2,CUSTOM,"Known as the gate of Triglav, the surface of Veles have been nearly devastated by orbital strikes. Beneath its marred surface lies a network of still-functioning underground facilities, capable of providing military support to whichever side manages to keep an extended foothold over it.",,,
+PLSP_planet3,CUSTOM,"For rocky planets far beyond several asteroid belts, the extremely low temperature has caused permanent ice layers around the entire earth to form. The inactive geonucleus increases the danger of the environment to a greater extent, and only those who are forced to lose their way will consider rest here.",,,
+PLSP_planet4,CUSTOM,"A gas giant, primarily composed of hydrogen and helium gases. The temperature and pressure at the core are extreme, but not enough to sustain the deuterium fusion that would turn the planet into a brown dwarf star.",, ,
+PLSP_planet5,CUSTOM,"Thanks to the natural barrier of the asteroid belt and the strong tidal forces from Vesna, the desert planet of Belobog mainly acts a military base for Polaris.",,,
+PLSP_planet6,CUSTOM,"Freezing cold and filled with an toxic atmosphere, Chernobog is an incredibly difficult place to live, but its strategically important volatiles and transplutonic mines which close to natural warm area of geothermal heating make its value incredibly high.",,,
+#PLSP_relay,CUSTOM,"Based on the transmission device designed by an unusual FTL transmitting base, this set of signal transfer equipment can shuttle through the meteorite belt without human control.",,,
+,,,,,
+,,,,,
+,,,,,
+plsp,FACTION,"'Polaris', full name being 'Polaris Prime', refers to an enigmatic faction whose first and most prominent action was the sudden invasion and capture of the Triglav system, which at that point was pending recolonization as part of an independent effort. Due to the chaos of the Second AI War, the Polaris initial capture of the system was left unimpeded, and when the ceasefires were called the war exhaustion within the various factions caused them to merely acknowledge the existence of the 'new' faction and agree to mutual non-aggression pacts.
+
+Polaris' rather insular attitude means that it has not attracted much public attention since then, a boon for most factions who simply lacked the energy to confront a new organization with hiterio unknown technologies in their possession. Most save the Sindrian Diktat, whose military leaders precieved it as a weakness to take advantage of. The resulting conflict has sunk into a stalemate as the fearsome opening Sindrian assault was halted by Polaris' exotic arsenal, resulting in a fierce cold war that continues to this day.
+
+Currently rumours circulate that Polaris is in possession of unique FTL communications technology that allows them to communicate outside of the Sector, but as the organization's isolationist stance continues, these rumours will (hopefully) remain rumours...",,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,

@@ -1,5 +1,5 @@
 id,name,short,desc,cost,isBonus,isGolden,spritePath,effectPlugin,extra1,extra2,source,tags,spriteAuthor
-,,,,,,,,,,,,,
-PLSP_pole_guard,Celestial Guard,Improves the efficiency of focus fire,Ships that are not the flagship deal +%s damage when attacking units targeted by the flagship,-2,TRUE,,graphics/icons/rules/PLSP_pole_guard.png,data.scripts.ungprules.PLSP_PoleGuard,,,Polaris - Operation Code R.,,
-PLSP_first_strike,Preemptive Strike,Improves the capability of enemy shipsystems,All ranged shipsystems of hostile ships have +%s to their range,2,FALSE,,graphics/icons/rules/PLSP_first_strike.png,data.scripts.ungprules.PLSP_FirstStrike,,,Polaris - Operation Code S.,,
-PLSP_depressing_lineup,Loss of Hope,"Without the Legion, what do we have left?",All ships in the fleet have their CR reduced by %s，but every %s friendly fleets reduces this effect by %s,3,FALSE,,graphics/icons/rules/PLSP_depressing_lineup.png,data.scripts.ungprules.PLSP_DepressingLineup,,,Polaris - Operation Code C.,,
+
+PLSP_pole_guard,天极卫队,提高集火效率,非旗舰的其他我方舰船单位，攻击被旗舰锁定为目标的单位时造成的伤害+{%s},-2,TRUE,,graphics/icons/rules/PLSP_pole_guard.png,data.scripts.ungprules.PLSP_PoleGuard,,,北极星.行动代号 R.,,
+PLSP_first_strike,先发制人,提高敌方战术系统能力,所有敌方舰船战术系统，若其有距离，则距离+{%s},2,FALSE,,graphics/icons/rules/PLSP_first_strike.png,data.scripts.ungprules.PLSP_FirstStrike,,,北极星.军备协议 S.,,
+PLSP_depressing_lineup,阵面无光,"没了军团, 我们还剩什么?",舰队中所有舰船的{CR}上限-{%s}，但{%s}单位距离内每个对玩家友善的舰队都将对玩家舰队提供持续{%s}天的负面减免，在此期间使负面效果减轻{%s},3,FALSE,,graphics/icons/rules/PLSP_depressing_lineup.png,data.scripts.ungprules.PLSP_DepressingLineup,,,北极星.战争规划 C.,,
