@@ -1,7 +1,10 @@
 package com.fs.starfarer.api.impl.campaign.rulecmd;
 
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.campaign.*;
+import com.fs.starfarer.api.campaign.CampaignFleetAPI;
+import com.fs.starfarer.api.campaign.CustomDialogDelegate;
+import com.fs.starfarer.api.campaign.CustomUIPanelPlugin;
+import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.rules.MemKeys;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.MutableCharacterStatsAPI.SkillLevelAPI;
@@ -12,8 +15,9 @@ import com.fs.starfarer.api.ui.ButtonAPI;
 import com.fs.starfarer.api.ui.CustomPanelAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
+import data.scripts.util.PLSP_Util.I18nSection;
 
-import java.awt.*;
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -27,21 +31,19 @@ public class PLSP_MAShowOfficersDelegate implements CustomDialogDelegate {
 	private static final float BUTTON_HEIGHT = 20f;
 	private static final float BUTTON_WIDTH = 120f;
 	private static final float UNDER_PADDING = 20f;
+	private static final int MAX_DISPLAY_COUNT = 7;
 
 	private static final Color BASE_COLOR = Misc.getBasePlayerColor();
 	private static final Color DARK_COLOR = Misc.getDarkPlayerColor();
 	private static final Color BRIGHT_COLOR = Misc.getBrightPlayerColor();
 
+	public static final I18nSection strings = I18nSection.getInstance("CMD", "PLSP_");
 	private final PLSP_MAShowOfficersPlugin plugin = new PLSP_MAShowOfficersPlugin(this);
 	private InteractionDialogAPI dialog;
 	private MemoryAPI memory;
 	private CustomPanelAPI panel;
 	private float width;
 	private float height;
-
-	private static String getString(String key) {
-		return Global.getSettings().getString("CMD", "PLSP_" + key);
-	}
 
 	public PLSP_MAShowOfficersDelegate(InteractionDialogAPI dialog, MemoryAPI memory) {
 		this.dialog = dialog;
@@ -57,7 +59,7 @@ public class PLSP_MAShowOfficersDelegate implements CustomDialogDelegate {
 
 		TooltipMakerAPI title = panel.createUIElement(width - 10f, TITLE_HEIGHT, false);
 		title.setTitleOrbitronLarge();
-		title.addTitle(getString("selectofficer")).setAlignment(Alignment.MID);
+		title.addTitle(strings.get("selectofficer")).setAlignment(Alignment.MID);
 		panel.addUIElement(title).inTMid(0f);
 
 		float pad = 10f;
@@ -84,9 +86,9 @@ public class PLSP_MAShowOfficersDelegate implements CustomDialogDelegate {
 			subArea.addPara(person.getPersonalityAPI().getDisplayName(), padS);
 
 			int maxLevel = Global.getSettings().getInt("officerMaxLevel");
-			String levelString = getString("officerlevel") + person.getStats().getLevel();
+			String levelString = strings.get("officerlevel") + person.getStats().getLevel();
 			if (person.getStats().getLevel() >= maxLevel) {
-				levelString += getString("maxlevel");
+				levelString += strings.get("maxlevel");
 				if (!spot) {
 					canSelect = false;
 				}
@@ -94,22 +96,22 @@ public class PLSP_MAShowOfficersDelegate implements CustomDialogDelegate {
 			subArea.addPara(levelString, padS);
 
 			for (SkillLevelAPI skill : person.getStats().getSkillsCopy()) {
-				if (images.size() > 4) break;
+				if (images.size() >= MAX_DISPLAY_COUNT) break;
 
 				if (skill.getSkill().isAptitudeEffect()) continue;
 				images.add(skill.getSkill().getSpriteName());
 			}
 
-			for (int i = images.size(); i < 5; i++) { // i don't know why
+			for (int i = images.size(); i < MAX_DISPLAY_COUNT; i++) { // i don't know why
 				images.add(Global.getSettings().getSpriteName("misc", "PLSP_emptySkill"));
 			}
 
-			float widthForSkills = width - 10f - OFFICER_SPRITE_HEIGHT - pad - 15f;
+			float widthForSkills = width - OFFICER_SPRITE_HEIGHT - pad - 5f;
 			subArea.addImages(widthForSkills, SKILL_SPRITE_HEIGHT, padS, pad, images.toArray(new String[0]));
 			totalList.addImageWithText(OFFICER_AREA_HEIGHT);
 			images.clear();
 
-			String buttonString = canSelect ? getString("select") : getString("noselect");
+			String buttonString = canSelect ? strings.get("select") : strings.get("noselect");
 			ButtonAPI bt = subArea.addButton(buttonString, person, BASE_COLOR, DARK_COLOR, BUTTON_WIDTH, BUTTON_HEIGHT, pad);
 			plugin.addButton(bt, person);
 			if (!canSelect) {
@@ -136,7 +138,7 @@ public class PLSP_MAShowOfficersDelegate implements CustomDialogDelegate {
 
 	@Override
 	public String getCancelText() {
-		return getString("cancel");
+		return strings.get("cancel");
 	}
 
 	@Override
@@ -154,10 +156,11 @@ public class PLSP_MAShowOfficersDelegate implements CustomDialogDelegate {
 			memory.set("$PLSP_MA_selectedOfficer", selectedOfficer, 0f);
 			memory.set("$PLSP_MA_selectedOfficerName", selectedOfficer.getNameString(), 0f);
 			dialog.getOptionPanel().clearOptions();
-			dialog.getOptionPanel().addOption(getString("continue"), "PLSP_MA_selectedOfficer");
-			dialog.getOptionPanel().addOption(getString("back"), "PLSP_MA_backToStart");
+			dialog.getOptionPanel().addOption(strings.get("continue"), "PLSP_MA_selectedOfficer");
+			dialog.getOptionPanel().addOption(strings.get("back"), "PLSP_MA_backToStart");
 		} else {
-
+			dialog.getOptionPanel().clearOptions();
+			FireBest.fire(null, dialog, memoryMap, "MAMainOpts");
 		}
 	}
 

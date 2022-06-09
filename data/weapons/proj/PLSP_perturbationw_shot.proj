@@ -18,6 +18,7 @@
 	"alwaysAccelerate":true,
 	"useHitGlowWhenDestroyed":true,
 	"noCollisionWhileFading":true,
+	"noDebrisWhenDestroyed":true,
 	"engineSlots":[{"id":"ES1",
 					"loc":[15, 0],
 				    #"style":"MISSILE_HIGH_TECH",

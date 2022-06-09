@@ -1,133 +1,130 @@
 id,trigger,conditions,script,text,options,notes
-,,,,,,
+
 greetingPLSPFriendly,OpenCommLink,"$faction.id == plsp
 $faction.friendlyToPlayer","$menuState = fleetConvMain 0
-FireAll PopulateOptions","$personName makes a standard military salute, ""Greetings, ally. What is it that you need assistance with?""
+FireAll PopulateOptions","$personName 行了一个标准的军礼，""贵安，盟友。请问有何需要帮助的么?""
 OR
-""Identity confirmed, ally. May I ask what you are doing?""
+""已确认身份，我的盟友。请问有何贵干?""
 OR
-""Welcome to Polaris space, distinguished friends!""",,
+""欢迎驾临北极星辖区! 尊贵的朋友。""",,
 greetingPLSPHostileWeaker,OpenCommLink,"$faction.id == plsp
 $faction.hostileToPlayer
-$relativeStrength < 0",$ignorePlayerCommRequests = true 1,"""Since this is Polaris territory, we will fight endlessly to protect it!"" $personName chest shows $hisOrHer $personRank badge of identity, shining proudly. 
+$relativeStrength < 0",$ignorePlayerCommRequests = true 1,"""自 $theFaction 领有此地，我们便为了保护这里而奋战不休"" $personName 胸前标志$heOrShe $personRank 身份的徽章闪耀着。
 OR
-This $personRank does not hesitate, ""There is nothing to be said, prepare your fleet for battle.""",cutCommLink:Cut the comm link,
+这位 $personRank 没有任何迟疑，""无需多言，让你的舰队做好战斗准备。""",cutCommLink:切断通讯链接,
 greetingPLSPHostileWeakerDefiant,OpenCommLink,"$faction.id == plsp
 $faction.hostileToPlayer
 $relativeStrength < 0
-$weakerThanPlayerButHolding",$ignorePlayerCommRequests = true 1,"""Do not act rashly! No matter what further actions you take, you will be severely punished.""
+$weakerThanPlayerButHolding",$ignorePlayerCommRequests = true 1,"""不要轻举妄动! 无论做出什么进一步行为，你都将受到严惩。""
 OR
-""This is $personRank $personName! We have caught up with the enemy, requesting..."" The sound is gradually lost in the interference of battle. Quite obviously, this message is not for you. 
+""这里是 $personRank $personName ! 我方已经接敌，请求..."" 声音逐渐变得杂乱。很显然，这些并不是对你说的。
 OR
-The officer salutes the star solemnly, ""We are the Astral Wall, never to retreat! """,cutCommLink:Cut the comm link,
+这位军官凝重地向星标行礼，""我们是星极之壁，绝不后退! """,cutCommLink:切断通讯链接,
 greetingPLSPHostileStronger,OpenCommLink,"$faction.id == plsp
 $faction.hostileToPlayer
-$relativeStrength >= 0",$ignorePlayerCommRequests = true 1,"""Today is your day to say goodbye to the observable universe."" $personName does not show a single hint of nervousness. 
+$relativeStrength >= 0",$ignorePlayerCommRequests = true 1,"""今天就是你和可观测宇宙说再见的日子了。"" $personName 没有表现出任何紧张情绪。
 OR
-""Needless to say, Polaris does not care about your last words.""
+""不用说什么，$theFaction 不会在乎你的遗言的。""
 OR
-""Eliminate this ignorant soul."" The officer does not even spare you a second glance before disconnecting.",cutCommLink:Cut the comm link,
+""肃清愚昧。"" 这位军官甚至不愿意多看你一眼就单方面切断了连线。",cutCommLink:切断通讯链接,
 greetingPLSPTOffNormal,OpenCommLink,"$faction.id == plsp
 !$isHostile
 !$player.transponderOn
-$entity.relativeStrength >= 0",,"""Turn on your transponder immediately, or be suppressed like a common thug.""","turnOnTransponder:Turn your transponder on
-cutCommLink:Cut the comm link",
+$entity.relativeStrength >= 0",,"""立刻打开通讯器，或者作为暴徒被镇压。""","turnOnTransponder:开启通讯器
+cutCommLink:切断通讯链接",
 greetingPLSPTOffWeaker,OpenCommLink,"$faction.id == plsp
 !$isHostile
 !$player.transponderOn
-$entity.relativeStrength < 0",,"""I'm warning you, there is no hiding in Polaris space.""","turnOnTransponder:Turn your transponder on
-cutCommLink:Cut the comm link ",
+$entity.relativeStrength < 0",,"""你无权在北极星辖区躲躲藏藏，我警告你。""","turnOnTransponder:开启通讯器
+cutCommLink:切断通讯链接",
 greetingPLSPNeutral,OpenCommLink,"$faction.id == plsp
 $faction.neutralToPlayer","$menuState = fleetConvMain 0
-FireAll PopulateOptions","$personName seems to open a recording device as $heOrshe speaks, ""What's the matter, stranger?""
+FireAll PopulateOptions"," $personName 似乎打开了一套记录设备，""陌生人，有何贵干?""
 OR
-""Identity confirmed. Please verify the purpose of your trip and cooperate with our inspection.""
+""已确认身份。请核实你此行的目的，配合我们的检查。""
 OR
-""I've validated the Armed Fleet Temporary Pass, you are allowed to pass during its period. To ensure the safety of the Sector, please send any useful route information to the local military post whenever necessary.""",,
-,,,,,,
-,,,,,,
-,,,,,,
+""武装舰队临时通行证确认，有效期内，允许通行。为确保星系内安全，请随时将航线信息发送至军方频段。""",,
+
+
+
 aiCores_turnInOptionSelPLSP,DialogOptionSelected,"$option == aiCores_startTurnIn
-$faction.id == plsp",FireAll PopulateCoresTurnInOptions,"""They are only roughly as important to us as a few pods of quality Celestite. But more is better, and Polaris will not shortchange a captain who has the guts to turn in such dangerous goods.""",,
-aiCores_turnInResponsePLSP,AICoresTurnedIn,$faction.id == plsp,FireAll PopulateOptions,$PersonRank $personLastName gave you a strong military salute to show appreciation and the conversation moves on to other matters.,,
-,,,,,,
-,,,,,,
-,,,,,,
+$faction.id == plsp",FireAll PopulateCoresTurnInOptions,"""这些东西对我们的重要性大致只能抵得上几舱优质的天青石。但多多益善，北极星不会亏待有胆识上缴这种危险品的舰长。""",,
+aiCores_turnInResponsePLSP,AICoresTurnedIn,$faction.id == plsp,FireAll PopulateOptions,$PersonRank $personLastName 向你行了个有力的军礼表示感谢，然后把话题然后把话题转移到了其他事上。,,
+
+
+
 relLevelNeutralPLSP,RelationshipLevelDesc,"$faction.rel == NEUTRAL
-$faction.id == plsp",,"$theFaction treats you like a stranger, discreetly and conservatively. Although you can apply for a temporary pass from the authorities without any problems, don't expect them to look at you with a little more enthusiasm than they do pirates. ",,
+$faction.id == plsp",,"$theFaction 对待你就如同对待其他陌生人一样，谨慎而保守。尽管你能顺畅地向官方申请临时通行证，但别指望他们会用比看待海盗稍微热情一点的眼光来看你。",,
 relLevelFavorablePLSP,RelationshipLevelDesc,"$faction.rel == FAVORABLE
-$faction.id == plsp",,"Being judged to be of good character by the $theFaction officer corps means that you have an easier time getting in and out of the jurisdiction and trading in the country, as well as access to the $theFaction military market, which is rare. ",,
+$faction.id == plsp",,"被 $theFaction 军官团鉴定为品行良好，意味着你在出入辖区和入境贸易相对容易一些，也代表着能接触到 $theFaction 军用市场的凤毛麟角...",,
 relLevelWelcomingPLSP,RelationshipLevelDesc,"$faction.rel == WELCOMING
-$faction.id == plsp",,"Your name was already well known to most officers, and your reputation in the faction has made even the few radicals less likely to provoke you. ",,
+$faction.id == plsp",,"你的名号已经为大多数军官所熟知，字面意义上的""重点关照态度""使得那些少数激进派也收敛了对你的挑衅行为。",,
 relLevelFriendlyPLSP,RelationshipLevelDesc,"$faction.rel == FRIENDLY
-$faction.id == plsp",,"You hold a very important position among $theFaction's allies, and some of the senior officers will even exchange pleasantries when they pass by you, with honors coming your way. ",,
+$faction.id == plsp",,"你在 $theFaction 的盟友中拥有这举足轻重的地位，有些高级军官与你擦肩而过的时候甚至会主动与你寒暄，荣誉加衔也不期而至。",,
 relLevelCooperativePLSP,RelationshipLevelDesc,"$faction.rel == COOPERATIVE
-$faction.id == plsp",,"It seems that nothing can shake your alliance with $theFaction, as long as you still want it to. You are even authorized to order weapons and equipment directly from $theFaction's orbital factory, and can defer payment. ",,
+$faction.id == plsp",,"似乎已经没有什么能够撼动你与 $theFaction 的盟友关系，只要你仍然希望这样的话。你获权直接从 $theFaction 的轨道工厂中调用武器设备，并且可以延期付款。",,
 relLevelSuspiciousPLSP,RelationshipLevelDesc,"$faction.rel == SUSPICIOUS
-$faction.id == plsp",,"Though nothing has been proven (yet), $faction officials tend to view you with distrust. Link access to the port authority is granted only grudgingly, and you find yourself the subject of investigations and harassment frequently.",,
+$faction.id == plsp",,"$theFaction 军官团已经将你列为潜在敌人，他们向来如此谨慎。尽管还可以勉强进入市场贸易环节，但是即便没有什么明确的证据，安全搜查也将会愈发频繁。",,
 relLevelInhospitablePLSP,RelationshipLevelDesc,"$faction.rel == INHOSPITABLE
-$faction.id == plsp",,"Suspicions have risen to an actionable level. There's no shoot-on-sight authorization quite yet, but $faction ports will refuse to trade with you, and patrols seem on a mission to make your life miserable.",,
+$faction.id == plsp",,"警戒等级提升，已经明确地感受到了来自 $theFaction 的不信任。他们的纠缠队开始追查你的行踪，公开的交易路线也被切断，无论你做什么都会有人进行警告或阻止。",,
 relLevelHostilePLSP,RelationshipLevelDesc,"$faction.rel == HOSTILE
-$faction.id == plsp",,"All the $theFaction officers have a list of people that need to be hunted down, including you. Once you enter $theFaction territory, they will not hesitate to destroy you on sight.",,
+$faction.id == plsp",,"所有的 $theFaction 巡逻队手中都有一份写着你与其他需要如此对待的对象名字的列表。一旦踏入 $theFaction 的辖区，守卫们会毫不留情地击毁你的旗舰。",,
 relLevelVengefulPLSP,RelationshipLevelDesc,"$faction.rel == VENGEFUL
-$faction.id == plsp",,"You have been declared a public enemy by the $theFaction military. Wherever the stars shine, you and your followers will be tracked down and eliminated. Even if you wish to try to communicate, the only response will be from their ship weapons. At maximum power. ",,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
+$faction.id == plsp",,"你已经被 $theFaction 军官团宣布为公敌。只要是星标所能笼罩的地方，你和你的追随者势必遭到肃清。就算你想要尝试交流，回应你的也只会是那些舰载武器的高能反应。",,
+
+
+
+
+
+
+
+
+
+
 PLSP_MA_greeting,PickGreeting,"$faction.friendlyToPlayer
 $PLSP_MA_isPort score:1000","ShowPersonVisual
-FireAll MAMainOpts
-$PLSP_MA_page = 0 0","""Greetings, this is the North Celestial Akademia's Office for External Affairs.""
+FireAll MAMainOpts","在短暂的等候之后，你成功联系上一位北天极学院的外务负责人。屏幕另一侧所传递而来的声音显得十分正式但平缓。
 
-After a short wait, you manage to reach the Akademia. The officer that you have reach speaks to you calmly and formally, and wastes no time in getting to the point. 
+""您好，$theFaction - 北天极学院外务处。省去不必要的寒暄吧，我们本不对外界军官提供什么资源，但近来倒是可以有限地公开一些作战资料...
+您是已经做好了决定，还是需要再了解一些相关内容？""",,
 
-""...Yes, the Akademia does not typically provide resources for outside groups，although recently we've started a experimental scheme for training non-Polaris personnel. Are you here to take part in that scheme, or would you like to know more?""",,
-,,,,,,
-,,,,,,
-PLSP_MA_greetingFail,PickGreeting,$PLSP_MA_isPort score:100,"ShowPersonVisual
-SetShortcut cutCommLink ESCAPE","After a long while and several attempts, you haven't been able to get in contact with the Academia.
-Perhaps your chances will improve if you were to improve your relationship with Polaris.",cutCommLink:Cut the comm link,
-,,,,,,
-,,,,,,
-PLSP_MA_help,DialogOptionSelected,$option == PLSP_MA_help,SetShortcut PLSP_MA_backToStart ESCAPE,"""As you are aware, the Chief Provost of the Akademia has granted permission to use some of the Akademia's teaching material to be repurposed as an experimental course, with the process and education being overseen by the Akademia itself. The attendant must be present on the grounds throughout the course, and all materials being confidential are restricted to the grounds itself...""
 
-Details:
-- This will send your officer for re-education in a skill of their choice. Payment and time taken will be based on the number of skills selected.
-- During this time the officer will not be able to command the ship and will be paid as usual, but will be available for other interactions.
-- If the Akademia is damaged or the colony changes ownership during this time, the operation will fail and the adjutant will return immediately.
+PLSP_MA_greetingFail,PickGreeting,"$PLSP_MA_isPort score:100","ShowPersonVisual
+SetShortcut cutCommLink ESCAPE","在长久的等候之后，你依然没有联系上任何相关人员。或许这与他们对于你的谨慎态度有关，也许在你们的关系得到改善后，情况将有所好转。",cutCommLink:切断通讯链接,
 
-""Now, if you are still interested, I am able to inform you that if you are willing to spare additional resources, beyond your officer's education and for the Akademia as a whole...my superiors will be able to provide you with some...benefit, as a sign of your cooperation.""
 
-- Paying a more exorbitant price allows you to learn a certain powerful and unique skill.",10:PLSP_MA_backToStart:Back,
-,,,,,,
-,,,,,,
-PLSP_MA_NE_selectOfficer,DialogOptionSelected,$option == PLSP_MA_normalExperience,"$PLSP_MA_reqType = PLSP_MA_normalExperience
+PLSP_MA_help,DialogOptionSelected,$option == PLSP_MA_help,SetShortcut PLSP_MA_backToStart ESCAPE,"""我们依然不接受任何外籍学员，尤其是不稳定的民间舰长...
+但出于加强外界沟通的考虑，总教务长准许有偿公开一些基于影像和植入物的高级作战资料，但学习它们的过程必须受到北天极学院的监管，实地监管，而且不能带离任何物质资源。""
+
+派遣你的副官进行再教育，为其自选技能。付费和耗时将根据选择技能的数量而定。
+在此期间该副官无法指挥舰船且工资照常发放，但可以抽空进行其他交互操作。
+如果在此期间北极星学院遭到破坏或殖民地所有权变更，则行动将失败，副官将立刻返回。
+
+""不过，若是你能为我们的发展提供某些足够有价值的资源，那我相信上层决策会为你提供一些深入合作的待遇。""
+
+支付更加高昂的代价可以学习某个强力的独特技能。",10:PLSP_MA_backToStart:返回,
+
+
+PLSP_MA_NE_selectOfficer,DialogOptionSelected,"$option == PLSP_MA_normalExperience","$PLSP_MA_reqType = PLSP_MA_normalExperience
 FireAll MAOfficerOpts",,,
 PLSP_MA_NE_selectedOfficer,DialogOptionSelected,"$option == PLSP_MA_selectedOfficer
 $PLSP_MA_reqType == PLSP_MA_normalExperience",PLSP_MAShow PLSP_MASkills,,,
-,,,,,,
-,,,,,,
-PLSP_MA_SE_showSpotData,DialogOptionSelected,$option == PLSP_MA_spotExperience,"$PLSP_MA_reqType = PLSP_MA_spotExperience
+
+
+PLSP_MA_SE_showSpotData,DialogOptionSelected,"$option == PLSP_MA_spotExperience","$PLSP_MA_reqType = PLSP_MA_spotExperience
 PLSP_MAShow PLSP_MASpotData",,,
-PLSP_MA_SE_selectOfficer,DialogOptionSelected,$option == PLSP_MA_spotExperience_2,"$PLSP_MA_reqType = PLSP_MA_spotExperience
+PLSP_MA_SE_selectOfficer,DialogOptionSelected,"$option == PLSP_MA_spotExperience_2","$PLSP_MA_reqType = PLSP_MA_spotExperience
 FireAll MAOfficerOpts",,,
 PLSP_MA_SE_selectedOfficer,DialogOptionSelected,"$option == PLSP_MA_selectedOfficer
 $PLSP_MA_reqType == PLSP_MA_spotExperience",PLSP_MASpotInit,,,
-,,,,,,
-,,,,,,
+
+
 PLSP_MA_officerOption,MAOfficerOpts,,PLSP_MAShow PLSP_MAOfficers,,,
 PLSP_MA_confirm,MAConfirm,,"PLSP_MAConfirm
 SetTextHighlights $PLSP_MA_selectedOfficerName
-SetShortcut PLSP_MA_backToStart ESCAPE","""Details have been confirmed. We will arrange matters related to $PLSP_MA_targetName as soon as possible. Thank you for your support of the Akademia.""",10:PLSP_MA_backToStart:Back,
-,,,,,,
-,,,,,,
+SetShortcut PLSP_MA_backToStart ESCAPE","你们很快处理完了相关手续，并安排好了 $PLSP_MA_selectedOfficerName 的其余一切相关事宜。",10:PLSP_MA_backToStart:返回,
+
+
 PLSP_MA_backToStart,DialogOptionSelected,$option == PLSP_MA_backToStart,FireAll MAMainOpts,,,
 PLSP_MA_mainOptionDisplay,MAMainOpts,,"PLSP_MAShow PLSP_MAServices
 SetShortcut cutCommLink ESCAPE",,,

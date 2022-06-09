@@ -1,0 +1,56 @@
+name,id,tier,rarity,base value,range,damage/second,damage/shot,emp,impact,turn rate,OPs,ammo,ammo/sec,reload size,type,energy/shot,energy/second,chargeup,chargedown,burst size,burst delay,min spread,max spread,spread/shot,spread decay/sec,beam speed,proj speed,launch speed,flight time,proj hitpoints,autofireAccBonus,extraArcForAI,hints,tags,groupTag,tech/manufacturer,for weapon tooltip>>,primaryRoleStr,speedStr,trackingStr,turnRateStr,accuracyStr,customPrimary,customPrimaryHL,customAncillary,customAncillaryHL,noDPSInTooltip,number
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Charge Generator,PLSP_electgenerator,1,,500,600,,75,,5,30,7,10,1,,ENERGY,75,,0.2,0,,,,,,,,1400,,,,,,,"energy9, merc, PLSP_p, PLSP_bp",,Polaris,,General,,,,,,,,,,22.1
+Charge Exciter,PLSP_electemitter,2,,1800,700,,150,,10,15,14,12,1,,ENERGY,150,,0.2,0,,,,,,,,1400,,,,,,,"energy15, merc, PLSP_p, PLSP_bp",,Polaris,,General,,,,,,,,,,22.2
+Charge Projector,PLSP_electprojecter,3,,5500,800,,150,,10,10,30,,,,ENERGY,150,,0.25,0,,,,,,,,1400,,,,,,,"energy18, merc, PLSP_p, PLSP_rp",,Polaris,,General,,,,,,,,,,22.3
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Impulse-Class Torpedo Tube,PLSP_impulses,1,,800,1200,,1200,,50,10,5,3,,,KINETIC,0,,0,5,1,0,0,0,0,0,,600,500,3,450,,,GUIDED_POOR,"strike9, missile1, merc, PLSP_p, PLSP_bp",,Polaris,,Torpedo,Very Fast,Normal,,,,,,,TRUE,9.523
+Impulse-Class Torpedo Launch Pad,PLSP_impulsem,2,,2000,1200,,1200,,50,10,14,14,,,KINETIC,0,,0,14.5,2,0.5,0,0,0,0,,600,500,3,450,,,GUIDED_POOR,"strike13, missile7, merc, PLSP_p, PLSP_bp",,Polaris,,Torpedo,Very Fast,Normal,,,,,,,TRUE,9.52
+Impulse-II-Class Torpedo Launch Pad,PLSP_impulsel,2,,6500,1600,,2000,,100,10,28,20,,,KINETIC,0,,0,14,2,1,0,0,0,0,,600,400,4,750,,,GUIDED_POOR,"strike18, missile13, merc, PLSP_p, PLSP_bp",,Polaris,,Torpedo,Very Fast,Normal,,,,,,,TRUE,9.521
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Heavy Particle Pulse Cannon,PLSP_pulsehp,2,0.5,800,700,,30,,5,15,9,,,,HIGH_EXPLOSIVE,24,,0.5,3.63,30,0.03,0,8,0.5,5,,1000,,,10,,,,"he9, LR, merc, PLSP_p, PLSP_bp",,Polaris,,Anti-Armor,,,,,,,,,,3.651
+Superimposed Pulse Cannon,PLSP_pulseo,2,0.5,2500,800,,45,,5,12,15,,,,HIGH_EXPLOSIVE,36,,0.5,4.48,35,0.03,1,10,0.75,4,,1200,,,10,,,,"he15, merc, PLSP_p, PLSP_bp",,Polaris,,Anti-Armor,,,,,,,,,,5.755
+Supercritical Pulse Cannon,PLSP_pulsesc,2,0.5,6500,800,,70,,20,12,28,,,,HIGH_EXPLOSIVE,56,,0.5,4.33,40,0.03,1,10,1,3,,1200,,,20,,,,"he19, merc, PLSP_p, PLSP_bp",,Polaris,,Anti-Armor,,,,,,,,,,8.59
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Light Tracking System,PLSP_guidingpds,2,0.5,800,600,,100,,40,60,8,,,,ENERGY,100,,0,1,1,,0,0,0,0,,1000,,,30,,,"PD, ANTI_FTR, DO_NOT_AIM","pd10, merc, PLSP_p, PLSP_bp",,Polaris,,Point Defense,,Good,,,Projectiles track onto targets.,,,,,3.113
+Heavy Tracking System,PLSP_guidingpdm,2,0.5,3000,700,,200,,30,80,14,,,,ENERGY,200,,0,1,1,,0,0,0,0,,1000,,,30,,,"PD, ANTI_FTR, DO_NOT_AIM","pd17, merc, PLSP_p, PLSP_rp",,Polaris,,Point Defense,,Good,,,Projectiles track onto targets.,,,,,3.114
+Arrayed Tracking System,PLSP_guidingpdl,3,0.5,7000,800,,100,,25,40,22,,,,ENERGY,100,,0,1.35,4,0.05,0,0,0,0,,1200,,,30,,,"PD, ANTI_FTR, DO_NOT_AIM","pd20, merc, PLSP_p, PLSP_rp",,Polaris,,Point Defense,,Excellent,,,Projectiles track onto targets.,,,,,3.115
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Microwave Particle Rifle,PLSP_streammicrowave,1,,300,800,250,,,0,30,4,,,,ENERGY,,200,0.5,0.2,1,1,,,,,100000,,,,,,,,"beam10, PLSP_p, PLSP_bp",,Polaris,,General,,,,,"Spawns flares at low rate when hitting target, interfere point defense with its %s hp.",100,,,,15.6141
+Polarized Particle Rifle,PLSP_streampolarization,1,,1500,800,400,,,0,20,9,,,,ENERGY,,320,0.8,0.2,1.5,2,,,,,100000,,,,,,,,"beam13, PLSP_p, PLSP_bp",,Polaris,,General,,,,,"Spawns dark particles at low rate when hitting target, cause %s energy area damage.",75,,,,15.6142
+Inverted Particle Rifle,PLSP_streaminvert,2,,4000,800,1000,,,0,8,18,,,,ENERGY,,800,1,0.2,2.5,4,,,,,100000,,,,,,,,"beam20, PLSP_p, PLSP_bp",,Polaris,,General,,,,,"Spawns motes at low rate when hitting target, seek target and cause %s EMP damage.",1000,,,,15.6143
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Crystal Shard Autocannon,PLSP_iccannon,1,,400,400,,50,,20,80,3,,,,KINETIC,50,,0,0.6667,1,,,,,,,1000,,,30,,,"ANTI_FTR, PD, PD_ALSO","pd7, merc, PLSP_p, PLSP_bp",,Polaris,,Point Defense (Area),,,,,,,,,,4.1
+Crystal Shard Flak,PLSP_icflak,1,,1000,600,,100,,50,50,7,,,,KINETIC,100,,0,1,1,,,,,,,1200,,,30,,,"ANTI_FTR, PD, PD_ALSO","pd13, merc, PLSP_p, PLSP_bp",,Polaris,,Point Defense (Area),,,,,"Upon shattering, generates an additional %s crystal shards with a damage of %s, with similar properties to the shot of the %s.",5 | 50 | Crystal Shard Autocannon,,,,4.2
+Crystal Flak Shards,PLSP_icflak2,,,,50,,50,,20,80,,,,,KINETIC,,,0,1,1,,,,,,,1000,,,30,,,SYSTEM,,,Polaris,,,,,,,,,,,,4.3
+Crystal Culverin,PLSP_icculverin,2,,3000,800,,300,,75,30,16,,,,KINETIC,300,,0,2,1,,,,,,,1200,,,30,,,"ANTI_FTR, PD, PD_ALSO","pd16, merc, PLSP_p, PLSP_bp",,Polaris,,Point Defense (Area),,,,,"Creates an additional random %s and %s projectile when the projectile detonates.
+
+An area of shattered crystals is also created at the point of detonation, causing all enemy units within the area to take constant kinetic damage, which scales to their movement speed.",Crystal Shard Autocannon | Crystal Shard Flak,,,,4.3
+Crystal Culverin Shards,PLSP_icculverin2,,,,75,,100,,50,,,,,,KINETIC,,,0,1,1,,,,,,,1200,,,30,,,SYSTEM,,,Polaris,,,,,,,,,,,,4.22
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Hyperbolic Interferometer,PLSP_interferometerhyperbolic,1,,400,800,,75,,10,20,5,,,,HIGH_EXPLOSIVE,100,,0.25,0.5,,,,,,,,1000,,,,,,,"he6, LR, merc, PLSP_p, PLSP_bp",,Polaris,,Anti-Armor,,,,Special,,,,,,22.1
+Resonant Interferometer,PLSP_interferometerresonant,2,,1500,800,,150,,20,10,11,,,,HIGH_EXPLOSIVE,195,,0.35,1.05,,,,,,,,1000,,,,,,,"he13, LR, merc, PLSP_p, PLSP_bp",,Polaris,,Anti-Armor,,,,Special,,,,,,22.2
+Degeneracy Interferometer,PLSP_interferometerdegeneracy,2,,5000,900,,200,,20,7,25,,,,HIGH_EXPLOSIVE,240,,0.5,1.667,6,0.1,,,,,,1000,,,,,,,"he18, LR, merc, PLSP_p, PLSP_rp",,Polaris,,Anti-Armor,,,,Special,,,,,,22.3
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Polar MIRV Launcher,PLSP_magnetics,1,,800,1400,,1000,,50,10,2,2,,,HIGH_EXPLOSIVE,0,,0,5,1,0,0,0,0,0,,300,200,6,300,,,DO_NOT_AIM,"strike6, missile2, merc, PLSP_p, PLSP_bp",,Polaris,,Finisher,Fast,Good,,,"When hitting hull or armour, there is a %s chance of generating an arc that strikes ship weapons and engine, dealing additional damage equal to the original hit.",25%,"All projectiles will generate %s energized magnetic streams each. Each excited projectile will also generate %s smaller magnetic stream, each dealing %s damage.",2 | 2 | 20%,TRUE,33.523
+Magnetar MIRV Launcher,PLSP_magneticm,2,,2000,2500,,1600,,100,10,9,5,,,HIGH_EXPLOSIVE,0,,0,10,1,0,0,0,0,0,,250,100,14,600,,,DO_NOT_AIM,"strike10, missile7, merc, PLSP_p, PLSP_rp",,Polaris,,Finisher,Fast,Good,,,"When hitting hull or armour, there is a %s chance of generating an arc that strikes ship weapons and engine, dealing additional damage equal to the original hit.",25%,"All projectiles will generate %s energized magnetic streams each. Each excited projectile will also generate %s smaller magnetic stream, each dealing %s damage.",2 | 2 | 20%,TRUE,33.52
+Magnetar MIRV Tower,PLSP_magneticl,2,,6500,2500,,1600,,100,10,20,10,,,HIGH_EXPLOSIVE,0,,0,9.5,2,0.5,0,0,0,0,,250,100,14,600,,,DO_NOT_AIM,"strike14, missile14, merc, PLSP_p, PLSP_rp",,Polaris,,Finisher,Fast,Good,,,"When hitting hull or armour, there is a %s chance of generating an arc that strikes ship weapons and engine, dealing additional damage equal to the original hit.",25%,"All projectiles will generate %s energized magnetic streams each. Each excited projectile will also generate %s smaller magnetic stream, each dealing %s damage.",2 | 2 | 20%,TRUE,33.521
+Main Magnetic Stream,PLSP_magnetic1,,,,600,,300,600,20,,,,,,HIGH_EXPLOSIVE,,,0,1,1,,,,,,,1000,,,30,,,SYSTEM,,,Polaris,,,,,,,,,,,,41.3
+Sub Magnetic Stream,PLSP_magnetic2,,,,500,,60,120,10,,,,,,HIGH_EXPLOSIVE,,,0,1,1,,,,,,,1000,,,30,,,SYSTEM,,,Polaris,,,,,,,,,,,,42.3
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+#Built-in Weapons,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Redshift Pulser,PLSP_redshiftw,,,,500,,250,,0,0,,,,,ENERGY,150,,0,0.65,,,,,,,,1000,,,,,,SYSTEM,SR,,Polaris,,,,,,,,,,,,40
+Blueshift Pulser,PLSP_blueshiftw,,,,400,,100,400,,0,0,8,2,2,ENERGY,100,,0.05,0.05,,,3,20,1,4,,1200,,,,,,SYSTEM,SR,,Polaris,,,,,,,,,,,,22.752
+Nebula Blaze,PLSP_nebulablaze,,,,500,,400,,0,0,,,,,ENERGY,100,,0,5,,,,,,,,800,,,,,,SYSTEM,SR,,Polaris,,,,,,,,,,,,40.1
+Flash Injector,PLSP_perturbationw,,,,1600,,300,,30,30,,3,,,HIGH_EXPLOSIVE,0,,0,1,,,,,,,,800,200,3,200,,,"DO_NOT_AIM, SYSTEM",,,Polaris,,,,,,,,,,,TRUE,11.5121
+Starblaze Torpedo,PLSP_lighter,,,,800,,3000,,30,10,,1,,,HIGH_EXPLOSIVE,0,,0,1,1,,,,,,,600,400,2,350,,,"STRIKE, SYSTEM",,,Polaris,,Torpedo,,,,,,,,,TRUE,9.9
+Dark Particle Shard,PLSP_polarization,,,,1000,,75,,25,0,,,,,ENERGY,0,,0,1,1,,,,,,,25,150,5,150,,,SYSTEM,,,Polaris,,,,,,,,,,,,38.55
+Ether Strike,PLSP_etherstrike,,,,1000,,1250,,100,0,,,,,ENERGY,1000,,1.7,8,4,0.1,,,,,,3000,,,20,,,"STRIKE, USE_VS_FRIGATES, SYSTEM",LR,,Polaris,,Universal,,,,,,,,,8.526,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+#Decorations,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Axis Light,PLSP_axis_dec,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SYSTEM,,,Polaris,,,,,,,,,,,,43.222

@@ -7,7 +7,9 @@ import data.hullmods.PLSP_ClusterModulator.ModulatorState;
 import data.scripts.weapons.PLSP_StreamVisualEffect.StreamState;
 import org.lwjgl.util.vector.Vector2f;
 
-import java.util.*;
+import java.util.EnumSet;
+import java.util.HashMap;
+import java.util.Map;
 
 public class PLSP_RenderPlugin extends BaseCombatLayeredRenderingPlugin {
 	private static final String DATA_KEY = "PLSP_RenderPlugin";

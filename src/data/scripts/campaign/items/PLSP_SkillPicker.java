@@ -13,6 +13,7 @@ import com.fs.starfarer.api.impl.campaign.skills.BaseSkillEffectDescription;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import data.scripts.util.PLSP_DataBase;
+import data.scripts.util.PLSP_Util.I18nSection;
 
 import java.util.List;
 
@@ -20,9 +21,7 @@ public class PLSP_SkillPicker extends BaseSpecialItemPlugin {
 	private SkillSpecAPI skill;
 	private static PersonAPI fakePerson = null;
 
-	private static String getString(String key) {
-		return Global.getSettings().getString("CMD", "PLSP_" + key);
-	}
+	public static final I18nSection strings = I18nSection.getInstance("CMD", "PLSP_");
 	
 	@Override
 	public void init(CargoStackAPI stack) {
@@ -33,7 +32,7 @@ public class PLSP_SkillPicker extends BaseSpecialItemPlugin {
 	
 	@Override
 	public String getDesignType() {
-		return "Polaris";
+		return strings.get("designType");
 	}
 
 	@Override
@@ -68,9 +67,9 @@ public class PLSP_SkillPicker extends BaseSpecialItemPlugin {
 				String prefix = "%s";
 
 				if (effect.getScopeDescription() == LevelBasedEffect.ScopeDescription.PILOTED_SHIP) {
-					prefix = getString("pilotedship");
+					prefix = strings.get("pilotedship");
 				} else if (effect.getScopeDescription() == LevelBasedEffect.ScopeDescription.SHIP_FIGHTERS) {
-					prefix = getString("pilotedfighter");
+					prefix = strings.get("pilotedfighter");
 				}
 
 				String base = effect.getEffectDescription(1);

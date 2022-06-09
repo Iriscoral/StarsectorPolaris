@@ -6,8 +6,9 @@ import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
+import data.scripts.util.PLSP_Util.I18nSection;
 
-import java.awt.*;
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -21,9 +22,7 @@ public class PLSP_MASkillPickerListener implements CargoPickerListener {
 	private final PersonAPI officer;
 	private final CampaignFleetAPI playerFleet;
 
-	private static String getString(String key) {
-		return Global.getSettings().getString("CMD", "PLSP_" + key);
-	}
+	public static final I18nSection strings = I18nSection.getInstance("CMD", "PLSP_");
 
 	public PLSP_MASkillPickerListener(InteractionDialogAPI dialog, MemoryAPI memory, Map<String, MemoryAPI> memoryMap, PersonAPI officer, CampaignFleetAPI playerFleet) {
 		this.dialog = dialog;
@@ -60,9 +59,9 @@ public class PLSP_MASkillPickerListener implements CargoPickerListener {
 	@Override
 	public void cancelledCargoSelection() {
 		dialog.getOptionPanel().clearOptions();
-		dialog.getOptionPanel().addOption(getString("return"), "PLSP_MA_selectedOfficer");
-		dialog.getOptionPanel().addOption(getString("reselectofficer"), "PLSP_MA_normalExperience");
-		dialog.getOptionPanel().addOption(getString("backtomenu"), "PLSP_MA_backToStart");
+		dialog.getOptionPanel().addOption(strings.get("return"), "PLSP_MA_selectedOfficer");
+		dialog.getOptionPanel().addOption(strings.get("reselectofficer"), "PLSP_MA_normalExperience");
+		dialog.getOptionPanel().addOption(strings.get("backtomenu"), "PLSP_MA_backToStart");
 	}
 
 	@Override
@@ -79,7 +78,7 @@ public class PLSP_MASkillPickerListener implements CargoPickerListener {
 		imageTooltip.addPara(officer.getNameString(), opad);
 		imageTooltip.setParaFontDefault();
 		imageTooltip.addPara(officer.getPersonalityAPI().getDisplayName(), opad);
-		imageTooltip.addPara(getString("officerlevel") + officer.getStats().getLevel(), opad);
+		imageTooltip.addPara(strings.get("officerlevel") + officer.getStats().getLevel(), opad);
 		panel.addImageWithText(0f);
 
 		SELECTED_ITEMS.clear();
@@ -93,7 +92,7 @@ public class PLSP_MASkillPickerListener implements CargoPickerListener {
 
 		Color selectedColor = SELECTED_ITEMS.size() > PLSP_MAData.getSkillAmountLimit(officer) ? negative : positive;
 		imageTooltip.setParaOrbitronLarge();
-		panel.addPara(String.format(getString("selectedskills"), SELECTED_ITEMS.size(), PLSP_MAData.getSkillAmountLimit(officer)), opad, highlight, selectedColor, "" + SELECTED_ITEMS.size());
+		panel.addPara(String.format(strings.get("selectedskills"), SELECTED_ITEMS.size(), PLSP_MAData.getSkillAmountLimit(officer)), opad, highlight, selectedColor, "" + SELECTED_ITEMS.size());
 		imageTooltip.setParaFontDefault();
 
 		for (SpecialItemData itemData : SELECTED_ITEMS) {
@@ -101,18 +100,18 @@ public class PLSP_MASkillPickerListener implements CargoPickerListener {
 		}
 
 		imageTooltip.setParaOrbitronLarge();
-		panel.addPara(getString("creditscost"), highlight, opad);
+		panel.addPara(strings.get("creditscost"), highlight, opad);
 		imageTooltip.setParaFontDefault();
 		panel.addPara("    " + PLSP_MAData.getCreditsCost(SELECTED_ITEMS), pad, positive);
 
 		if (!PLSP_MAData.canAffordNormal(SELECTED_ITEMS, playerFleet)) {
 			imageTooltip.setParaOrbitronLarge();
-			panel.addPara(getString("cantafford2"), negative, lpad);
+			panel.addPara(strings.get("cantafford2"), negative, lpad);
 		} else if (SELECTED_ITEMS.size() > PLSP_MAData.getSkillAmountLimit(officer)) {
 			imageTooltip.setParaOrbitronLarge();
-			panel.addPara(getString("amountlimit"), negative, lpad);
+			panel.addPara(strings.get("amountlimit"), negative, lpad);
 		} else {
-			panel.addPara(getString("ready"), positive, lpad);
+			panel.addPara(strings.get("ready"), positive, lpad);
 		}
 	}
 }

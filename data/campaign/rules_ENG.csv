@@ -1,0 +1,134 @@
+id,trigger,conditions,script,text,options,notes
+,,,,,,
+greetingPLSPFriendly,OpenCommLink,"$faction.id == plsp
+$faction.friendlyToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","$personName makes a standard military salute, ""Greetings, ally. What is it that you need assistance with?""
+OR
+""Identity confirmed, ally. May I ask what you are doing?""
+OR
+""Welcome to Polaris space, distinguished friends!""",,
+greetingPLSPHostileWeaker,OpenCommLink,"$faction.id == plsp
+$faction.hostileToPlayer
+$relativeStrength < 0",$ignorePlayerCommRequests = true 1,"""Since this is Polaris territory, we will fight endlessly to protect it!"" $personName chest shows $hisOrHer $personRank badge of identity, shining proudly. 
+OR
+This $personRank does not hesitate, ""There is nothing to be said, prepare your fleet for battle.""",cutCommLink:Cut the comm link,
+greetingPLSPHostileWeakerDefiant,OpenCommLink,"$faction.id == plsp
+$faction.hostileToPlayer
+$relativeStrength < 0
+$weakerThanPlayerButHolding",$ignorePlayerCommRequests = true 1,"""Do not act rashly! No matter what further actions you take, you will be severely punished.""
+OR
+""This is $personRank $personName! We have caught up with the enemy, requesting..."" The sound is gradually lost in the interference of battle. Quite obviously, this message is not for you. 
+OR
+The officer salutes the star solemnly, ""We are the Astral Wall, never to retreat! """,cutCommLink:Cut the comm link,
+greetingPLSPHostileStronger,OpenCommLink,"$faction.id == plsp
+$faction.hostileToPlayer
+$relativeStrength >= 0",$ignorePlayerCommRequests = true 1,"""Today is your day to say goodbye to the observable universe."" $personName does not show a single hint of nervousness. 
+OR
+""Needless to say, Polaris does not care about your last words.""
+OR
+""Eliminate this ignorant soul."" The officer does not even spare you a second glance before disconnecting.",cutCommLink:Cut the comm link,
+greetingPLSPTOffNormal,OpenCommLink,"$faction.id == plsp
+!$isHostile
+!$player.transponderOn
+$entity.relativeStrength >= 0",,"""Turn on your transponder immediately, or be suppressed like a common thug.""","turnOnTransponder:Turn your transponder on
+cutCommLink:Cut the comm link",
+greetingPLSPTOffWeaker,OpenCommLink,"$faction.id == plsp
+!$isHostile
+!$player.transponderOn
+$entity.relativeStrength < 0",,"""I'm warning you, there is no hiding in Polaris space.""","turnOnTransponder:Turn your transponder on
+cutCommLink:Cut the comm link ",
+greetingPLSPNeutral,OpenCommLink,"$faction.id == plsp
+$faction.neutralToPlayer","$menuState = fleetConvMain 0
+FireAll PopulateOptions","$personName seems to open a recording device as $heOrshe speaks, ""What's the matter, stranger?""
+OR
+""Identity confirmed. Please verify the purpose of your trip and cooperate with our inspection.""
+OR
+""I've validated the Armed Fleet Temporary Pass, you are allowed to pass during its period. To ensure the safety of the Sector, please send any useful route information to the local military post whenever necessary.""",,
+,,,,,,
+,,,,,,
+,,,,,,
+aiCores_turnInOptionSelPLSP,DialogOptionSelected,"$option == aiCores_startTurnIn
+$faction.id == plsp",FireAll PopulateCoresTurnInOptions,"""They are only roughly as important to us as a few pods of quality Celestite. But more is better, and Polaris will not shortchange a captain who has the guts to turn in such dangerous goods.""",,
+aiCores_turnInResponsePLSP,AICoresTurnedIn,$faction.id == plsp,FireAll PopulateOptions,$PersonRank $personLastName gave you a strong military salute to show appreciation and the conversation moves on to other matters.,,
+,,,,,,
+,,,,,,
+,,,,,,
+relLevelNeutralPLSP,RelationshipLevelDesc,"$faction.rel == NEUTRAL
+$faction.id == plsp",,"$theFaction treats you like a stranger, discreetly and conservatively. Although you can apply for a temporary pass from the authorities without any problems, don't expect them to look at you with a little more enthusiasm than they do pirates. ",,
+relLevelFavorablePLSP,RelationshipLevelDesc,"$faction.rel == FAVORABLE
+$faction.id == plsp",,"Being judged to be of good character by the $theFaction officer corps means that you have an easier time getting in and out of the jurisdiction and trading in the country, as well as access to the $theFaction military market, which is rare. ",,
+relLevelWelcomingPLSP,RelationshipLevelDesc,"$faction.rel == WELCOMING
+$faction.id == plsp",,"Your name was already well known to most officers, and your reputation in the faction has made even the few radicals less likely to provoke you. ",,
+relLevelFriendlyPLSP,RelationshipLevelDesc,"$faction.rel == FRIENDLY
+$faction.id == plsp",,"You hold a very important position among $theFaction's allies, and some of the senior officers will even exchange pleasantries when they pass by you, with honors coming your way. ",,
+relLevelCooperativePLSP,RelationshipLevelDesc,"$faction.rel == COOPERATIVE
+$faction.id == plsp",,"It seems that nothing can shake your alliance with $theFaction, as long as you still want it to. You are even authorized to order weapons and equipment directly from $theFaction's orbital factory, and can defer payment. ",,
+relLevelSuspiciousPLSP,RelationshipLevelDesc,"$faction.rel == SUSPICIOUS
+$faction.id == plsp",,"Though nothing has been proven (yet), $faction officials tend to view you with distrust. Link access to the port authority is granted only grudgingly, and you find yourself the subject of investigations and harassment frequently.",,
+relLevelInhospitablePLSP,RelationshipLevelDesc,"$faction.rel == INHOSPITABLE
+$faction.id == plsp",,"Suspicions have risen to an actionable level. There's no shoot-on-sight authorization quite yet, but $faction ports will refuse to trade with you, and patrols seem on a mission to make your life miserable.",,
+relLevelHostilePLSP,RelationshipLevelDesc,"$faction.rel == HOSTILE
+$faction.id == plsp",,"All the $theFaction officers have a list of people that need to be hunted down, including you. Once you enter $theFaction territory, they will not hesitate to destroy you on sight.",,
+relLevelVengefulPLSP,RelationshipLevelDesc,"$faction.rel == VENGEFUL
+$faction.id == plsp",,"You have been declared a public enemy by the $theFaction military. Wherever the stars shine, you and your followers will be tracked down and eliminated. Even if you wish to try to communicate, the only response will be from their ship weapons. At maximum power. ",,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+PLSP_MA_greeting,PickGreeting,"$faction.friendlyToPlayer
+$PLSP_MA_isPort score:1000","ShowPersonVisual
+FireAll MAMainOpts","""Greetings, this is the North Celestial Akademia's Office for External Affairs.""
+
+After a short wait, you manage to reach the Akademia. The officer that you have reach speaks to you calmly and formally, and wastes no time in getting to the point. 
+
+""...Yes, the Akademia does not typically provide resources for outside groups, although recently we've started a experimental scheme for training non-Polaris personnel. Are you here to take part in that scheme, or would you like to know more?""",,
+,,,,,,
+,,,,,,
+PLSP_MA_greetingFail,PickGreeting,$PLSP_MA_isPort score:100,"ShowPersonVisual
+SetShortcut cutCommLink ESCAPE","After a long while and several attempts, you haven't been able to get in contact with the Academia.
+Perhaps your chances will improve if you were to improve your relationship with Polaris.",cutCommLink:Cut the comm link,
+,,,,,,
+,,,,,,
+PLSP_MA_help,DialogOptionSelected,$option == PLSP_MA_help,SetShortcut PLSP_MA_backToStart ESCAPE,"""As you are aware, the Chief Provost of the Akademia has granted permission to use some of the Akademia's teaching material to be repurposed as an experimental course, with the process and education being overseen by the Akademia itself. The attendant must be present on the grounds throughout the course, and all materials being confidential are restricted to the grounds itself...""
+
+Details:
+- This will send your officer for re-education in a skill of their choice. Payment and time taken will be based on the number of skills selected.
+- During this time the officer will not be able to command the ship and will be paid as usual, but will be available for other interactions.
+- If the Akademia is damaged or the colony changes ownership during this time, the operation will fail and the adjutant will return immediately.
+
+""Now, if you are still interested, I am able to inform you that if you are willing to spare additional resources, beyond your officer's education and for the Akademia as a whole...my superiors will be able to provide you with some...benefit, as a sign of your cooperation.""
+
+- Paying a more exorbitant price allows you to learn a certain powerful and unique skill.",10:PLSP_MA_backToStart:Back,
+,,,,,,
+,,,,,,
+PLSP_MA_NE_selectOfficer,DialogOptionSelected,$option == PLSP_MA_normalExperience,"$PLSP_MA_reqType = PLSP_MA_normalExperience
+FireAll MAOfficerOpts",,,
+PLSP_MA_NE_selectedOfficer,DialogOptionSelected,"$option == PLSP_MA_selectedOfficer
+$PLSP_MA_reqType == PLSP_MA_normalExperience",PLSP_MAShow PLSP_MASkills,,,
+,,,,,,
+,,,,,,
+PLSP_MA_SE_showSpotData,DialogOptionSelected,$option == PLSP_MA_spotExperience,"$PLSP_MA_reqType = PLSP_MA_spotExperience
+PLSP_MAShow PLSP_MASpotData",,,
+PLSP_MA_SE_selectOfficer,DialogOptionSelected,$option == PLSP_MA_spotExperience_2,"$PLSP_MA_reqType = PLSP_MA_spotExperience
+FireAll MAOfficerOpts",,,
+PLSP_MA_SE_selectedOfficer,DialogOptionSelected,"$option == PLSP_MA_selectedOfficer
+$PLSP_MA_reqType == PLSP_MA_spotExperience",PLSP_MASpotInit,,,
+,,,,,,
+,,,,,,
+PLSP_MA_officerOption,MAOfficerOpts,,PLSP_MAShow PLSP_MAOfficers,,,
+PLSP_MA_confirm,MAConfirm,,"PLSP_MAConfirm
+SetTextHighlights $PLSP_MA_selectedOfficerName
+SetShortcut PLSP_MA_backToStart ESCAPE","""Details have been confirmed. We will arrange matters related to $PLSP_MA_targetName as soon as possible. Thank you for your support of the Akademia.""",10:PLSP_MA_backToStart:Back,
+,,,,,,
+,,,,,,
+PLSP_MA_backToStart,DialogOptionSelected,$option == PLSP_MA_backToStart,FireAll MAMainOpts,,,
+PLSP_MA_mainOptionDisplay,MAMainOpts,,"PLSP_MAShow PLSP_MAServices
+SetShortcut cutCommLink ESCAPE",,,
+PLSP_MA_officerOptionDisplay,MAOfficerOpts,,"PLSP_MAShow PLSP_MAOfficers
+SetShortcut PLSP_MA_backToStart ESCAPE",,,

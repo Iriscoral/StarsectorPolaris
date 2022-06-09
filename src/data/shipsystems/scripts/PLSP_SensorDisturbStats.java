@@ -3,6 +3,7 @@ package data.shipsystems.scripts;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.*;
 import com.fs.starfarer.api.impl.combat.BaseShipSystemScript;
+import data.scripts.util.PLSP_Util.I18nSection;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.combat.AIUtils;
 
@@ -15,9 +16,7 @@ public class PLSP_SensorDisturbStats extends BaseShipSystemScript {
 
 	private SensorDisturbState data = null;
 
-	private static String getString(String key) {
-		return Global.getSettings().getString("ShipSystem", "PLSP_" + key);
-	}
+	public static final I18nSection strings = I18nSection.getInstance("ShipSystem", "PLSP_");
 
 	public static float getRange(ShipAPI ship) {
 		if (ship == null) return RANGE_FACTOR;
@@ -113,7 +112,7 @@ public class PLSP_SensorDisturbStats extends BaseShipSystemScript {
 	@Override
 	public StatusData getStatusData(int index, State state, float effectLevel) {
 		if (index == 0) {
-			return new StatusData(getString("sensordisturbS3"), false);
+			return new StatusData(strings.get("sensordisturbS3"), false);
 		}
 		return null;
 	}
@@ -123,9 +122,9 @@ public class PLSP_SensorDisturbStats extends BaseShipSystemScript {
 		if (system.getState() != ShipSystemAPI.SystemState.IDLE) return "";
 		List<ShipAPI> targets = AIUtils.getNearbyEnemies(ship, getRange(ship));
 		if (!targets.isEmpty()) {
-			return getString("sensordisturbS1") + targets.size();
+			return strings.get("sensordisturbS1") + targets.size();
 		}
-		return getString("sensordisturbS2");
+		return strings.get("sensordisturbS2");
 	}
 
 	private final static class SensorDisturbState {

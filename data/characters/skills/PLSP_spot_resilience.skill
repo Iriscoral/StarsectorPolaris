@@ -11,5 +11,13 @@
 				{"type":"SHIP", "script":"data.scripts.campaign.skills.PLSP_SpotResilience$Level1"},
 			]
 		},
+		{
+			"name":"精英",
+			"requiredSkillLevel":2,
+			"effectBasedOnLevel":false,
+			"effects":[
+				{"type":"SHIP", "script":"data.scripts.campaign.skills.PLSP_SpotResilience$Level2"},
+			]
+		},
 	],
 }

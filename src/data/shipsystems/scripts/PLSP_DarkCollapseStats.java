@@ -9,13 +9,14 @@ import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Misc.FindShipFilter;
 import data.scripts.util.PLSP_ColorData;
 import data.scripts.util.PLSP_Util;
+import data.scripts.util.PLSP_Util.I18nSection;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.VectorUtils;
 import org.lazywizard.lazylib.combat.AIUtils;
 import org.lazywizard.lazylib.combat.CombatUtils;
 import org.lwjgl.util.vector.Vector2f;
 
-import java.awt.*;
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -37,9 +38,7 @@ public class PLSP_DarkCollapseStats extends BaseShipSystemScript {
 
 	private DarkCollapseState data = null;
 
-	private static String getString(String key) {
-		return Global.getSettings().getString("ShipSystem", "PLSP_" + key);
-	}
+	public static final I18nSection strings = I18nSection.getInstance("ShipSystem", "PLSP_");
 
 	public static float getRange(ShipAPI ship) {
 		if (ship == null) return RANGE_FACTOR;
@@ -66,7 +65,7 @@ public class PLSP_DarkCollapseStats extends BaseShipSystemScript {
 			if (engine.isPaused()) amount = 0f;
 
 			if (!data.launched && (data.target == Global.getCombatEngine().getPlayerShip() || ship == Global.getCombatEngine().getPlayerShip())) {
-				data.target.getFluxTracker().showOverloadFloatyIfNeeded(getString("darkcollapseS3"), PLSP_ColorData.TEXT_GREY, 4f, true);
+				data.target.getFluxTracker().showOverloadFloatyIfNeeded(strings.get("darkcollapseS3"), PLSP_ColorData.TEXT_GREY, 4f, true);
 				data.launched = true;
 			}
 
@@ -214,10 +213,10 @@ public class PLSP_DarkCollapseStats extends BaseShipSystemScript {
 
 		ShipAPI target = getTarget(ship);
 		if (target == null) {
-			return getString("darkcollapseS1");
+			return strings.get("darkcollapseS1");
 		}
 
-		return getString("darkcollapseS2");
+		return strings.get("darkcollapseS2");
 	}
 
 

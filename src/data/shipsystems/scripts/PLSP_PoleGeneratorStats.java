@@ -5,12 +5,11 @@ import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.impl.combat.BaseShipSystemScript;
 import data.scripts.util.PLSP_ColorData;
+import data.scripts.util.PLSP_Util.I18nSection;
 
 public class PLSP_PoleGeneratorStats extends BaseShipSystemScript {
 
-	private static String getString(String key) {
-		return Global.getSettings().getString("ShipSystem", "PLSP_" + key);
-	}
+	public static final I18nSection strings = I18nSection.getInstance("ShipSystem", "PLSP_");
 
 	@Override
 	public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
@@ -77,13 +76,13 @@ public class PLSP_PoleGeneratorStats extends BaseShipSystemScript {
 	@Override
 	public StatusData getStatusData(int index, State state, float effectLevel) {
 		if (index == 0) {
-			return new StatusData(getString("polegeneratorS1") , false);
+			return new StatusData(strings.get("polegeneratorS1") , false);
 		}
 		if (index == 1) {
-			return new StatusData(getString("polegeneratorS2"), false);
+			return new StatusData(strings.get("polegeneratorS2"), false);
 		}
 		if (index == 2) {
-			return new StatusData(getString("polegeneratorS3") + (int) (50f * effectLevel) + "%", false);
+			return new StatusData(strings.get("polegeneratorS3") + (int) (50f * effectLevel) + "%", false);
 		}
 		return null;
 	}

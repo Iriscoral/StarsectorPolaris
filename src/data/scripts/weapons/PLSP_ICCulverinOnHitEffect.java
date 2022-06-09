@@ -8,7 +8,7 @@ import data.scripts.plugin.PLSP_WeaponPlugin;
 import org.lazywizard.lazylib.MathUtils;
 import org.lwjgl.util.vector.Vector2f;
 
-import java.awt.*;
+import java.awt.Color;
 import java.util.Map;
 
 public class PLSP_ICCulverinOnHitEffect implements OnHitEffectPlugin {

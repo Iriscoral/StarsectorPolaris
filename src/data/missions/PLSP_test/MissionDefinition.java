@@ -8,6 +8,7 @@ import com.fs.starfarer.api.mission.FleetSide;
 import com.fs.starfarer.api.mission.MissionDefinitionAPI;
 import com.fs.starfarer.api.mission.MissionDefinitionPlugin;
 import data.scripts.util.PLSP_DataBase;
+import data.scripts.util.PLSP_Util.I18nSection;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -15,17 +16,15 @@ import java.util.List;
 
 public class MissionDefinition implements MissionDefinitionPlugin {
 	
-	private static String getString(String key) {
-		return Global.getSettings().getString("Misc", "PLSP_" + key);
-	}
+	public static final I18nSection strings = I18nSection.getInstance("Misc", "PLSP_");
 
 	@Override
 	public void defineMission(MissionDefinitionAPI api) {
 		api.initFleet(FleetSide.PLAYER, "PLSP", FleetGoal.ATTACK, false, 5);
 		api.initFleet(FleetSide.ENEMY, "SIM", FleetGoal.ATTACK, true);
-		api.setFleetTagline(FleetSide.PLAYER, getString("list"));
-		api.setFleetTagline(FleetSide.ENEMY, getString("fearpng"));
-		api.addBriefingItem(getString("variantTest"));
+		api.setFleetTagline(FleetSide.PLAYER, strings.get("list"));
+		api.setFleetTagline(FleetSide.ENEMY, strings.get("fearpng"));
+		api.addBriefingItem(strings.get("variantTest"));
 
 		List<String> ships = PLSP_DataBase.getPLSPNormalShipIds();
 		List<String> variants = new ArrayList<>();

@@ -14,8 +14,9 @@ import com.fs.starfarer.api.ui.SectorMapAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.util.Misc;
+import data.scripts.util.PLSP_Util.I18nSection;
 
-import java.awt.*;
+import java.awt.Color;
 import java.util.List;
 import java.util.Set;
 
@@ -107,12 +108,12 @@ public class PLSP_MilitaryAcademyIntel extends BaseIntelPlugin {
 	public String getSmallDescriptionTitle() {
 		if (isEnding()) {
 			if (lastMACheck) {
-				getString("title_1");
+				strings.get("title_1");
 			} else {
-				getString("title_2");
+				strings.get("title_2");
 			}
 		}
-		return getString("title_0");
+		return strings.get("title_0");
 	}
 
 	@Override
@@ -130,21 +131,21 @@ public class PLSP_MilitaryAcademyIntel extends BaseIntelPlugin {
 			// 3 possible updates: de-posted/expired, failed, completed
 			if (isEnding()) {
 				if (lastMACheck) {
-					info.addPara(getString("ends_1"), initPad, tc, h, person.getName().getFullName());
+					info.addPara(strings.get("ends_1"), initPad, tc, h, person.getName().getFullName());
 				} else {
-					info.addPara(getString("ends_2"), initPad, tc, h, person.getName().getFullName());
+					info.addPara(strings.get("ends_2"), initPad, tc, h, person.getName().getFullName());
 				}
 			}
 		} else {
 			// either in small description, or in tooltip/intel list
 			if (isEnding()) {
 				if (lastMACheck) {
-					info.addPara(getString("ends_1"), initPad, tc, h, person.getName().getFullName());
+					info.addPara(strings.get("ends_1"), initPad, tc, h, person.getName().getFullName());
 				} else {
-					info.addPara(getString("ends_2"), initPad, tc, h, person.getName().getFullName());
+					info.addPara(strings.get("ends_2"), initPad, tc, h, person.getName().getFullName());
 				}
 			} else {
-				info.addPara(getString("short_0"), initPad, tc, h, person.getName().getFullName());
+				info.addPara(strings.get("short_0"), initPad, tc, h, person.getName().getFullName());
 			}
 		}
 
@@ -177,18 +178,16 @@ public class PLSP_MilitaryAcademyIntel extends BaseIntelPlugin {
 
 		if (isEnding()) {
 			if (lastMACheck) {
-				info.addPara(getString("des_1"), opad, h, entity.getName());
+				info.addPara(strings.get("des_1"), opad, h, entity.getName());
 			} else {
-				info.addPara(getString("des_2"), opad, h, entity.getName());
+				info.addPara(strings.get("des_2"), opad, h, entity.getName());
 			}
 		} else {
-			info.addPara(getString("des_0"), opad, h, entity.getName(), "" + (int)timeLeft);
+			info.addPara(strings.get("des_0"), opad, h, entity.getName(), "" + (int)timeLeft);
 		}
 	}
 
-	private String getString(String key) {
-		return Global.getSettings().getString("Intel", "PLSP_MA_" + key);
-	}
+	public static final I18nSection strings = I18nSection.getInstance("Intel", "PLSP_MA_");
 
 	@Override
 	public SectorEntityToken getMapLocation(SectorMapAPI map) {

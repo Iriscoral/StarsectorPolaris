@@ -4,6 +4,7 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.*;
 import com.fs.starfarer.api.impl.combat.BaseShipSystemScript;
 import data.scripts.util.PLSP_Util;
+import data.scripts.util.PLSP_Util.I18nSection;
 
 import java.util.Random;
 
@@ -12,9 +13,7 @@ public class PLSP_RepairLinkStats extends BaseShipSystemScript {
 	private static final Random rand = new Random();
 	private PLSP_RepairLinkVisual visual = null;
 
-	private static String getString(String key) {
-		return Global.getSettings().getString("ShipSystem", "PLSP_" + key);
-	}
+	public static final I18nSection strings = I18nSection.getInstance("ShipSystem", "PLSP_");
 
 	@Override
 	public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
@@ -80,10 +79,10 @@ public class PLSP_RepairLinkStats extends BaseShipSystemScript {
 	@Override
 	public StatusData getStatusData(int index, State state, float effectLevel) {
 		if (index == 0) {
-			return new StatusData(getString("repairlinkS1") + " 50%", false);
+			return new StatusData(strings.get("repairlinkS1") + " 50%", false);
 		}
 		if (index == 1) {
-			return new StatusData(getString("repairlinkS2") + " 100%", false);
+			return new StatusData(strings.get("repairlinkS2") + " 100%", false);
 		}
 		return null;
 	}

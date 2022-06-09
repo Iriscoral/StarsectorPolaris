@@ -105,11 +105,17 @@ public class PLSP_DataBase {
 
 	private static final Random random = new Random();
 	private static final HashMap<String, List<ShipSkillEffect>> SKILL_EFFECTS = new HashMap<>();
+	private static final HashMap<String, List<ShipSkillEffect>> SKILL_ELITE_EFFECTS = new HashMap<>();
 	static {
 		ShipSkillEffect helmsmanship1 = new Helmsmanship.Level1(); // fuc it
 		ShipSkillEffect helmsmanship2 = new Helmsmanship.Level2(); // why no reflect
 		List<ShipSkillEffect> helmsmanship = new ArrayList<>(Arrays.asList(helmsmanship1, helmsmanship2));
 		SKILL_EFFECTS.put(Skills.HELMSMANSHIP, helmsmanship);
+
+		ShipSkillEffect helmsmanship_e3 = new Helmsmanship.Level3();
+		ShipSkillEffect helmsmanship_e4 = new Helmsmanship.Level4();
+		List<ShipSkillEffect> helmsmanship_e = new ArrayList<>(Arrays.asList(helmsmanship_e3, helmsmanship_e4));
+		SKILL_ELITE_EFFECTS.put(Skills.HELMSMANSHIP, helmsmanship_e);
 
 		ShipSkillEffect combat_endurance1 = new CombatEndurance.Level1();
 		ShipSkillEffect combat_endurance2 = new CombatEndurance.Level2();
@@ -117,10 +123,18 @@ public class PLSP_DataBase {
 		List<ShipSkillEffect> combat_endurance = new ArrayList<>(Arrays.asList(combat_endurance1, combat_endurance2, combat_endurance3));
 		SKILL_EFFECTS.put(Skills.COMBAT_ENDURANCE, combat_endurance);
 
+		ShipSkillEffect combat_endurance_e4 = new CombatEndurance.Level4();
+		List<ShipSkillEffect> combat_endurance_e = new ArrayList<>(Arrays.asList(combat_endurance_e4));
+		SKILL_ELITE_EFFECTS.put(Skills.COMBAT_ENDURANCE, combat_endurance_e);
+
 		ShipSkillEffect impact_mitigation1 = new ImpactMitigation.Level2();
 		ShipSkillEffect impact_mitigation2 = new ImpactMitigation.Level4();
 		List<ShipSkillEffect> impact_mitigation = new ArrayList<>(Arrays.asList(impact_mitigation1, impact_mitigation2));
 		SKILL_EFFECTS.put(Skills.IMPACT_MITIGATION, impact_mitigation);
+
+		ShipSkillEffect impact_mitigation_e3 = new ImpactMitigation.Level6();
+		List<ShipSkillEffect> impact_mitigation_e = new ArrayList<>(Arrays.asList(impact_mitigation_e3));
+		SKILL_ELITE_EFFECTS.put(Skills.IMPACT_MITIGATION, impact_mitigation_e);
 
 		ShipSkillEffect damage_control1 = new DamageControl.Level2();
 		ShipSkillEffect damage_control2 = new DamageControl.Level3();
@@ -128,15 +142,28 @@ public class PLSP_DataBase {
 		List<ShipSkillEffect> damage_control = new ArrayList<>(Arrays.asList(damage_control1, damage_control2, damage_control3));
 		SKILL_EFFECTS.put(Skills.DAMAGE_CONTROL, damage_control);
 
+		ShipSkillEffect damage_control_e4 = new DamageControl.Level6();
+		List<ShipSkillEffect> damage_control_e = new ArrayList<>(Arrays.asList(damage_control_e4));
+		SKILL_ELITE_EFFECTS.put(Skills.DAMAGE_CONTROL, damage_control_e);
+
 		ShipSkillEffect field_modulation1 = new FieldModulation.Level1();
 		ShipSkillEffect field_modulation2 = new FieldModulation.Level2();
 		List<ShipSkillEffect> field_modulation = new ArrayList<>(Arrays.asList(field_modulation1, field_modulation2));
 		SKILL_EFFECTS.put(Skills.FIELD_MODULATION, field_modulation);
 
+		ShipSkillEffect field_modulation_e3 = new FieldModulation.Level3();
+		ShipSkillEffect field_modulation_e4 = new FieldModulation.Level4();
+		List<ShipSkillEffect> field_modulation_e = new ArrayList<>(Arrays.asList(field_modulation_e3, field_modulation_e4));
+		SKILL_ELITE_EFFECTS.put(Skills.FIELD_MODULATION, field_modulation_e);
+
 		ShipSkillEffect point_defense1 = new PointDefense.Level1();
 		ShipSkillEffect point_defense2 = new PointDefense.Level2();
 		List<ShipSkillEffect> point_defense = new ArrayList<>(Arrays.asList(point_defense1, point_defense2));
 		SKILL_EFFECTS.put(Skills.POINT_DEFENSE, point_defense);
+
+		ShipSkillEffect point_defense_3 = new PointDefense.Level3();
+		List<ShipSkillEffect> point_defense_e = new ArrayList<>(Arrays.asList(point_defense_3));
+		SKILL_ELITE_EFFECTS.put(Skills.POINT_DEFENSE, point_defense_e);
 
 		ShipSkillEffect target_analysis1 = new TargetAnalysis.Level1();
 		ShipSkillEffect target_analysis2 = new TargetAnalysis.Level2();
@@ -144,10 +171,18 @@ public class PLSP_DataBase {
 		List<ShipSkillEffect> target_analysis = new ArrayList<>(Arrays.asList(target_analysis1, target_analysis2, target_analysis3));
 		SKILL_EFFECTS.put(Skills.TARGET_ANALYSIS, target_analysis);
 
+		ShipSkillEffect target_analysis_e4 = new TargetAnalysis.Level4();
+		List<ShipSkillEffect> target_analysis_e = new ArrayList<>(Arrays.asList(target_analysis_e4));
+		SKILL_ELITE_EFFECTS.put(Skills.TARGET_ANALYSIS, target_analysis_e);
+
 		ShipSkillEffect ballistic_mastery1 = new BallisticMastery.Level1();
 		ShipSkillEffect ballistic_mastery2 = new BallisticMastery.Level2();
 		List<ShipSkillEffect> ballistic_mastery = new ArrayList<>(Arrays.asList(ballistic_mastery1, ballistic_mastery2));
 		SKILL_EFFECTS.put(Skills.BALLISTIC_MASTERY, ballistic_mastery);
+
+		ShipSkillEffect ballistic_mastery_e3 = new BallisticMastery.Level3();
+		List<ShipSkillEffect> ballistic_mastery_e = new ArrayList<>(Arrays.asList(ballistic_mastery_e3));
+		SKILL_ELITE_EFFECTS.put(Skills.BALLISTIC_MASTERY, ballistic_mastery_e);
 
 		ShipSkillEffect systems_expertise1 = new SystemsExpertise.Level1();
 		ShipSkillEffect systems_expertise2 = new SystemsExpertise.Level2();
@@ -156,10 +191,21 @@ public class PLSP_DataBase {
 		List<ShipSkillEffect> systems_expertise = new ArrayList<>(Arrays.asList(systems_expertise1, systems_expertise2, systems_expertise3, systems_expertise4));
 		SKILL_EFFECTS.put(Skills.SYSTEMS_EXPERTISE, systems_expertise);
 
+		ShipSkillEffect systems_expertise_e5 = new SystemsExpertise.Level5();
+		ShipSkillEffect systems_expertise_e6 = new SystemsExpertise.Level6();
+		ShipSkillEffect systems_expertise_e7 = new SystemsExpertise.Level7();
+		List<ShipSkillEffect> systems_expertise_e = new ArrayList<>(Arrays.asList(systems_expertise_e5, systems_expertise_e6, systems_expertise_e7));
+		SKILL_ELITE_EFFECTS.put(Skills.SYSTEMS_EXPERTISE, systems_expertise_e);
+
 		ShipSkillEffect missile_specialization1 = new MissileSpecialization.Level1();
 		ShipSkillEffect missile_specialization2 = new MissileSpecialization.Level2();
 		List<ShipSkillEffect> missile_specialization = new ArrayList<>(Arrays.asList(missile_specialization1, missile_specialization2));
 		SKILL_EFFECTS.put(Skills.MISSILE_SPECIALIZATION, missile_specialization);
+
+		ShipSkillEffect missile_specialization_e3 = new MissileSpecialization.Level3();
+		ShipSkillEffect missile_specialization_e4 = new MissileSpecialization.Level4();
+		List<ShipSkillEffect> missile_specialization_e = new ArrayList<>(Arrays.asList(missile_specialization_e3, missile_specialization_e4));
+		SKILL_ELITE_EFFECTS.put(Skills.MISSILE_SPECIALIZATION, missile_specialization_e);
 
 		ShipSkillEffect gunnery_implants1 = new GunneryImplants.Level1();
 		ShipSkillEffect gunnery_implants2 = new GunneryImplants.Level2();
@@ -167,19 +213,35 @@ public class PLSP_DataBase {
 		List<ShipSkillEffect> gunnery_implants = new ArrayList<>(Arrays.asList(gunnery_implants1, gunnery_implants2, gunnery_implants3));
 		SKILL_EFFECTS.put(Skills.GUNNERY_IMPLANTS, gunnery_implants);
 
+		ShipSkillEffect gunnery_implants_e4 = new GunneryImplants.Level1A();
+		List<ShipSkillEffect> gunnery_implants_e = new ArrayList<>(Arrays.asList(gunnery_implants_e4));
+		SKILL_ELITE_EFFECTS.put(Skills.GUNNERY_IMPLANTS, gunnery_implants_e);
+
 		ShipSkillEffect energy_weapon_mastery1 = new EnergyWeaponMastery.Level1();
 		List<ShipSkillEffect> energy_weapon_mastery = new ArrayList<>(Arrays.asList(energy_weapon_mastery1));
 		SKILL_EFFECTS.put(Skills.ENERGY_WEAPON_MASTERY, energy_weapon_mastery);
 
+		ShipSkillEffect energy_weapon_mastery_e2 = new EnergyWeaponMastery.Level2();
+		List<ShipSkillEffect> energy_weapon_mastery_e = new ArrayList<>(Arrays.asList(energy_weapon_mastery_e2));
+		SKILL_ELITE_EFFECTS.put(Skills.ENERGY_WEAPON_MASTERY, energy_weapon_mastery_e);
+
 		ShipSkillEffect ordnance_expert1 = new OrdnanceExpertise.Level1();
 		List<ShipSkillEffect> ordnance_expert = new ArrayList<>(Arrays.asList(ordnance_expert1));
 		SKILL_EFFECTS.put(Skills.ORDNANCE_EXPERTISE, ordnance_expert);
+
+		ShipSkillEffect ordnance_expert_e2 = new OrdnanceExpertise.Level3();
+		List<ShipSkillEffect> ordnance_expert_e = new ArrayList<>(Arrays.asList(ordnance_expert_e2));
+		SKILL_ELITE_EFFECTS.put(Skills.ORDNANCE_EXPERTISE, ordnance_expert_e);
 
 		ShipSkillEffect polarized_armor1 = new PolarizedArmor.Level1();
 		ShipSkillEffect polarized_armor2 = new PolarizedArmor.Level2();
 		ShipSkillEffect polarized_armor3 = new PolarizedArmor.Level3();
 		List<ShipSkillEffect> polarized_armor = new ArrayList<>(Arrays.asList(polarized_armor1, polarized_armor2, polarized_armor3));
 		SKILL_EFFECTS.put(Skills.POLARIZED_ARMOR, polarized_armor);
+
+		ShipSkillEffect polarized_armor_e4 = new PolarizedArmor.Level4();
+		List<ShipSkillEffect> polarized_armor_e = new ArrayList<>(Arrays.asList(polarized_armor_e4));
+		SKILL_ELITE_EFFECTS.put(Skills.POLARIZED_ARMOR, polarized_armor_e);
 	}
 
 	public static List<String> getAllAvailableSkills() {
@@ -188,6 +250,10 @@ public class PLSP_DataBase {
 
 	public static List<ShipSkillEffect> getSkillEffects(String id) {
 		return SKILL_EFFECTS.get(id);
+	}
+
+	public static List<ShipSkillEffect> getSkillEliteEffects(String id) {
+		return SKILL_ELITE_EFFECTS.get(id);
 	}
 
 	public static String pickUnpickedSkill(PersonAPI person, ShipAPI ship) {

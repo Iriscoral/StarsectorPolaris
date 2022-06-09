@@ -1,19 +1,21 @@
 package data.hullmods;
 
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.combat.*;
+import com.fs.starfarer.api.combat.BaseHullMod;
+import com.fs.starfarer.api.combat.FluxTrackerAPI;
+import com.fs.starfarer.api.combat.ShipAPI;
+import com.fs.starfarer.api.combat.ShipCommand;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import data.scripts.util.PLSP_ColorData;
 import data.scripts.util.PLSP_DataBase;
 import data.scripts.util.PLSP_Util;
+import data.scripts.util.PLSP_Util.I18nSection;
 
 public class PLSP_FluxLink extends BaseHullMod {
 	private static final String id = "PLSP_FluxLink";
 	
-	private static String getString(String key) {
-		return Global.getSettings().getString("HullMod", "PLSP_" + key);
-	}
+	public static final I18nSection strings = I18nSection.getInstance("HullMod", "PLSP_");
 
 	@Override
 	public boolean shouldAddDescriptionToTooltip(ShipAPI.HullSize hullSize, ShipAPI ship, boolean isForModSpec) {
@@ -25,11 +27,11 @@ public class PLSP_FluxLink extends BaseHullMod {
 		float pad = 10f;
 		float padS = 2f;
 
-		tooltip.addPara("%s " + getString("fluxlinkTEXT1"), pad, Misc.getHighlightColor(), "#");
-		tooltip.addPara("%s " + getString("fluxlinkTEXT2"), padS, Misc.getHighlightColor(), "#", "90%");
-		tooltip.addPara("%s " + getString("fluxlinkTEXT3"), padS, Misc.getNegativeHighlightColor(), "#");
-		tooltip.addPara("%s " + getString("fluxlinkDO"), pad, Misc.getNegativeHighlightColor(), "#");
-		tooltip.addPara("%s " + getString("HAO"), padS, Misc.getNegativeHighlightColor(), "#");
+		tooltip.addPara("%s " + strings.get("fluxlinkTEXT1"), pad, Misc.getHighlightColor(), "#");
+		tooltip.addPara("%s " + strings.get("fluxlinkTEXT2"), padS, Misc.getHighlightColor(), "#", "90%");
+		tooltip.addPara("%s " + strings.get("fluxlinkTEXT3"), padS, Misc.getNegativeHighlightColor(), "#");
+		tooltip.addPara("%s " + strings.get("fluxlinkDO"), pad, Misc.getNegativeHighlightColor(), "#");
+		tooltip.addPara("%s " + strings.get("HAO"), padS, Misc.getNegativeHighlightColor(), "#");
 	}
 	
 	@Override
@@ -99,7 +101,7 @@ public class PLSP_FluxLink extends BaseHullMod {
 	public String getUnapplicableReason(ShipAPI ship) {
 		int bays = (int)ship.getMutableStats().getNumFighterBays().getModifiedValue();
 		if (bays == 0) {
-			return getString("fluxlinkDO");
+			return strings.get("fluxlinkDO");
 		}
 		return null;
 	}

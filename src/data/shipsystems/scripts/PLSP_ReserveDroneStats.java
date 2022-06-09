@@ -6,13 +6,12 @@ import com.fs.starfarer.api.impl.combat.BaseShipSystemScript;
 import com.fs.starfarer.api.loading.WeaponSlotAPI;
 import com.fs.starfarer.api.util.Misc.FindShipFilter;
 import data.scripts.util.PLSP_Util;
+import data.scripts.util.PLSP_Util.I18nSection;
 import org.lwjgl.util.vector.Vector2f;
 
 public class PLSP_ReserveDroneStats extends BaseShipSystemScript {
 
-	private static String getString(String key) {
-		return Global.getSettings().getString("ShipSystem", "PLSP_" + key);
-	}
+	public static final I18nSection strings = I18nSection.getInstance("ShipSystem", "PLSP_");
 
 	@Override
 	public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
@@ -57,15 +56,15 @@ public class PLSP_ReserveDroneStats extends BaseShipSystemScript {
 		if (system.getState() != ShipSystemAPI.SystemState.IDLE) return "";
 
 		if (ship.isPullBackFighters()) {
-			return getString("reservedroneS2");
+			return strings.get("reservedroneS2");
 		}
 
 		ShipAPI target = getTarget(ship);
 		if (target == null) {
-			return getString("reservedroneS3");
+			return strings.get("reservedroneS3");
 		}
 
-		return getString("reservedroneS4");
+		return strings.get("reservedroneS4");
 	}
 
 
@@ -91,7 +90,7 @@ public class PLSP_ReserveDroneStats extends BaseShipSystemScript {
 	@Override
 	public StatusData getStatusData(int index, State state, float effectLevel) {
 		if (index == 0) {
-			return new StatusData(getString("reservedroneS1"), false);
+			return new StatusData(strings.get("reservedroneS1"), false);
 		}
 		return null;
 	}

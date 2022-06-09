@@ -11,6 +11,7 @@ import com.fs.starfarer.api.util.Misc;
 import data.hullmods.PLSP_ClusterModulator.ModulatorState;
 import data.scripts.util.PLSP_DataBase;
 import data.scripts.util.PLSP_Util;
+import data.scripts.util.PLSP_Util.I18nSection;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.VectorUtils;
 import org.lwjgl.util.vector.Vector2f;
@@ -24,9 +25,7 @@ public class PLSP_ClusterAddition extends BaseHullMod {
 	private static final String id = "PLSP_ClusterAddition";
 	private static final Vector2f ZERO = new Vector2f();
 
-	private static String getString(String key) {
-		return Global.getSettings().getString("HullMod", "PLSP_" + key);
-	}
+	public static final I18nSection strings = I18nSection.getInstance("HullMod", "PLSP_");
 
 	@Override
 	public boolean shouldAddDescriptionToTooltip(ShipAPI.HullSize hullSize, ShipAPI ship, boolean isForModSpec) {
@@ -38,11 +37,11 @@ public class PLSP_ClusterAddition extends BaseHullMod {
 		float pad = 10f;
 		float padS = 2f;
 
-		tooltip.addPara("%s " + getString("clusteradditionTEXT1"), pad, Misc.getHighlightColor(), "#", Global.getSettings().getHullModSpec("PLSP_clustermodulator").getDisplayName());
-		tooltip.addPara("    %s " + getString("clusteradditionTEXT2"), padS, Misc.getHighlightColor(), "#", "600");
-		tooltip.addPara("    %s " + getString("clusteradditionTEXT3"), padS, Misc.getHighlightColor(), "#");
-		tooltip.addPara("%s " + getString("clusteradditionDO"), pad, Misc.getNegativeHighlightColor(), "#", Global.getSettings().getHullModSpec("PLSP_clustermodulator").getDisplayName());
-		tooltip.addPara("%s " + getString("HAO"), padS, Misc.getNegativeHighlightColor(), "#");
+		tooltip.addPara("%s " + strings.get("clusteradditionTEXT1"), pad, Misc.getHighlightColor(), "#", Global.getSettings().getHullModSpec("PLSP_clustermodulator").getDisplayName());
+		tooltip.addPara("    %s " + strings.get("clusteradditionTEXT2"), padS, Misc.getHighlightColor(), "#", "600");
+		tooltip.addPara("    %s " + strings.get("clusteradditionTEXT3"), padS, Misc.getHighlightColor(), "#");
+		tooltip.addPara("%s " + strings.get("clusteradditionDO"), pad, Misc.getNegativeHighlightColor(), "#", Global.getSettings().getHullModSpec("PLSP_clustermodulator").getDisplayName());
+		tooltip.addPara("%s " + strings.get("HAO"), padS, Misc.getNegativeHighlightColor(), "#");
 	}
 
 	@Override

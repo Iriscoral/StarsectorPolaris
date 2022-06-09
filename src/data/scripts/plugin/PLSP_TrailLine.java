@@ -12,7 +12,7 @@ import org.lazywizard.lazylib.VectorUtils;
 import org.lazywizard.lazylib.combat.entities.SimpleEntity;
 import org.lwjgl.util.vector.Vector2f;
 
-import java.awt.*;
+import java.awt.Color;
 import java.util.EnumSet;
 
 public class PLSP_TrailLine extends SimpleEntity implements CombatLayeredRenderingPlugin {

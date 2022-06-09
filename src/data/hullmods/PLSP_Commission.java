@@ -7,10 +7,11 @@ import com.fs.starfarer.api.graphics.SpriteAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import data.scripts.util.PLSP_Util;
+import data.scripts.util.PLSP_Util.I18nSection;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.combat.AIUtils;
 
-import java.awt.*;
+import java.awt.Color;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -22,15 +23,14 @@ public class PLSP_Commission extends BaseHullMod {
 
 	private static final Map<HullSize, Float> mag = new HashMap<>();
 	static {
+		mag.put(HullSize.FIGHTER, 0f);
 		mag.put(HullSize.FRIGATE, 0.4f);
 		mag.put(HullSize.DESTROYER, 0.6f);
 		mag.put(HullSize.CRUISER, 0.8f);
 		mag.put(HullSize.CAPITAL_SHIP, 1f);
 	}
 
-    private String getString(String key) {
-        return Global.getSettings().getString("HullMod", "PLSP_" + key);
-    }
+	public static final I18nSection strings = I18nSection.getInstance("HullMod", "PLSP_");
 
 	@Override
 	public Color getBorderColor() {
@@ -43,20 +43,20 @@ public class PLSP_Commission extends BaseHullMod {
 		return NAME;
 	}
 
-    @Override
-    public void addPostDescriptionSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width, boolean isForModSpec) {
-        float pad = 10f;
-        float padS = 2f;
+	@Override
+	public void addPostDescriptionSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width, boolean isForModSpec) {
+		float pad = 10f;
+		float padS = 2f;
 
-		tooltip.addPara("%s " + getString("commissionTEXT1"), pad, Misc.getHighlightColor(), "#", "1000", Global.getSettings().getHullModSpec(id).getDisplayName());
-        tooltip.addPara("%s " + getString("commissionTEXT2"), padS, Misc.getHighlightColor(), "#");
-		tooltip.addPara("%s " + getString("commissionTEXT3"), padS, Misc.getPositiveHighlightColor(), "#", "0.4", "0.6", "0.8", "1");
-		tooltip.addPara("%s " + getString("commissionTEXT4"), padS, Misc.getPositiveHighlightColor(), "#", "+20%");
-    }
+		tooltip.addPara("%s " + strings.get("commissionTEXT1"), pad, Misc.getHighlightColor(), "#", "1000", Global.getSettings().getHullModSpec(id).getDisplayName());
+		tooltip.addPara("%s " + strings.get("commissionTEXT2"), padS, Misc.getHighlightColor(), "#");
+		tooltip.addPara("%s " + strings.get("commissionTEXT3"), padS, Misc.getPositiveHighlightColor(), "#", "0.4", "0.6", "0.8", "1");
+		tooltip.addPara("%s " + strings.get("commissionTEXT4"), padS, Misc.getPositiveHighlightColor(), "#", "+20%");
+	}
 
-    @Override
-    public void advanceInCombat(ShipAPI ship, float amount) {
-    	CombatEngineAPI engine = Global.getCombatEngine();
+	@Override
+	public void advanceInCombat(ShipAPI ship, float amount) {
+		CombatEngineAPI engine = Global.getCombatEngine();
 		if (!engine.getCustomData().containsKey(DATA_KEY)) {
 			engine.getCustomData().put(DATA_KEY, new HashMap<>());
 		}
@@ -72,6 +72,8 @@ public class PLSP_Commission extends BaseHullMod {
 		}
 
 		if (ship.isStationModule()) return;
+		if (ship.isFighter() || ship.isDrone()) return;
+
 		if (!shipsMap.containsKey(ship)) {
 			shipsMap.put(ship, new CommState(ship));
 		} else {
@@ -96,7 +98,7 @@ public class PLSP_Commission extends BaseHullMod {
 			data.alpha = total / 20f;
 			ringRender(data, amount);
 		}
-    }
+	}
 
 	private static void ringRender(CommState state, float amount) {
 		state.sprite.setAlphaMult(state.alpha);

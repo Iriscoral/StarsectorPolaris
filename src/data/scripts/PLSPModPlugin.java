@@ -2,12 +2,8 @@ package data.scripts;
 
 import com.fs.starfarer.api.BaseModPlugin;
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.ModSpecAPI;
 import com.fs.starfarer.api.PluginPick;
 import com.fs.starfarer.api.campaign.CampaignPlugin;
-import com.fs.starfarer.api.campaign.FactionAPI;
-import com.fs.starfarer.api.campaign.RepLevel;
-import com.fs.starfarer.api.campaign.SectorAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.combat.MissileAIPlugin;
 import com.fs.starfarer.api.combat.MissileAPI;
@@ -20,9 +16,9 @@ import data.scripts.plugin.PLSP_CampaignPlugin;
 import data.scripts.util.MagicSettings;
 import data.scripts.util.PLSP_BlackList;
 import data.scripts.util.PLSP_Util;
+import data.scripts.util.PLSP_Util.I18nSection;
 import data.scripts.weapons.ai.PLSP_MagneticMissileAI;
 import data.scripts.weapons.ai.PLSP_MagneticMissileLargeAI;
-import data.scripts.world.systems.Triglav;
 import org.dark.shaders.light.LightData;
 import org.dark.shaders.util.ShaderLib;
 import org.dark.shaders.util.TextureData;
@@ -33,9 +29,7 @@ import java.util.List;
 public class PLSPModPlugin extends BaseModPlugin {
 	public static boolean modifiedVentingAI = true;
 	
-	private static String getString(String key) {
-		return Global.getSettings().getString("Misc", "PLSP_" + key);
-	}
+	public static final I18nSection strings = I18nSection.getInstance("Misc", "PLSP_");
 	
 	@Override
 	public void onApplicationLoad() {
@@ -46,7 +40,7 @@ public class PLSPModPlugin extends BaseModPlugin {
 
 		for (String id : PLSP_BlackList.getBlackListModId()) {
 			if (Global.getSettings().getModManager().isModEnabled(id)) {
-				throw new RuntimeException(String.format(getString("incMod"), Global.getSettings().getModManager().getModSpec("Polaris_Prime").getName(), Global.getSettings().getModManager().getModSpec(id).getName()));
+				throw new RuntimeException(String.format(strings.get("incMod"), Global.getSettings().getModManager().getModSpec("Polaris_Prime").getName(), Global.getSettings().getModManager().getModSpec(id).getName()));
 			}
 		}
 
@@ -59,14 +53,7 @@ public class PLSPModPlugin extends BaseModPlugin {
 			weaponIds.add(weapon.getWeaponId());
 		}
 		if (!intersectionConfirm(PLSP_BlackList.getBlackListShipId(), hullIds) || !intersectionConfirm(PLSP_BlackList.getBlackListWeaponId(), weaponIds)) {
-			throw new RuntimeException(Global.getSettings().getModManager().getModSpec("Polaris_Prime").getName() + " " + getString("imMod"));
-		}
-
-		if (Global.getSettings().getModManager().isModEnabled("ungp")) {
-			ModSpecAPI spec = Global.getSettings().getModManager().getModSpec("ungp");
-			if (Integer.parseInt(spec.getVersionInfo().getMinor()) < 6) {
-				throw new RuntimeException("Your UNGP is too old, get a new one in fossic.org!");
-			}
+			throw new RuntimeException(Global.getSettings().getModManager().getModSpec("Polaris_Prime").getName() + " " + strings.get("imMod"));
 		}
 
 		ShaderLib.init();
@@ -80,9 +67,9 @@ public class PLSPModPlugin extends BaseModPlugin {
 	public PluginPick<MissileAIPlugin> pickMissileAI(MissileAPI missile, ShipAPI launchingShip) {
 		switch (missile.getProjectileSpecId()) {
 			case "PLSP_magnetic_missile":
-				return new PluginPick<MissileAIPlugin>(new PLSP_MagneticMissileAI(missile, launchingShip), CampaignPlugin.PickPriority.MOD_SPECIFIC);
+				return new PluginPick<MissileAIPlugin>(new PLSP_MagneticMissileAI(missile, launchingShip), CampaignPlugin.PickPriority.MOD_SET);
 			case "PLSP_magnetic_missile_large":
-				return new PluginPick<MissileAIPlugin>(new PLSP_MagneticMissileLargeAI(missile, launchingShip), CampaignPlugin.PickPriority.MOD_SPECIFIC);
+				return new PluginPick<MissileAIPlugin>(new PLSP_MagneticMissileLargeAI(missile, launchingShip), CampaignPlugin.PickPriority.MOD_SET);
 			default:
 		}
 		return null;
@@ -99,9 +86,9 @@ public class PLSPModPlugin extends BaseModPlugin {
 		ProcgenUsedNames.notifyUsed("Chernobog");
 
 		if (PLSP_Util.NEX()) {
-			PLSP_SetNEXSettings.generate(Global.getSector());
+			new PLSP_NEXGenerate().generate(Global.getSector());
 		} else {
-			newGenerate(Global.getSector());
+			new PLSP_NormalGenerate().generate(Global.getSector());
 		}
 
 		MarketAPI market = PLSP_Util.pickMarket(Global.getSector().getFaction("plsp"));
@@ -120,26 +107,6 @@ public class PLSPModPlugin extends BaseModPlugin {
 
 	@Override
 	public void beforeGameSave(){
-	}
-	
-	public static void newGenerate(SectorAPI sector) {
-		new Triglav().generate(sector);
-		relationAdj(sector);
-	}
-	
-	private static void relationAdj(SectorAPI sector) {
-		FactionAPI plsp = sector.getFaction("plsp");
-
-		plsp.setRelationship("pirates", RepLevel.HOSTILE);
-		plsp.setRelationship("sindrian_diktat", RepLevel.HOSTILE);
-		plsp.setRelationship("independent", RepLevel.SUSPICIOUS);
-		plsp.setRelationship("luddic_path", RepLevel.VENGEFUL);
-		plsp.setRelationship("luddic_church", RepLevel.INHOSPITABLE);
-		plsp.setRelationship("tritachyon", RepLevel.INHOSPITABLE);
-		plsp.setRelationship("derelict", RepLevel.HOSTILE);
-		plsp.setRelationship("remnant", RepLevel.HOSTILE);
-
-		plsp.setRelationship("cabal", RepLevel.VENGEFUL);
 	}
 
 	private static boolean intersectionConfirm(List<String> listA, List<String> listB) {

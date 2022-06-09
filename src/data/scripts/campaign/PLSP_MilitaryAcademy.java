@@ -9,14 +9,13 @@ import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
+import data.scripts.util.PLSP_Util.I18nSection;
 
 public class PLSP_MilitaryAcademy extends BaseIndustry {
 	public static final String INDUSTRY_ID = "PLSP_militaryacademy";
 	public static final String MA_KEY = "$PLSP_MilitaryAcademy_Faction";
 	
-	private static String getString(String key) {
-		return Global.getSettings().getString("Misc", "PLSP_" + key);
-	}
+	public static final I18nSection strings = I18nSection.getInstance("Misc", "PLSP_");
 
 	public static float getMaxLevel() {
 		return 6f;
@@ -93,9 +92,9 @@ public class PLSP_MilitaryAcademy extends BaseIndustry {
 			String numStr = "+" + Math.round(getNumBonus(market)) + "%";
 
 			float opad = 10f;
-			tooltip.addPara(getString("alphacoreID"), opad, Misc.getHighlightColor(), levelStr);
-			tooltip.addPara(getString("alphacoreIN"), opad, Misc.getHighlightColor(), numStr);
-			tooltip.addPara(getString("alphacoreAD"), Misc.getGrayColor(), opad);
+			tooltip.addPara(strings.get("alphacoreID"), opad, Misc.getHighlightColor(), levelStr);
+			tooltip.addPara(strings.get("alphacoreIN"), opad, Misc.getHighlightColor(), numStr);
+			tooltip.addPara(strings.get("alphacoreAD"), Misc.getGrayColor(), opad);
 		}
 	}
 
@@ -113,8 +112,8 @@ public class PLSP_MilitaryAcademy extends BaseIndustry {
 	private static final float ALPHA_CORE_BONUS = 0.15f;
 	@Override
 	protected void applyAlphaCoreModifiers() {
-		market.getStats().getDynamic().getMod(Stats.OFFICER_MAX_LEVEL_MOD).modifyFlat(getModId(1), ALPHA_CORE_BONUS, getString("alphacore") + " (" + getNameForModifier() + ")");
-		market.getStats().getDynamic().getMod(Stats.OFFICER_MAX_ELITE_SKILLS_MOD).modifyFlat(getModId(1), ALPHA_CORE_BONUS, getString("alphacore") + " (" + getNameForModifier() + ")");
+		market.getStats().getDynamic().getMod(Stats.OFFICER_MAX_LEVEL_MOD).modifyFlat(getModId(1), ALPHA_CORE_BONUS, strings.get("alphacore") + " (" + getNameForModifier() + ")");
+		market.getStats().getDynamic().getMod(Stats.OFFICER_MAX_ELITE_SKILLS_MOD).modifyFlat(getModId(1), ALPHA_CORE_BONUS, strings.get("alphacore") + " (" + getNameForModifier() + ")");
 	}
 	
 	@Override
@@ -125,31 +124,31 @@ public class PLSP_MilitaryAcademy extends BaseIndustry {
 	
 	@Override
 	protected void applyAlphaCoreSupplyAndDemandModifiers() {
-		demandReduction.modifyFlat(getModId(0), DEMAND_REDUCTION, getString("alphacore"));
+		demandReduction.modifyFlat(getModId(0), DEMAND_REDUCTION, strings.get("alphacore"));
 	}
 	
 	@Override
 	protected void addAlphaCoreDescription(TooltipMakerAPI tooltip, AICoreDescriptionMode mode) {
 		float opad = 10f;
-		String pre = getString("alphacoreCA");
+		String pre = strings.get("alphacoreCA");
 		if (mode == AICoreDescriptionMode.MANAGE_CORE_DIALOG_LIST || mode == AICoreDescriptionMode.INDUSTRY_TOOLTIP) {
-			pre = getString("alphacore") + ".";
+			pre = strings.get("alphacore") + ".";
 		}
 
 		String str = "+" + (int)(100f * ALPHA_CORE_BONUS) + "%";
 		if (mode == AICoreDescriptionMode.INDUSTRY_TOOLTIP) {
 			CommoditySpecAPI coreSpec = Global.getSettings().getCommoditySpec(aiCoreId);
 			TooltipMakerAPI text = tooltip.beginImageWithText(coreSpec.getIconName(), 48);
-			text.addPara(pre + getString("alphacoreRC") + " " +
-					getString("alphacoreID"), 0f, Misc.getHighlightColor(),
+			text.addPara(pre + strings.get("alphacoreRC") + " " +
+					strings.get("alphacoreID"), 0f, Misc.getHighlightColor(),
 					"" + (int)((1f - UPKEEP_MULT) * 100f) + "%", "" + DEMAND_REDUCTION,
 					str);
 			tooltip.addImageWithText(opad);
 			return;
 		}
 
-		tooltip.addPara(pre + getString("alphacoreRC") + " " +
-					getString("alphacoreID"), opad, Misc.getHighlightColor(),
+		tooltip.addPara(pre + strings.get("alphacoreRC") + " " +
+					strings.get("alphacoreID"), opad, Misc.getHighlightColor(),
 				"" + (int)((1f - UPKEEP_MULT) * 100f) + "%", "" + DEMAND_REDUCTION, str);
 	}
 

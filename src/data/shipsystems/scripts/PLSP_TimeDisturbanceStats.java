@@ -10,6 +10,7 @@ import data.scripts.plugins.MagicRenderPlugin;
 import data.scripts.util.MagicLensFlare;
 import data.scripts.util.PLSP_ColorData;
 import data.scripts.util.PLSP_Util;
+import data.scripts.util.PLSP_Util.I18nSection;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.VectorUtils;
 import org.lazywizard.lazylib.combat.AIUtils;
@@ -20,12 +21,10 @@ import java.util.Map;
 
 public class PLSP_TimeDisturbanceStats extends BaseShipSystemScript {
 	private static final String DATA_KEY = "PLSP_SystemPlugin";
-	private static final Vector2f ZERO = new Vector2f(0, 0);
+	private static final Vector2f ZERO = new Vector2f();
 	private static final float RANGE_FACTOR = 800f;
 	
-	private static String getString(String key) {
-		return Global.getSettings().getString("ShipSystem", "PLSP_" + key);
-	}
+	public static final I18nSection strings = I18nSection.getInstance("ShipSystem", "PLSP_");
 
 	public static float getRange(ShipAPI ship) {
 		if (ship == null) return RANGE_FACTOR;
@@ -98,7 +97,7 @@ public class PLSP_TimeDisturbanceStats extends BaseShipSystemScript {
 			theData.put(enemy, new TimeData(time));
 			if ((enemy.getFluxTracker().showFloaty() || enemy == Global.getCombatEngine().getPlayerShip()) && !enemy.isFighter() && !enemy.isDrone()) {
 				String key = "time";
-				enemy.getFluxTracker().showOverloadFloatyIfNeeded(Global.getSettings().getString("ShipSystem", "PLSP_" + key), PLSP_ColorData.TEXT_RED, 4f, true);
+				enemy.getFluxTracker().showOverloadFloatyIfNeeded(strings.get(key), PLSP_ColorData.TEXT_RED, 4f, true);
 			}
 		} else {
 			for (Map.Entry<ShipAPI, TimeData> entry : theData.entrySet()) {
@@ -117,7 +116,7 @@ public class PLSP_TimeDisturbanceStats extends BaseShipSystemScript {
 	@Override
 	public StatusData getStatusData(int index, State state, float effectLevel) {
 		if (index == 0) {
-			return new StatusData(getString("timedisturbanceS1"), false);
+			return new StatusData(strings.get("timedisturbanceS1"), false);
 		}
 		return null;
 	}
@@ -128,9 +127,9 @@ public class PLSP_TimeDisturbanceStats extends BaseShipSystemScript {
 
 		List<ShipAPI> targets = AIUtils.getNearbyEnemies(ship, getRange(ship));
 		if (!targets.isEmpty()) {
-			return getString("timedisturbanceS2") + "" + targets.size();
+			return strings.get("timedisturbanceS2") + "" + targets.size();
 		}
 
-		return getString("timedisturbanceS3");
+		return strings.get("timedisturbanceS3");
 	}
 }

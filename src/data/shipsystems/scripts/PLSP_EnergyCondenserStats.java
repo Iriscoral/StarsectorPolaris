@@ -1,14 +1,12 @@
 package data.shipsystems.scripts;
 
-import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.impl.combat.BaseShipSystemScript;
+import data.scripts.util.PLSP_Util.I18nSection;
 
 public class PLSP_EnergyCondenserStats extends BaseShipSystemScript {
 	
-	private static String getString(String key) {
-		return Global.getSettings().getString("ShipSystem", "PLSP_" + key);
-	}
+	public static final I18nSection strings = I18nSection.getInstance("ShipSystem", "PLSP_");
 	
 	@Override
 	public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
@@ -25,13 +23,13 @@ public class PLSP_EnergyCondenserStats extends BaseShipSystemScript {
 	@Override
 	public StatusData getStatusData(int index, State state, float effectLevel) {
 		if (index == 0) {
-			return new StatusData(getString("energycondenserS1") + (int) (100f * effectLevel) + "%", false);
+			return new StatusData(strings.get("energycondenserS1") + (int) (100f * effectLevel) + "%", false);
 		}
 		if (index == 1) {
-			return new StatusData(getString("energycondenserS2") + (int) (50f * effectLevel) + "%", false);
+			return new StatusData(strings.get("energycondenserS2") + (int) (50f * effectLevel) + "%", false);
 		}
 		if (index == 2) {
-			return new StatusData(getString("energycondenserS3"), true);
+			return new StatusData(strings.get("energycondenserS3"), true);
 		}
 		return null;
 	}

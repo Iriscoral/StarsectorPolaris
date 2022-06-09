@@ -70,7 +70,7 @@ public class PLSP_GuidingProjPlugin extends BaseEveryFrameCombatPlugin {
 		final Map<CombatEntityAPI, Integer> alreadyTargeted = localData.alreadyTargeted;
 
 		for (DamagingProjectileAPI projectile : Global.getCombatEngine().getProjectiles()) {
-            if (projectile.getElapsed() > 0) {//only run once when projectile was created.
+            if (projectile.getElapsed() > 0f) {//only run once when projectile was created.
                 continue;
             }
 

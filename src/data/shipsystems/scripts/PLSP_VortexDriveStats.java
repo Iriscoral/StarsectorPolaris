@@ -8,6 +8,7 @@ import com.fs.starfarer.api.impl.combat.BaseShipSystemScript;
 import com.fs.starfarer.api.plugins.ShipSystemStatsScript;
 import data.scripts.util.PLSP_ColorData;
 import data.scripts.util.PLSP_Util;
+import data.scripts.util.PLSP_Util.I18nSection;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.VectorUtils;
 import org.lazywizard.lazylib.combat.CombatUtils;
@@ -15,9 +16,7 @@ import org.lwjgl.util.vector.Vector2f;
 
 public class PLSP_VortexDriveStats extends BaseShipSystemScript {
 
-	private static String getString(String key) {
-		return Global.getSettings().getString("ShipSystem", "PLSP_" + key);
-	}
+	public static final I18nSection strings = I18nSection.getInstance("ShipSystem", "PLSP_");
 
 	@Override
 	public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
@@ -95,10 +94,10 @@ public class PLSP_VortexDriveStats extends BaseShipSystemScript {
 	@Override
 	public StatusData getStatusData(int index, State state, float effectLevel) {
 		if (index == 0) {
-			return new StatusData(getString("vortexdriveS1"), false);
+			return new StatusData(strings.get("vortexdriveS1"), false);
 		}
 		if (index == 1) {
-			return new StatusData(getString("vortexdriveS2"), false);
+			return new StatusData(strings.get("vortexdriveS2"), false);
 		}
 		return null;
 	}
