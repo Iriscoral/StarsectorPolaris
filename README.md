@@ -8,6 +8,6 @@ This mod from `Github` is in **unstable** development state, your game **may cra
 
 TN Note: Piggybacking of AnyIDElse's earlier comment -
 
-With regards to translation errors or minor bug reports, please reach out to **Scarlet-MagicianX26#7838** on Discord. Additonal help to maintaining this mod is always welcome!
+With regards to translation errors or minor bug reports, please reach out to **Iriscoral** on Discord. Additonal help to maintaining this mod is always welcome!
 
 
